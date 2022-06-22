@@ -43,9 +43,12 @@ header{
     transition: 0.1s;
     font-family: 'Montserrat', sans-serif;
     font-size: larger;
+    transition: all 0.5S ease;
 }
 .menutitles a:hover{
     color: #085D8D;
+    padding-bottom: 3px;
+    transition: all 0.5S ease;
 }
 
 .ham{
@@ -98,11 +101,18 @@ header{
     width: 28px;
 }
 
-@media(max-width:700px){
+ul{
+    list-style: none;
+}
+
+@media(max-width:767px){
     header{
         grid-template-columns: 4fr 0.5fr;
         box-shadow: 0 10px 10px rgb(92, 91, 91);
         border-radius: 0.5rem;
+    }
+    .kjbrand{
+        justify-content: center;
     }
     .imgtitle{
         justify-content: flex-start;
@@ -136,9 +146,85 @@ header{
         justify-content: center;
         flex-direction: column;
     }
-}
-@media(max-width:700px){
-    .kjbrand{
-        justify-content: center;
+    .footercol{
+        width: 50%;
+        margin-bottom: 30px;
     }
+}
+@media(max-width:574px){
+    .footercol{
+        width: 100%;
+    }
+}
+
+.footer{
+    background-color: rgb(92, 91, 91);
+    padding: 70px 0;
+    border-radius: 0.5rem;
+}
+
+.footerbox{
+    margin: auto;
+}
+
+.footerrow{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footercol{
+    width: 25%;
+    padding: 0 15px;
+}
+
+.footercol h4{
+    font-size: 18px;
+    color: white;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+}
+
+.footercol h4::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #085D8D;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+
+.footercol li ul:not(:last-child){
+    margin-bottom: 10px;
+}
+
+.footercol ul li a{
+    font-size: 16px;
+    text-transform: capitalize;
+    color: gainsboro;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    display: block;
+    transition: all 0.5S ease;
+}
+
+.footercol ul li a:hover{
+    color: #c4e8ff;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    display: block;
+    padding-left: 2px;
+}
+
+.footercol a{
+    display: inline-block;
+    width: 40px;
+    color: white;
+    transition: all 0.5S ease;
 }
