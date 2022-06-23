@@ -5,7 +5,9 @@ header{
     grid-template-columns: 1fr 3fr;
     grid-template-rows: 100%;
     border-radius: 0.5rem;
-    box-shadow: 0 10px 10px rgb(92, 91, 91);
+    box-shadow: 0 10px 10px rgb(180, 178, 178, 0.25);
+    z-index: 1001;
+    background-color: rgba(255, 255, 255, 0.025);
 }
 
 .imgtitle{
@@ -59,7 +61,7 @@ header{
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    transition: 0.15s;
+    transition: 0.25s;
 }
 
 .bur{
@@ -108,11 +110,12 @@ ul{
 @media(max-width:767px){
     header{
         grid-template-columns: 4fr 0.5fr;
-        box-shadow: 0 10px 10px rgb(92, 91, 91);
+        box-shadow: 0 10px 10px rgb(180, 178, 178, 0.25);
         border-radius: 0.5rem;
     }
     .kjbrand{
         justify-content: center;
+        z-index: 2000;
     }
     .imgtitle{
         justify-content: flex-start;
@@ -122,6 +125,7 @@ ul{
         display: flex;
         justify-content: center;
         align-items: center;
+        z-index: 2000;
     }
     .menutitles{
         position: absolute;
@@ -133,18 +137,29 @@ ul{
         justify-content: flex-start;
         align-items: center;
         flex-direction: column;
-        z-index: -1;
-        transition: 0.25s;
-        transform: translate(0, -250px);
+        z-index: -100;
+        transition: 0.15s;
+        top: 60px;
+        /* transform: translate(0, 500px); */
+        color: rgb(92, 91, 91);
     }
     .menutitles.show{
-        transform: translate(0, 29%);
+        /* transform: translate(0, 29%); */
+        z-index: 999;
+    }
+    .menutitles a{
+        color: rgb(92, 91, 91);
     }
     .menutitles{
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
+        margin-top: -60px;
+        background: white;
+        padding-top: 125px;
+        padding-bottom: 100%;
+        z-index: -2;
     }
     .footercol{
         width: 50%;
@@ -158,7 +173,7 @@ ul{
 }
 
 .footer{
-    background-color: rgb(92, 91, 91);
+    background-color: rgb(205, 204, 204);;
     padding: 70px 0;
     border-radius: 0.5rem;
 }
@@ -206,7 +221,7 @@ ul{
 .footercol ul li a{
     font-size: 16px;
     text-transform: capitalize;
-    color: gainsboro;
+    color: rgb(153, 151, 151);
     text-decoration: none;
     font-weight: bold;
     font-family: 'Montserrat', sans-serif;
