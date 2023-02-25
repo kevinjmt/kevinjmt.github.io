@@ -17,6 +17,13 @@ a:visited,
 a:hover{
     text-decoration: none;
 }
+.footercol,
+.footercol a,
+.footercol a:visited,
+.footercol a:hover,
+.footercol a:active{
+    text-decoration: none;
+}
 
 /*    ---   GLOBALS   ---    */
 
@@ -29,7 +36,6 @@ nav{
     grid-template-columns: 0fr 1fr 2fr;
     grid-template-rows: 100%;
     border-radius: 0.5rem;
-    box-shadow: 0 0 10px 0 rgb(180, 178, 178, 0.25);
     z-index: 1001;
     background-color: rgba(255, 255, 255, 0.025);
 }
@@ -218,10 +224,96 @@ p{
     border-radius: 25px;
 }
 
-
-
 .pagebody{
     background: rgb(255, 255, 255, 0.9);
+}
+.section{
+    margin: 25px 0;
+    padding: 50px 0;
+    text-align: center;
+}
+.my-portfolio, .my-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(90deg, white, white, rgb(234, 250, 255), white, white);
+}
+.jkeys-div{
+    transition: 0.5s;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: darkgreen;
+    border: 5px solid darkgreen; 
+    border-radius: 25px;
+}
+.jkeys-div:hover{
+    text-shadow: rgb(255, 205, 104) 1px 1px 1px;
+    box-shadow: rgb(255, 205, 104) 3px 3px 3px;
+    transition: 0.5s;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: mediumseagreen;
+    background-color: rgb(255, 246, 228);
+    border: 5px solid mediumseagreen; 
+    border-radius: 25px;
+}
+.sudocru-div{
+    transition: 0.5s;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: darkblue;
+    border: 5px solid darkblue; 
+    border-radius: 25px;
+}
+.sudocru-div:hover{
+    text-shadow: rgb(255, 205, 104) 1px 1px 1px;
+    box-shadow: rgb(255, 205, 104) 3px 3px 3px;
+    transition: 0.5s;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: blue;
+    background-color: rgb(255, 246, 228);
+    border: 5px solid blue; 
+    border-radius: 25px;
+}
+.more-preojects-div{
+    transition: 0.5s;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: black;
+    border: 5px solid black; 
+    border-radius: 25px;
+}
+.more-preojects-div:hover{
+    text-shadow: lightblue 1px 1px 1px;
+    box-shadow: lightblue 3px 3px 3px;
+    transition: 0.5s;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: rgb(96, 126, 136);
+    background-color: rgb(237, 251, 255);
+    border: 5px solid rgb(96, 126, 136); 
+    border-radius: 25px;
+}
+
+.footer{
+    background-color: lightgrey;
+    display: flex;
+    flex-direction: column;
+}
+.footercol a{
+    transition: 0.5s;
+    color: gray;
+}
+.footercol a:hover{
+    transition: 0,5s;
+    color: #1b7eb7;
 }
 
 
@@ -277,10 +369,6 @@ p{
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        /*
-        margin-top: -60px;
-        padding-top: 125px;
-        */
         padding-bottom: 100%;
         z-index: -2;
     }
@@ -304,8 +392,72 @@ p{
         display: flex;
         flex-direction: column;
     }
+    .projects-buttons-cols{
+        display: flex;
+        flex-direction: column;
+    }
     .bubble{
         margin: 25px auto;
+    }
+    .my-last-projects{
+        background: linear-gradient(90deg, rgb(234, 250, 255), white, white, white, rgb(234, 250, 255));
+    }
+    .my-portfolio, .my-contact {
+        background: linear-gradient(90deg, white, white, rgb(234, 250, 255), white, white);
+    }
+
+    
+    .jkeys-div{
+        text-align: left;
+        margin-top: 10px;
+        width: 250px;
+        height: 150px;
+    }
+    .jkeys-div:hover{
+        text-align: left;
+        margin-top: 10px;
+        width: 250px;
+        height: 150px;
+    }
+    .sudocru-div{
+        text-align: left;
+        margin-top: 10px;
+        width: 250px;
+        height: 150px;
+    }
+    .sudocru-div:hover{
+        text-align: left;
+        margin-top: 10px;
+        width: 250px;
+        height: 150px;
+    }
+    .more-preojects-div{
+        text-align: left;
+        margin-top: 10px;
+        width: 250px;
+        height: 150px;
+    }
+    .more-preojects-div:hover{
+        text-align: left;
+        margin-top: 10px;
+        width: 250px;
+        height: 150px;
+    }
+    .section{
+        padding: 0 10%;
+    }
+    .footer{
+        align-items: center;
+        padding-bottom: 50px;
+    }
+    .footerbox{
+        display: flex;
+        flex-direction: column;
+    }
+    .footercol{
+        display: flex;
+        flex-direction: column;
+        padding: 0 5%;
     }
 }
 
@@ -318,6 +470,9 @@ p{
         display: flex;
         flex-direction: column;
         padding: 0 10%;
+    }
+    .bubble{
+        margin: 25px auto;
     }
     .hero-text{
         justify-content: center;
@@ -332,8 +487,61 @@ p{
         display: flex;
         flex-direction: row;
     }
-    .bubble{
-        margin: 25px auto;
+    .projects-buttons-cols{
+        display: flex;
+        flex-direction: column;
+    }    
+    .jkeys-div{
+        text-align: left;
+        margin-top: 10px;
+        width: 300px;
+        height: 150px;
+    }
+    .jkeys-div:hover{
+        text-align: left;
+        margin-top: 10px;
+        width: 300px;
+        height: 150px;
+    }
+    .sudocru-div{
+        text-align: left;
+        margin-top: 10px;
+        width: 300px;
+        height: 150px;
+    }
+    .sudocru-div:hover{
+        text-align: left;
+        margin-top: 10px;
+        width: 300px;
+        height: 150px;
+    }
+    .more-preojects-div{
+        text-align: left;
+        margin-top: 10px;
+        width: 300px;
+        height: 150px;
+    }
+    .more-preojects-div:hover{
+        text-align: left;
+        margin-top: 10px;
+        width: 300px;
+        height: 150px;
+    }
+    .section{
+        padding: 0 15%;
+    }
+    .footer{
+        align-items: center;
+        padding-bottom: 50px;
+    }
+    .footerbox{
+        display: flex;
+        flex-direction: row;
+    }
+    .footercol{
+        display: flex;
+        flex-direction: column;
+        padding: 0 10%;
     }
 }
 
@@ -345,6 +553,9 @@ p{
         display: flex;
         flex-direction: row;
         padding-bottom: 100px;
+    }
+    .bubble{
+        margin: 0;
     }
     .hero-text{
         justify-content: center;
@@ -363,7 +574,61 @@ p{
         display: flex;
         flex-direction: row;
     }
-    .bubble{
-        margin: 0;
+    .projects-buttons-cols{
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .jkeys-div{
+        text-align: left;
+        margin-top: 10px;
+        width: 300px;
+        height: 150px;
+    }
+    .jkeys-div:hover{
+        text-align: left;
+        margin-top: 10px;
+        width: 300px;
+        height: 150px;
+    }
+    .sudocru-div{
+        text-align: left;
+        margin-top: 10px;
+        width: 300px;
+        height: 150px;
+    }
+    .sudocru-div:hover{
+        text-align: left;
+        margin-top: 10px;
+        width: 300px;
+        height: 150px;
+    }
+    .more-preojects-div{
+        text-align: left;
+        margin-top: 10px;
+        width: 300px;
+        height: 150px;
+    }
+    .more-preojects-div:hover{
+        text-align: left;
+        margin-top: 10px;
+        width: 300px;
+        height: 150px;
+    }
+    .section{
+        padding: 0 20%;
+    }
+    .footer{
+        align-items: center;
+        padding-bottom: 50px;
+    }
+    .footerbox{
+        display: flex;
+        flex-direction: row;
+    }
+    .footercol{
+        display: flex;
+        flex-direction: column;
+        padding: 0 15%;
     }
 }
