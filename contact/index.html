@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>KJ - Contact</title>
+	<link rel="stylesheet" href="../assets/css/contact.css">
+	<link rel="shortcut icon" type="image/png" href="../assets/icons/kjicon.png">
+	<meta name="description" content="Kévin JAMET, 
+	un étudiant curieux, passionné, créatif et investit en école d'ingénieur informatique">
+
+</head>
+
+<body>
+	<nav>
+		<div></div>
+		<div class="kjbrand">
+			<a href="../">
+				<img class="imgtitle" src="../assets/icons/kjicon.png" >
+			</a>
+		</div>
+		<div class="menutitles">
+			<a href="../">Home</a>
+			<a href="../portfolio">Portfolio</a>
+			<a href="../mesprojets">Mes Projets</a>
+			<a href="../contact">Contact</a>
+			<a href="../en/contact"><img src="../assets/icons/uk.png" style="width: 30px;"></a>
+		</div>
+		<div class="iloveburgers" onclick="eatoneburger()">
+			<div class="ham">
+				<div class="bur">
+					<span class="ger q"></span>
+					<span class="ger w"></span>
+					<span class="ger e"></span>
+				</div>
+			</div>
+			<script>
+				document.querySelector(".ham").addEventListener("click", function(){
+					document.querySelector(".q").classList.toggle("a")
+					document.querySelector(".w").classList.toggle("b")
+					document.querySelector(".e").classList.toggle("c")
+				})
+				function eatoneburger(){
+					document.querySelector(".menutitles").classList.toggle("show");
+				}
+			</script>
+		</div>
+	</nav>
+
+	
+
+	<div class="pagebody">
+
+		<div class="section my-last-projects">
+			<h1 class="hero-title">
+				ME CONTACTER
+			</h1>
+			<h2>Ajoutez-moi à vos contacts ainsi que sur tous mes réseaux !</h2>
+			<div class="hero-buttons-cols">
+				<a class="download-cv" href="#contact">
+					<div class="download-cv-div">
+						<img style="height: 40px; margin-right: 10%;" src="../assets/icons/chevron-down-solid.svg">
+						<h2 class="cv-text">Mon Contact</h2>
+					</div>
+				</a>
+				<a class="download-cv" href="#reseaux">
+					<div class="download-cv-div">
+						<img style="height: 40px; margin-right: 10%;" src="../assets/icons/chevron-down-solid.svg">
+						<h2 class="cv-text">Mes Réseaux</h2>
+					</div>
+				</a>
+				<a class="download-cv" href="#mecrire">
+					<div class="download-cv-div">
+						<img style="height: 40px; margin-right: 10%;" src="../assets/icons/chevron-down-solid.svg">
+						<h2 class="cv-text">M'écrire</h2>
+					</div>
+				</a>
+			</div>
+
+			
+			<h1 id="contact" class="hero-title year">
+				MON CONTACT
+			</h1>
+
+			
+		<div class="section my-contact">
+			<h3>Ajoutez-moi à vos contacts ainsi que sur tous mes réseaux !</h3>
+			<div style="display: flex; flex-direction: column; align-items: center;">
+				<img style="width: 50%;" src="../assets/imgs/contact.png">
+				<h3>Scannez le QR pour ajouter mon contact ou télécharger le grâce au bouton ci-dessous</h3>
+			</div>
+			<div class="hero-buttons-cols">
+				<a class="download-cv" target="_blank" href="../assets/downloads/Kévin JAMET.vcf">
+					<div class="download-cv-div">
+						<img style="height: 40px; margin-right: 10%;" src="../assets/icons/address-card-solid.svg">
+						<h2 class="cv-text">Mon Contact</h2>
+					</div>
+				</a>
+			</div>
+		</div>
+
+		<h1 id="reseaux" class="hero-title year">
+			MES RESEAUX
+		</h1>
+		<h2 style="margin-bottom: 50px;">Ajoutez-moi sur vos réseaux !</h2>
+
+		
+		<div class="social-cols">
+			<a class="github" target="_blank" href="https://discordapp.com/users/1009783547722215505">
+				<div class="download-github-div">
+					<img style="height: 40px; margin-right: 10%;" src="../assets/icons/discord.svg">
+					<h2 class="github-text">Discord</h2>
+				</div>
+			</a>
+			<a class="download-cv" target="_blank" href="https://twitter.com/_kjprojects">
+				<div class="download-cv-div">
+					<img style="height: 40px; margin-right: 10%;" src="../assets/icons/twitter.svg">
+					<h2 class="cv-text">Twitter</h2>
+				</div>
+			</a>
+		</div>
+
+		<div class="social-cols">
+			<a class="download-cv" target="_blank" href="https://www.youtube.com/channel/UCP6D55Eu7XCB6tDRhHjaLRw">
+				<div class="youtube-div">
+					<img style="height: 40px; margin-right: 10%;" src="../assets/icons/youtube.svg">
+					<h2 class="cv-text">YouTube</h2>
+				</div>
+			</a>
+			<a class="download-cv" target="_blank" href="https://www.instagram.com/_kjprojects">
+				<div class="insta-div">
+					<img style="height: 40px; margin-right: 10%;" src="../assets/icons/instagram.svg">
+					<h2 class="cv-text">Instagram</h2>
+				</div>
+			</a>
+		</div>
+
+		<div class="social-cols">
+			<a class="download-cv" target="_blank" href="https://www.linkedin.com/in/k%C3%A9vin-jamet-12a22222b/">
+				<div class="download-cv-div">
+					<img style="height: 40px; margin-right: 10%;" src="../assets/icons/linkedin.svg">
+					<h2 class="cv-text">LinkedIn</h2>
+				</div>
+			</a>
+			<a class="github" target="_blank" href="https://github.com/kevinjmt">
+				<div class="download-github-div">
+					<img style="height: 40px; margin-right: 10%;" src="../assets/icons/github.svg">
+					<h2 class="github-text">GitHub</h2>
+				</div>
+			</a>
+		</div>
+
+
+		
+		<h1 id="mecrire" class="hero-title year" style="margin-bottom: 100px;">
+			M'ECRIRE
+		</h1>
+		
+		<!-- modify this form HTML and place wherever you want your form -->
+		<form class="form" action="https://formspree.io/f/xayzjqya" method="POST">
+			<label>
+				<h1 style="padding-top: 25px;">Your email</h1>
+				<input id="mail" placeholder="Email" type="email" name="email">
+			</label>
+			<label>
+				<h1>Your message</h1>
+				<textarea id="message" placeholder="Message" name="message"></textarea>
+			</label>
+			<!-- your other form fields go here -->
+			<button class="send-button" type="submit">Send</button>
+		</form>
+		
+	</div>
+
+	</div>
+	<footer class="footer">
+		<h3>Made with ❤️ by KJ</h3>
+		<div class="footerbox">
+			<div class="footercol">
+				<h3>Documents</h3>
+				<a href="../downloads/Kévin JAMET.vcf">Contact</a>
+				<a href="../downloads/CV - Kévin JAMET.pdf" target="_blank">Resume</a>
+			</div>
+			<div class="footercol">
+				<h3>Social</h3>
+				<a href="https://www.linkedin.com/in/k%C3%A9vin-jamet-12a22222b/">LinkedIn</a>
+				<a href="https://github.com/kevinjmt">GitHub</a>
+				<a href="">Discord</a>
+				<a href="">Instagram</a>
+				<a href="">YouTube</a>
+			</div>
+		</div>
+	</footer>
+	
+</body>
+
+</html>

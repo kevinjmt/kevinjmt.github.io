@@ -151,7 +151,7 @@ ul{
     justify-content: center;
 }
 .bubble{
-    max-width: 365px;
+    max-width: 350px;
     padding: 5px 15px;
     color: white;
     background-color: black;
@@ -230,17 +230,6 @@ p{
     border: 5px solid purple; 
     border-radius: 25px;
 }
-.in-dev{
-    height: 100px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 0 25px;
-    border: 5px solid orange;
-    border-radius: 25px;
-}
 
 .pagebody{
     background: rgb(255, 255, 255, 0.9);
@@ -249,16 +238,11 @@ p{
     margin: 25px 0;
     text-align: center;
 }
-.my-portfolio, .my-contact{
+.my-portfolio, .my-contact {
     display: flex;
     flex-direction: column;
     align-items: center;
     background: linear-gradient(90deg, white, white, rgb(234, 250, 255), white, white);
-}
-.my-portfolio, .my-passion{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 .jkeys-div{
     transition: 0.5s;

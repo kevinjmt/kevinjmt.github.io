@@ -151,7 +151,7 @@ ul{
     justify-content: center;
 }
 .bubble{
-    max-width: 365px;
+    max-width: 350px;
     padding: 5px 15px;
     color: white;
     background-color: black;
@@ -168,6 +168,7 @@ ul{
     z-index: 0;
 }
 .hero-title{
+    margin: 250px 0 0 0;
     font-size: calc(40px + (60 - 40) * ((100vw - 320px) / (1140 - 320)));
 }
 h1{
@@ -183,6 +184,11 @@ p{
     display: flex;
     justify-content: center;
 }
+
+.hero-buttons-cols{
+    display: flex;
+    justify-content: center;
+}
 .cv-text{
     font-size: calc(14px + (20 - 14) * ((100vw - 320px) / (1500 - 320)));
     color: black;
@@ -194,6 +200,7 @@ p{
 .download-cv, .github{
     margin-top: 100px;
     display: flex;
+    justify-content: center;
     font-family: 'Montserrat', sans-serif;
     margin: 0 10px;
 }
@@ -230,15 +237,46 @@ p{
     border: 5px solid purple; 
     border-radius: 25px;
 }
-.in-dev{
-    height: 100px;
-    display: flex;
-    flex-direction: row;
+.youtube-div{
+    transition: 0.5s;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    padding: 0 25px;
-    border: 5px solid orange;
+    display: flex;
+    color: black;
+    border: 5px solid black; 
+    border-radius: 25px;
+}
+.youtube-div:hover{
+    text-shadow: lightcoral;
+    box-shadow: lightcoral 3px 3px 3px;
+    transition: 0.5s;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: brown;
+    background-color: rgb(255, 205, 205);
+    border: 5px solid brown; 
+    border-radius: 25px;
+}
+.insta-div{
+    transition: 0.5s;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: black;
+    border: 5px solid black; 
+    border-radius: 25px;
+}
+.insta-div:hover{
+    text-shadow: lightpink;
+    box-shadow: lightpink 3px 3px 3px;
+    transition: 0.5s;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: palevioletred;
+    background-color: rgb(255, 231, 235);
+    border: 5px solid palevioletred; 
     border-radius: 25px;
 }
 
@@ -246,62 +284,92 @@ p{
     background: rgb(255, 255, 255, 0.9);
 }
 .section{
-    margin: 25px 0;
     text-align: center;
 }
-.my-portfolio, .my-contact{
+.my-portfolio, .my-contact {
     display: flex;
     flex-direction: column;
     align-items: center;
     background: linear-gradient(90deg, white, white, rgb(234, 250, 255), white, white);
 }
-.my-portfolio, .my-passion{
+.social-cols{
+    display: flex;
+    justify-content: center;   
+}
+
+.form{
     display: flex;
     flex-direction: column;
-    align-items: center;
-}
-.jkeys-div{
-    transition: 0.5s;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    color: darkgreen;
-    border: 5px solid darkgreen; 
+    background-color: lightgray; 
+    margin: 0 20%; 
     border-radius: 25px;
 }
-.jkeys-div:hover{
-    text-shadow: rgb(255, 205, 104) 1px 1px 1px;
-    box-shadow: rgb(255, 205, 104) 3px 3px 3px;
+
+#mail{
     transition: 0.5s;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    color: mediumseagreen;
-    background-color: rgb(255, 246, 228);
-    border: 5px solid mediumseagreen; 
-    border-radius: 25px;
+    padding: 0 15px 0 15px;
+    margin-bottom: 15px;
+    width: 75%;
+    height: 50px;
+    font-size: large;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 10px;
+    font-weight: 200;
+    outline: none !important;
+    border: 4px solid lightgray;
+    color: gray;
 }
-.sudocru-div{
+#message{
     transition: 0.5s;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    color: darkblue;
-    border: 5px solid darkblue; 
-    border-radius: 25px;
+    padding: 15px;
+    margin-bottom: 15px;
+    width: 75%;
+    height: 250px;
+    font-size: large;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 10px;
+    font-weight: 200;
+    outline: none !important;
+    border: 4px solid lightgray;
+    color: gray;
 }
-.sudocru-div:hover{
-    text-shadow: rgb(255, 205, 104) 1px 1px 1px;
-    box-shadow: rgb(255, 205, 104) 3px 3px 3px;
+#mail:hover,
+#message:hover{
     transition: 0.5s;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    color: blue;
-    background-color: rgb(255, 246, 228);
-    border: 5px solid blue; 
-    border-radius: 25px;
+    color: black;
 }
+#mail:focus,
+#message:focus{
+    transition: 0.5s;
+    background-color: whitesmoke;
+    color: black;
+    border: 4px solid black;
+}
+.send-button{
+    width: 50%;
+    align-self: center;
+    transition: 0.5s;
+    margin: 50px 0;
+    font-size: large;
+    font-family: 'Montserrat', sans-serif;
+    color: darkgray;
+    background-color: whitesmoke;
+    border: 4px solid darkgray;
+    border-radius: 25px;
+    padding: 10px 0;
+}
+.send-button:hover{
+    width: 60%;
+    align-self: center;
+    transition: 0.5s;
+    color: black;
+    border: 4px solid black;
+    margin: 50px 0;
+    font-size: large;
+    font-family: 'Montserrat', sans-serif;
+    padding: 10px 0;
+}
+
 .more-preojects-div{
     transition: 0.5s;
     justify-content: center;
@@ -322,6 +390,20 @@ p{
     background-color: rgb(237, 251, 255);
     border: 5px solid rgb(96, 126, 136); 
     border-radius: 25px;
+}
+
+.year,
+.year:active,
+.year:hover,
+.year:visited{
+    margin: 200px 0 0 0;
+}
+.yearmenu,
+.yearmenu:active,
+.yearmenu:hover,
+.yearmenu:visited{
+    text-decoration: none;
+    margin: 0 15px;
 }
 
 .footer{
@@ -405,21 +487,14 @@ p{
         justify-content: center;
         text-align: center;
     }
-    .download-cv-div, .download-github-div{
+    .download-cv-div, .download-github-div, .youtube-div, .insta-div{
         margin-top: 10px;
         width: 250px;
         height: 75px;
     }
     .hero-buttons-cols{
-        display: flex;
+        justify-content: center; 
         flex-direction: column;
-    }
-    .project-list{
-        display: flex;
-        flex-direction: column;
-    }
-    .discover-button{
-        display: none;
     }
     .projects-buttons-cols{
         display: flex;
@@ -434,32 +509,6 @@ p{
     .my-portfolio, .my-contact {
         background: linear-gradient(90deg, white, white, rgb(234, 250, 255), white, white);
     }
-
-    
-    .jkeys-div{
-        text-align: left;
-        margin-top: 10px;
-        width: 250px;
-        height: 150px;
-    }
-    .jkeys-div:hover{
-        text-align: left;
-        margin-top: 10px;
-        width: 250px;
-        height: 150px;
-    }
-    .sudocru-div{
-        text-align: left;
-        margin-top: 10px;
-        width: 250px;
-        height: 150px;
-    }
-    .sudocru-div:hover{
-        text-align: left;
-        margin-top: 10px;
-        width: 250px;
-        height: 150px;
-    }
     .more-preojects-div{
         text-align: left;
         margin-top: 10px;
@@ -472,8 +521,17 @@ p{
         width: 250px;
         height: 150px;
     }
+    
+    .social-cols{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;   
+    }
     .section{
-        padding: 25px 10%;
+        padding: 0 10%;
+    }
+    .form{
+        margin: 0; 
     }
     .footer{
         align-items: center;
@@ -507,50 +565,20 @@ p{
         justify-content: center;
         text-align: center;
     }
-    .download-cv-div, .download-github-div{
+    .download-cv-div, .download-github-div, .youtube-div, .insta-div{
         margin-top: 10px;
         width: 250px;
         height: 75px;
     }
     .hero-buttons-cols{
-        display: flex;
-        flex-direction: row;
-    }
-    .project-list{
-        display: flex;
+        justify-content: center; 
         flex-direction: column;
-    }
-    .discover-button{
-        display: none;
     }
     .projects-buttons-cols{
         display: flex;
         flex-direction: column;
     }    
-    .jkeys-div{
-        text-align: left;
-        margin-top: 10px;
-        width: 300px;
-        height: 150px;
-    }
-    .jkeys-div:hover{
-        text-align: left;
-        margin-top: 10px;
-        width: 300px;
-        height: 150px;
-    }
-    .sudocru-div{
-        text-align: left;
-        margin-top: 10px;
-        width: 300px;
-        height: 150px;
-    }
-    .sudocru-div:hover{
-        text-align: left;
-        margin-top: 10px;
-        width: 300px;
-        height: 150px;
-    }
+
     .more-preojects-div{
         text-align: left;
         margin-top: 10px;
@@ -563,8 +591,17 @@ p{
         width: 300px;
         height: 150px;
     }
+    
+    .social-cols{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;   
+    }
     .section{
-        padding: 25px 15%;
+        padding: 0 15%;
+    }
+    .form{
+        margin: 0 10%; 
     }
     .footer{
         align-items: center;
@@ -588,6 +625,7 @@ p{
         padding: 0 10%;
         display: flex;
         flex-direction: row;
+        padding-bottom: 100px;
     }
     .bubble{
         margin: 0;
@@ -600,65 +638,42 @@ p{
         justify-content: center;
         text-align: left;
     }
-    .project-list{
-        display: flex;
-        flex-direction: row;
-    }
-    .discover-button{
-        display: flex;
-    }
-    .download-cv-div, .download-github-div{
+    .download-cv-div, .download-github-div, .youtube-div, .insta-div{
         margin-top: 10px;
         width: 250px;
         height: 75px;
     }
     .hero-buttons-cols{
-        display: flex;
+        justify-content: center; 
         flex-direction: row;
     }
     .projects-buttons-cols{
         display: flex;
         flex-direction: row;
     }
-    
-    .jkeys-div{
-        text-align: left;
-        margin-top: 10px;
-        width: 300px;
-        height: 150px;
-    }
-    .jkeys-div:hover{
-        text-align: left;
-        margin-top: 10px;
-        width: 300px;
-        height: 150px;
-    }
-    .sudocru-div{
-        text-align: left;
-        margin-top: 10px;
-        width: 300px;
-        height: 150px;
-    }
-    .sudocru-div:hover{
-        text-align: left;
-        margin-top: 10px;
-        width: 300px;
-        height: 150px;
-    }
     .more-preojects-div{
         text-align: left;
         margin-top: 10px;
-        width: 300px;
+        width: 500px;
         height: 150px;
     }
     .more-preojects-div:hover{
         text-align: left;
         margin-top: 10px;
-        width: 300px;
+        width: 500px;
         height: 150px;
     }
+    
+    .social-cols{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;   
+    }
     .section{
-        padding: 25px 20%;
+        padding: 0 20%;
+    }
+    .form{
+        margin: 0 20%; 
     }
     .footer{
         align-items: center;

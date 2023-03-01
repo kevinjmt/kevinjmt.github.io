@@ -5,13 +5,12 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>KJ - Home</title>
-	<link rel="stylesheet" href="./assets/css/home.css">
-	<link rel="shortcut icon" type="image/png" href="./assets/icons/kjicon.png">
+	<link rel="stylesheet" href="../assets/css/home.css">
+	<link rel="shortcut icon" type="image/png" href="../assets/icons/kjicon.png">
 	<meta name="description" content="Kévin JAMET, a curious, passionate, creative and invested student in computer engineering school">
 
-	<!-- GOOGLE FONTS -->
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
-	
+	<!-- PRELOAD -->
+	<link rel="preload" href="../assets/imgs/kj-hero.png" as="image">  	
 </head>
 
 <style>
@@ -22,16 +21,16 @@
 	<nav>
 		<div></div>
 		<div class="kjbrand">
-			<a href="./index-e.html">
+			<a href="./">
 				<img class="imgtitle" src="assets/icons/kjicon.png" >
 			</a>
 		</div>
 		<div class="menutitles">
-			<a href="./index.html">Home</a>
-			<a href="./portfolio.html">Portfolio</a>
-			<a href="./myprojects.html">My Projects</a>
-			<a href="./contact.html">Contact</a>
-			<a href="./index.html"><img src="./assets/icons/fr.png" style="width: 30px;"></a>
+			<a href="./">Home</a>
+			<a href="./portfolio">Portfolio</a>
+			<a href="./myprojects">My Projects</a>
+			<a href="./contact">Contact</a>
+			<a href="../"><img src="../assets/icons/fr.png" style="width: 30px;"></a>
 		</div>
 		<div class="iloveburgers" onclick="eatoneburger()">
 			<div class="ham">
@@ -60,8 +59,8 @@
 		<div class="hero-block">
 
 			<div class="hero-items">
-				<img src="./assets/imgs/kj-hero.png" class="hero-img">
-				<img src="./assets/imgs/hero-mainblob.svg" class="hero-imgs hero-svg">
+				<img src="../assets/imgs/kj-hero.png" class="hero-img">
+				<img src="../assets/imgs/hero-mainblob.svg" class="hero-imgs hero-svg">
 			</div>
 			<div class="hero-text">
 				<h4 class="bubble">
@@ -76,15 +75,15 @@
 				
 				<div class="hero-buttons">
 					<div class="hero-buttons-cols">
-						<a class="download-cv" target="_blank" href="./assets/downloads/CV - Kévin JAMET.pdf">
+						<a class="download-cv" target="_blank" href="../assets/downloads/CV - Kévin JAMET.pdf">
 							<div class="download-cv-div">
-								<img style="height: 40px; margin-right: 10%;" src="./assets/icons/file-solid.svg">
+								<img style="height: 40px; margin-right: 10%;" src="../assets/icons/file-solid.svg">
 								<h2 class="cv-text">My CV</h2>
 							</div>
 						</a>
 						<a class="github" target="_blank" href="https://github.com/kevinjmt">
 							<div class="download-github-div">
-								<img style="height: 40px; margin-right: 10%;" src="./assets/icons/github.svg">
+								<img style="height: 40px; margin-right: 10%;" src="../assets/icons/github.svg">
 								<h2 class="github-text">My GitHub</h2>
 							</div>
 						</a>
@@ -94,16 +93,26 @@
 
 		</div>
 
-		
+		<div style="margin-top: 15px;" class="hero-buttons discover-button">
+			<div class="projects-buttons-cols">
+				<a class="download-cv" href="#portfolio">
+					<div class="download-cv-div">
+						<img style="height: 40px; margin-right: 10%;" src="../assets/icons/chevron-down-solid.svg">
+						<h2 class="cv-text">Discover</h2>
+					</div>
+				</a>
+			</div>
+		</div>
 
-		<div class="section my-portfolio">
+
+		<div id="portfolio" class="section my-portfolio">
 			<h1 class="title">
 				MY PORTFOLIO
 			</h1>
 			<h3>Discover my background, my training and much more!</h3>
-			<a class="download-cv" href="./mesprojets.html">
+			<a class="download-cv" href="../mesprojets.html">
 				<div class="download-cv-div">
-					<img style="height: 40px; margin-right: 10%;" src="./assets/icons/clipboard-user-solid.svg">
+					<img style="height: 40px; margin-right: 10%;" src="../assets/icons/clipboard-user-solid.svg">
 					<h2 class="cv-text">Read more</h2>
 				</div>
 			</a>
@@ -115,10 +124,10 @@
 			</h1>
 			<h3>Here are the latest projects I've done recently!</h3>
 			<div class="hero-buttons projects-buttons">
-				<div class="hero-buttons-cols">
+				<div class="project-list">
 					<a class="download-cv" target="_blank" href="https://kevinjmt.github.io/JKeysWebsite">
 						<div class="jkeys-div">
-							<img style="height: 100px; margin-right: 10%;" src="./assets/icons/jkey.png">
+							<img style="height: 100px; margin-right: 10%;" src="../assets/icons/jkey.png">
 							<div>
 								<h2 class="cv-text">JKeys</h2>
 								<h3>A password manager LAN hosted</h3>
@@ -127,16 +136,16 @@
 					</a>
 					<a class="github" target="_blank" href="https://github.com/SudOCRu/SudOCRu">
 						<div class="sudocru-div">
-							<img style="height: 100px; margin-right: 10%;" src="./assets/icons/SudOCRu.png">
+							<img style="height: 100px; margin-right: 10%;" src="../assets/icons/SudOCRu.png">
 							<div style="display: flex; flex-direction: column;">
 								<h2 class="cv-text">SudOCRu</h2>
 								<h3>An OCR Sudoku Solver</h3>
 							</div>
 						</div>
 					</a>
-					<a class="download-cv" href="./mesprojets.html">
+					<a class="download-cv" href="../mesprojets.html">
 						<div class="more-preojects-div">
-							<img style="height: 75px; margin-right: 10%;" src="./assets/icons/angles-right-solid.svg">
+							<img style="height: 75px; margin-right: 10%;" src="../assets/icons/angles-right-solid.svg">
 							<h2 class="cv-text">View All</h2>
 						</div>
 					</a>
@@ -150,19 +159,19 @@
 			</h1>
 			<h3>Add me to your contacts and all my social networks!</h3>
 			<div style="display: flex; flex-direction: column; align-items: center;">
-				<img style="width: 20%;" src="./assets/imgs/contact.png">
+				<img style="width: 20%;" src="../assets/imgs/contact.png">
 				<h3>Scan the QR to add my contact or download it using the buttons below</h3>
 			</div>
 			<div class="hero-buttons-cols">
-				<a class="download-cv" target="_blank" href="./assets/downloads/Kévin JAMET.vcf">
+				<a class="download-cv" target="_blank" href="../assets/downloads/Kévin JAMET.vcf">
 					<div class="download-cv-div">
-						<img style="height: 40px; margin-right: 10%;" src="./assets/icons/address-card-solid.svg">
+						<img style="height: 40px; margin-right: 10%;" src="../assets/icons/address-card-solid.svg">
 						<h2 class="cv-text">My Contact</h2>
 					</div>
 				</a>
-				<a class="download-cv" href="./contact.html">
+				<a class="download-cv" href="../contact.html">
 					<div class="download-cv-div">
-						<img style="height: 40px; margin-right: 10%;" src="./assets/icons/angles-right-solid.svg">
+						<img style="height: 40px; margin-right: 10%;" src="../assets/icons/angles-right-solid.svg">
 						<h2 class="cv-text">My Networks</h2>
 					</div>
 				</a>
@@ -173,28 +182,22 @@
 	</div>
 
 
+	
 	<footer class="footer">
+		<h3>Made with ❤️ by KJ</h3>
 		<div class="footerbox">
-			<div class="footerrow">
-				<div class="footercol">
-				</div>
-				<div class="footercol">
-					<h4>Documents</h4>
-					<ul class="footerul">
-						<li><a href="./downloads/Kévin JAMET.vcf">Contact</a></li>
-						<li><a href="./downloads/CV - Kévin JAMET.pdf" target="_blank">Resume</a></li>
-					</ul>
-				</div>
-				<div class="footercol">
-					<h4>Social</h4>
-					<ul class="footerul">
-						<li><a href="">Discord</a></li>
-						<li><a href="">Instagram</a></li>
-						<li><a href="">YouTube</a></li>
-					</ul>
-				</div>
-				<div class="footercol">
-				</div>
+			<div class="footercol">
+				<h3>Documents</h3>
+				<a href="../downloads/Kévin JAMET.vcf">Contact</a>
+				<a href="../downloads/CV - Kévin JAMET.pdf" target="_blank">Resume</a>
+			</div>
+			<div class="footercol">
+				<h3>Social</h3>
+				<a href="https://www.linkedin.com/in/k%C3%A9vin-jamet-12a22222b/">LinkedIn</a>
+				<a href="https://github.com/kevinjmt">GitHub</a>
+				<a href="">Discord</a>
+				<a href="">Instagram</a>
+				<a href="">YouTube</a>
 			</div>
 		</div>
 	</footer>

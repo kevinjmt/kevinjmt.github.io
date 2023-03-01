@@ -151,7 +151,7 @@ ul{
     justify-content: center;
 }
 .bubble{
-    max-width: 365px;
+    max-width: 350px;
     padding: 5px 15px;
     color: white;
     background-color: black;
@@ -168,6 +168,7 @@ ul{
     z-index: 0;
 }
 .hero-title{
+    margin: 250px 0 0 0;
     font-size: calc(40px + (60 - 40) * ((100vw - 320px) / (1140 - 320)));
 }
 h1{
@@ -230,35 +231,20 @@ p{
     border: 5px solid purple; 
     border-radius: 25px;
 }
-.in-dev{
-    height: 100px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 0 25px;
-    border: 5px solid orange;
-    border-radius: 25px;
-}
 
 .pagebody{
     background: rgb(255, 255, 255, 0.9);
 }
 .section{
     margin: 25px 0;
+    padding: 50px 0;
     text-align: center;
 }
-.my-portfolio, .my-contact{
+.my-portfolio, .my-contact {
     display: flex;
     flex-direction: column;
     align-items: center;
     background: linear-gradient(90deg, white, white, rgb(234, 250, 255), white, white);
-}
-.my-portfolio, .my-passion{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 .jkeys-div{
     transition: 0.5s;
@@ -302,6 +288,27 @@ p{
     border: 5px solid blue; 
     border-radius: 25px;
 }
+.cubetools-div{
+    transition: 0.5s;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: gold;
+    border: 5px solid gold; 
+    border-radius: 25px;
+}
+.cubetools-div:hover{
+    text-shadow: rgb(255, 205, 104) 3px 3px 3px;
+    box-shadow: rgb(255, 205, 104) 3px 3px 3px;
+    transition: 0.5s;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: goldenrod;
+    background-color: rgb(255, 246, 228);
+    border: 5px solid goldenrod; 
+    border-radius: 25px;
+}
 .more-preojects-div{
     transition: 0.5s;
     justify-content: center;
@@ -322,6 +329,20 @@ p{
     background-color: rgb(237, 251, 255);
     border: 5px solid rgb(96, 126, 136); 
     border-radius: 25px;
+}
+
+.year,
+.year:active,
+.year:hover,
+.year:visited{
+    margin: 200px 0 0 0;
+}
+.yearmenu,
+.yearmenu:active,
+.yearmenu:hover,
+.yearmenu:visited{
+    text-decoration: none;
+    margin: 0 15px;
 }
 
 .footer{
@@ -414,13 +435,6 @@ p{
         display: flex;
         flex-direction: column;
     }
-    .project-list{
-        display: flex;
-        flex-direction: column;
-    }
-    .discover-button{
-        display: none;
-    }
     .projects-buttons-cols{
         display: flex;
         flex-direction: column;
@@ -460,6 +474,18 @@ p{
         width: 250px;
         height: 150px;
     }
+    .cubetools-div{
+        text-align: left;
+        margin-top: 10px;
+        width: 300px;
+        height: 150px;
+    }
+    .cubetools-div:hover{
+        text-align: left;
+        margin-top: 10px;
+        width: 300px;
+        height: 150px;
+    }
     .more-preojects-div{
         text-align: left;
         margin-top: 10px;
@@ -473,7 +499,7 @@ p{
         height: 150px;
     }
     .section{
-        padding: 25px 10%;
+        padding: 0 10%;
     }
     .footer{
         align-items: center;
@@ -516,13 +542,6 @@ p{
         display: flex;
         flex-direction: row;
     }
-    .project-list{
-        display: flex;
-        flex-direction: column;
-    }
-    .discover-button{
-        display: none;
-    }
     .projects-buttons-cols{
         display: flex;
         flex-direction: column;
@@ -551,6 +570,18 @@ p{
         width: 300px;
         height: 150px;
     }
+    .cubetools-div{
+        text-align: left;
+        margin-top: 10px;
+        width: 300px;
+        height: 150px;
+    }
+    .cubetools-div:hover{
+        text-align: left;
+        margin-top: 10px;
+        width: 300px;
+        height: 150px;
+    }
     .more-preojects-div{
         text-align: left;
         margin-top: 10px;
@@ -564,7 +595,7 @@ p{
         height: 150px;
     }
     .section{
-        padding: 25px 15%;
+        padding: 0 15%;
     }
     .footer{
         align-items: center;
@@ -588,6 +619,7 @@ p{
         padding: 0 10%;
         display: flex;
         flex-direction: row;
+        padding-bottom: 100px;
     }
     .bubble{
         margin: 0;
@@ -599,13 +631,6 @@ p{
     .hero-text{
         justify-content: center;
         text-align: left;
-    }
-    .project-list{
-        display: flex;
-        flex-direction: row;
-    }
-    .discover-button{
-        display: flex;
     }
     .download-cv-div, .download-github-div{
         margin-top: 10px;
@@ -624,41 +649,53 @@ p{
     .jkeys-div{
         text-align: left;
         margin-top: 10px;
-        width: 300px;
+        width: 500px;
         height: 150px;
     }
     .jkeys-div:hover{
         text-align: left;
         margin-top: 10px;
-        width: 300px;
+        width: 500px;
         height: 150px;
     }
     .sudocru-div{
         text-align: left;
         margin-top: 10px;
-        width: 300px;
+        width: 500px;
         height: 150px;
     }
     .sudocru-div:hover{
         text-align: left;
         margin-top: 10px;
-        width: 300px;
+        width: 500px;
+        height: 150px;
+    }
+    .cubetools-div{
+        text-align: left;
+        margin-top: 10px;
+        width: 500px;
+        height: 150px;
+    }
+    .cubetools-div:hover{
+        text-align: left;
+        margin-top: 10px;
+        width: 500px;
         height: 150px;
     }
     .more-preojects-div{
         text-align: left;
         margin-top: 10px;
-        width: 300px;
+        width: 500px;
         height: 150px;
     }
     .more-preojects-div:hover{
         text-align: left;
         margin-top: 10px;
-        width: 300px;
+        width: 500px;
         height: 150px;
     }
     .section{
-        padding: 25px 20%;
+        padding: 0 20%;
     }
     .footer{
         align-items: center;

@@ -30,10 +30,6 @@ a:hover{
 
 /*    ---   GLOBALS   ---    */
 
-@font-face {
-    font-family: 'Montserrat';
-    src: url("../fonts/Montserrat-Black.ttf");
-}
 nav{
     margin-bottom: 0;
     height: 5rem;
@@ -151,14 +147,14 @@ ul{
     justify-content: center;
 }
 .bubble{
-    max-width: 365px;
+    max-width: 120px;
     padding: 5px 15px;
     color: white;
     background-color: black;
     border-radius: 100px;
 }
 .hero-img{
-    width: calc(250px + (500 - 250) * ((100vw - 320px) / (1140 - 320)));
+    width: calc(150px + (300 - 150) * ((100vw - 320px) / (1140 - 320)));
     z-index: 1;
     border-radius: 8%; 
 }
@@ -230,17 +226,6 @@ p{
     border: 5px solid purple; 
     border-radius: 25px;
 }
-.in-dev{
-    height: 100px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 0 25px;
-    border: 5px solid orange;
-    border-radius: 25px;
-}
 
 .pagebody{
     background: rgb(255, 255, 255, 0.9);
@@ -254,11 +239,6 @@ p{
     flex-direction: column;
     align-items: center;
     background: linear-gradient(90deg, white, white, rgb(234, 250, 255), white, white);
-}
-.my-portfolio, .my-passion{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 .jkeys-div{
     transition: 0.5s;
@@ -395,6 +375,7 @@ p{
         z-index: -2;
     }
     .hero-block{
+        margin-top: 100px;
         justify-content: center;
         align-items: center;
         display: flex;
@@ -494,6 +475,7 @@ p{
 /* TABLETS */
 @media (min-width: 768px){
     .hero-block{
+        margin-top: 100px;
         justify-content: center;
         align-items: center;
         display: flex;
@@ -585,6 +567,7 @@ p{
 /* PCs */
 @media (min-width: 1024px){
     .hero-block{
+        margin-top: 100px;
         padding: 0 10%;
         display: flex;
         flex-direction: row;
@@ -597,6 +580,7 @@ p{
         text-align: left;
     }
     .hero-text{
+        margin-left: 100px;
         justify-content: center;
         text-align: left;
     }
