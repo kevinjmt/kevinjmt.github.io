@@ -215,9 +215,11 @@ p{
     border: 5px solid black; 
     border-radius: 25px;
 }
+.cv-shadow:hover{
+    box-shadow: lightblue 3px 3px 3px;
+}
 .download-cv-div:hover{
     text-shadow: lightblue 1px 1px 1px;
-    box-shadow: lightblue 3px 3px 3px;
     transition: 0.5s;
     justify-content: center;
     align-items: center;
@@ -322,7 +324,6 @@ p{
 }
 .more-preojects-div:hover{
     text-shadow: lightblue 1px 1px 1px;
-    box-shadow: lightblue 3px 3px 3px;
     transition: 0.5s;
     justify-content: center;
     align-items: center;

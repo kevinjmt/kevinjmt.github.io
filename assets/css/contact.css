@@ -199,6 +199,9 @@ p{
     font-size: calc(14px + (20 - 14) * ((100vw - 320px) / (1500 - 320)));
     color: black;
 }
+.cv-shadow:hover{
+    box-shadow: lightblue 3px 3px 3px;
+}
 .download-cv, .github{
     margin-top: 100px;
     display: flex;
@@ -217,7 +220,6 @@ p{
 }
 .download-cv-div:hover{
     text-shadow: lightblue 1px 1px 1px;
-    box-shadow: lightblue 3px 3px 3px;
     transition: 0.5s;
     justify-content: center;
     align-items: center;
