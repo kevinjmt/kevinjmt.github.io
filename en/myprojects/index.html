@@ -4,14 +4,12 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>KJ - Mes Projets</title>
-	<link rel="stylesheet" href="../assets/css/myprojects.css">
-	<link rel="shortcut icon" type="image/png" href="../assets/icons/kjicon.png">
+	<title>KJ - My Projects</title>
+	<link rel="stylesheet" href="../../assets/css/myprojects.css">
+	<link rel="shortcut icon" type="image/png" href="../../assets/icons/kjicon.png">
 	<meta name="description" content="Kévin JAMET, 
 	un étudiant curieux, passionné, créatif et investit en école d'ingénieur informatique">
 
-	<!-- GOOGLE FONTS -->
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -19,7 +17,7 @@
 		<div></div>
 		<div class="kjbrand">
 			<a href="../">
-				<img class="imgtitle" src="assets/icons/kjicon.png" >
+				<img class="imgtitle" src="../../assets/icons/kjicon.png" >
 			</a>
 		</div>
 		<div class="menutitles">
@@ -27,7 +25,7 @@
 			<a href="../portfolio">Portfolio</a>
 			<a href="../myprojects">My Projects</a>
 			<a href="../contact">Contact</a>
-			<a href="../../mesprojets"><img src="../assets/icons/fr.png" style="width: 30px;"></a>
+			<a href="../../mesprojets"><img src="../../assets/icons/fr.png" class="flag"></a>
 		</div>
 		<div class="iloveburgers" onclick="eatoneburger()">
 			<div class="ham">
@@ -56,12 +54,20 @@
 
 		<div class="section my-last-projects">
 			<h1 class="hero-title">
-				MY VERY LAST PROJECTS
+				MY LATEST PROJECTS
 			</h1>
-			<h2>All my projects from the most recent to the oldest!</h2>
+			<h2>All my projects from the most recent to the oldest!</h2>			
+			<h3>Select a year:</h3>
+			<div style="display: flex; flex-direction: row; justify-content: center; ">
+				<a class="yearmenu" href="#2023"><h2>2023</h2></a>
+				<a class="yearmenu" href="#2022"><h2>2022</h2></a>
+			</div>
 
 			
-			<h2>IN PROGRESS</h2>
+			
+			<h1 class="hero-title year">
+				IN PROGRESS
+			</h1>
 
 
 			<h4>(FEBRUARY 2023 -> ... )</h4>
@@ -69,16 +75,16 @@
 				<div class="projects-buttons-cols">
 					<a class="download-cv" target="_blank" href="https://kevinjmt.github.io/JKeysWebsite">
 						<div class="jkeys-div">
-							<img style="height: 100px; margin-right: 10%;" src="../assets/icons/jkey.png">
+							<img style="height: 100px; margin-right: 10%;" src="../../assets/icons/jkey.png">
 							<div>
 								<h2 class="cv-text">JKeys</h2>
 								<h3>A password manager LAN hosted</h3>
 							</div>
 						</div>
 					</a>
-					<a class="download-cv" target="_blank" href="https://github.com/kevinjmt/JKeysLite">
-						<div class="jkeys-div">
-							<img style="height: 100px; margin-right: 10%;" src="../assets/icons/jkey.png">
+					<a class="download-cv" target="_blank" href="https://github.com/ForixM/AUTOMATA">
+						<div class="automata-div">
+							<img style="height: 100px; margin-right: 10%;" src="../../assets/icons/automata.png">
 							<div>
 								<h2 class="cv-text">AUTOMATA</h2>
 								<h3>A Factorio's inspired game</h3>
@@ -88,16 +94,19 @@
 				</div>
 			</div>
 
-			<h2>2023</h2>
+			<h1 id="2023" class="hero-title year">
+				2023
+			</h1>
+			<h3 style="margin-bottom: 100px;"><a style="color: #1b7eb7; text-decoration: none;" href="#top">Top of Page</a></h3>
 
 
 			<h3>HTML - CSS</h3>
 			<h4>(FEBRUARY 2023)</h4>
 			<div class="hero-buttons">
 				<div class="projects-buttons-cols">
-					<a class="download-cv" target="_blank" href="https://github.com/kevinjmt/JKeys">
-						<div class="jkeys-div">
-							<img style="height: 100px; margin-right: 10%;" src="../assets/icons/kjicon.png">
+					<a class="download-cv" target="_blank" href="https://github.com/kevinjmt/kevinjmt.github.io">
+						<div class="automata-div">
+							<img style="height: 100px; margin-right: 10%;" src="../../assets/icons/kjicon.png">
 							<div>
 								<h2 class="cv-text">KJ</h2>
 								<h3>My Website and Portfolio</h3>
@@ -112,7 +121,7 @@
 				<div class="projects-buttons-cols">
 					<a class="download-cv" target="_blank" href="https://github.com/kevinjmt/JKeysLite">
 						<div class="jkeys-div">
-							<img style="height: 100px; margin-right: 10%;" src="../assets/icons/jkey.png">
+							<img style="height: 100px; margin-right: 10%;" src="../../assets/icons/jkey.png">
 							<div>
 								<h2 class="cv-text">JKeysLite</h2>
 								<h3>A password manager LAN hosted (Lite Version)</h3>
@@ -125,11 +134,11 @@
 			<h4>(FEBRUARY 2023)</h4>
 			<div class="hero-buttons">
 				<div class="projects-buttons-cols">
-					<a class="download-cv" target="_blank" href="https://github.com/kevinjmt/JKeysLite">
-						<div class="jkeys-div">
-							<img style="height: 100px; margin-right: 10%;" src="../assets/icons/jkey.png">
+					<a class="download-cv" target="_blank" href="https://github.com/kevinjmt/StudentManagementSystem">
+						<div class="automata-div">
+							<img style="height: 50px; margin-right: 10%;" src="../../assets/icons/school-solid.svg">
 							<div>
-								<h2 class="cv-text">StudentManagementSystem</h2>
+								<h2 class="cv-text">Student Management System</h2>
 								<h3>An app to manage students</h3>
 							</div>
 						</div>
@@ -137,7 +146,10 @@
 				</div>
 			</div>
 
-			<h2>2022</h2>
+			<h1 id="2022" class="hero-title year">
+				2022
+			</h1>
+			<h3 style="margin-bottom: 100px;"><a style="color: #1b7eb7; text-decoration: none;" href="#top">Top of Page</a></h3>
 
 			<h3>C</h3>
 			<h4>(SEPTEMBER 2022 -> DECEMBER 2022)</h4>
@@ -145,7 +157,7 @@
 				<div class="projects-buttons-cols">
 					<a class="github" target="_blank" href="https://github.com/SudOCRu/SudOCRu">
 						<div class="sudocru-div">
-							<img style="height: 100px; margin-right: 10%;" src="../assets/icons/SudOCRu.png">
+							<img style="height: 100px; margin-right: 10%;" src="../../assets/icons/SudOCRu.png">
 							<div style="display: flex; flex-direction: column;">
 								<h2 class="cv-text">SudOCRu</h2>
 								<h3>An OCR Sudoku Solver</h3>
@@ -160,10 +172,10 @@
 				<div class="projects-buttons-cols">
 					<a class="github" target="_blank" href="https://github.com/ForixM/CubeTools">
 						<div class="cubetools-div">
-							<img style="height: 100px; margin-right: 10%;" src="../assets/icons/CubeTools.png">
+							<img style="height: 100px; margin-right: 10%;" src="../../assets/icons/CubeTools.png">
 							<div style="display: flex; flex-direction: column;">
 								<h2 class="cv-text">CubeTools</h2>
-								<h3>Cross-platform file explorer with unique features by KM3</h3>
+								<h3>Cross-platform file explorer by KM3</h3>
 							</div>
 						</div>
 					</a>

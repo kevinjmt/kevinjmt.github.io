@@ -55,8 +55,11 @@ nav{
 
 .kjbrand{
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
+}
+.flag{
+    width: 30px; 
 }
 
 .navigationbar{
@@ -68,7 +71,6 @@ nav{
 }
 
 .menutitles{
-    margin: 20px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -151,7 +153,14 @@ ul{
     justify-content: center;
 }
 .bubble{
-    max-width: 365px;
+    max-width: 362px;
+    padding: 5px 15px;
+    color: white;
+    background-color: black;
+    border-radius: 100px;
+}
+.enbubble{
+    max-width: 335px;
     padding: 5px 15px;
     color: white;
     background-color: black;
@@ -350,8 +359,12 @@ p{
         border-radius: 0.5rem;
     }
     .kjbrand{
+        justify-content: center;
         text-align: center;
         z-index: 2000;
+    }
+    .flag{
+        margin-right: 0;
     }
     .imgtitle{
         justify-content: flex-start;
@@ -428,6 +441,9 @@ p{
     .bubble{
         margin: 25px auto;
     }
+    .enbubble{
+        margin: 25px auto;
+    }
     .my-last-projects{
         background: linear-gradient(90deg, rgb(234, 250, 255), white, white, white, rgb(234, 250, 255));
     }
@@ -500,7 +516,16 @@ p{
         flex-direction: column;
         padding: 0 10%;
     }
+    .kjbrand{
+        margin-left: 20%;
+    }
+    .flag{
+        margin-right: 0;
+    }
     .bubble{
+        margin: 25px auto;
+    }
+    .enbubble{
         margin: 25px auto;
     }
     .hero-text{
@@ -589,7 +614,13 @@ p{
         display: flex;
         flex-direction: row;
     }
+    .flag{
+        margin-right: 25px;
+    }
     .bubble{
+        margin: 0;
+    }
+    .enbubble{
         margin: 0;
     }
     .hero-text{
