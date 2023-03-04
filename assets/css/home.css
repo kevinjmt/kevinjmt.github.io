@@ -172,9 +172,8 @@ ul{
     border-radius: 8%; 
 }
 .hero-svg{
-    display: none;
     position: absolute;
-    z-index: 0;
+    z-index: -1;
 }
 .hero-title{
     font-size: calc(40px + (60 - 40) * ((100vw - 320px) / (1140 - 320)));
@@ -260,13 +259,17 @@ p{
     margin: 25px 0;
     text-align: center;
 }
-.my-portfolio, .my-contact{
+.my-portfolio, .my-contact, .my-last-projects{
+    margin-top: 75px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    /*
     background: linear-gradient(90deg, white, white, rgb(234, 250, 255), white, white);
+    */
 }
 .my-portfolio, .my-passion{
+    margin-top: 75px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -419,6 +422,13 @@ p{
         justify-content: center;
         text-align: center;
     }
+    .svg-phone{
+        display: none;
+    }
+    .hero-svg{
+        padding: 0;
+        width: 70%;
+    }
     .download-cv-div, .download-github-div{
         margin-top: 10px;
         width: 250px;
@@ -445,12 +455,14 @@ p{
     .enbubble{
         margin: 25px auto;
     }
+    /*
     .my-last-projects{
         background: linear-gradient(90deg, rgb(234, 250, 255), white, white, white, rgb(234, 250, 255));
     }
     .my-portfolio, .my-contact {
         background: linear-gradient(90deg, white, white, rgb(234, 250, 255), white, white);
     }
+    */
 
     
     .jkeys-div{
@@ -492,6 +504,10 @@ p{
     .section{
         padding: 25px 10%;
     }
+    .contact-qr{
+        border-radius: 10px;
+        width: 50%;
+    }
     .footer{
         align-items: center;
         padding-bottom: 50px;
@@ -532,6 +548,13 @@ p{
     .hero-text{
         justify-content: center;
         text-align: center;
+    }
+    .svg-phone{
+        display: none;
+    }
+    .hero-svg{
+        padding: 0;
+        width: 50%;
     }
     .download-cv-div, .download-github-div{
         margin-top: 10px;
@@ -592,6 +615,10 @@ p{
     .section{
         padding: 25px 15%;
     }
+    .contact-qr{
+        border-radius: 10px;
+        width: 30%;
+    }
     .footer{
         align-items: center;
         padding-bottom: 50px;
@@ -627,6 +654,10 @@ p{
     .hero-text{
         justify-content: center;
         text-align: left;
+    }
+    .svg-phone{
+        display: inline;
+        width: max-content;
     }
     .hero-text{
         justify-content: center;
@@ -691,6 +722,9 @@ p{
     }
     .section{
         padding: 25px 20%;
+    }
+    .contact-qr{
+        width: 25%;
     }
     .footer{
         align-items: center;

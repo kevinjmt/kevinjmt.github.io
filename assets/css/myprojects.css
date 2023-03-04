@@ -165,9 +165,8 @@ ul{
     border-radius: 8%; 
 }
 .hero-svg{
-    display: none;
     position: absolute;
-    z-index: 0;
+    z-index: -1;
 }
 .hero-title{
     margin: 250px 0 0 0;
@@ -470,12 +469,14 @@ p{
     .bubble{
         margin: 25px auto;
     }
+    /*
     .my-last-projects{
         background: linear-gradient(90deg, rgb(234, 250, 255), white, white, white, rgb(234, 250, 255));
     }
     .my-portfolio, .my-contact {
         background: linear-gradient(90deg, white, white, rgb(234, 250, 255), white, white);
     }
+    */
 
     
     .jkeys-div{
@@ -541,6 +542,10 @@ p{
     .section{
         padding: 0 10%;
     }
+    .hero-svg{
+        padding: 0;
+        width: 50%;
+    }
     .footer{
         align-items: center;
         padding-bottom: 50px;
@@ -578,6 +583,10 @@ p{
     .hero-text{
         justify-content: center;
         text-align: center;
+    }
+    .hero-svg{
+        padding: 0;
+        width: 50%;
     }
     .download-cv-div, .download-github-div{
         margin-top: 10px;
