@@ -163,7 +163,7 @@ ul{
     border-radius: 100px;
 }
 .hero-img{
-    width: calc(150px + (300 - 150) * ((100vw - 320px) / (1140 - 320)));
+    width: calc(150px + (250 - 150) * ((100vw - 320px) / (1140 - 320)));
     z-index: 1;
     border-radius: 8%; 
 }

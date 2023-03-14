@@ -273,46 +273,25 @@ p{
     border: 5px solid mediumseagreen; 
     border-radius: 25px;
 }
-.sudocru-div{
+.automata-div{
     transition: 0.5s;
     justify-content: center;
     align-items: center;
     display: flex;
-    color: darkblue;
-    border: 5px solid darkblue; 
+    color: gray;
+    border: 5px solid gray; 
     border-radius: 25px;
 }
-.sudocru-div:hover{
-    text-shadow: rgb(255, 205, 104) 1px 1px 1px;
-    box-shadow: rgb(255, 205, 104) 3px 3px 3px;
+.automata-div:hover{
+    text-shadow: lightgray 1px 1px 1px;
+    box-shadow: lightgray 3px 3px 3px;
     transition: 0.5s;
     justify-content: center;
     align-items: center;
     display: flex;
-    color: blue;
-    background-color: rgb(255, 246, 228);
-    border: 5px solid blue; 
-    border-radius: 25px;
-}
-.cubetools-div{
-    transition: 0.5s;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    color: gold;
-    border: 5px solid gold; 
-    border-radius: 25px;
-}
-.cubetools-div:hover{
-    text-shadow: rgb(255, 205, 104) 3px 3px 3px;
-    box-shadow: rgb(255, 205, 104) 3px 3px 3px;
-    transition: 0.5s;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    color: goldenrod;
-    background-color: rgb(255, 246, 228);
-    border: 5px solid goldenrod; 
+    color: black;
+    background-color: lightgray;
+    border: 5px solid black; 
     border-radius: 25px;
 }
 .more-preojects-div{
@@ -473,25 +452,26 @@ p{
         background: linear-gradient(90deg, white, white, rgb(234, 250, 255), white, white);
     }
     */
-    .sudocru-div{
+    
+    .jkeys-div{
         text-align: left;
         margin-top: 10px;
         width: 300px;
         height: 150px;
     }
-    .sudocru-div:hover{
+    .jkeys-div:hover{
         text-align: left;
         margin-top: 10px;
         width: 300px;
         height: 150px;
     }
-    .cubetools-div{
+    .automata-div{
         text-align: left;
         margin-top: 10px;
         width: 300px;
         height: 150px;
     }
-    .cubetools-div:hover{
+    .automata-div:hover{
         text-align: left;
         margin-top: 10px;
         width: 300px;
@@ -588,25 +568,13 @@ p{
         width: 300px;
         height: 150px;
     }
-    .sudocru-div{
+    .automata-div{
         text-align: left;
         margin-top: 10px;
         width: 300px;
         height: 150px;
     }
-    .sudocru-div:hover{
-        text-align: left;
-        margin-top: 10px;
-        width: 300px;
-        height: 150px;
-    }
-    .cubetools-div{
-        text-align: left;
-        margin-top: 10px;
-        width: 300px;
-        height: 150px;
-    }
-    .cubetools-div:hover{
+    .automata-div:hover{
         text-align: left;
         margin-top: 10px;
         width: 300px;
@@ -691,22 +659,22 @@ p{
     .jkeys-div{
         text-align: left;
         margin-top: 10px;
-        width: 300px;
+        width: 500px;
         height: 150px;
     }
     .jkeys-div:hover{
         text-align: left;
         margin-top: 10px;
-        width: 300px;
+        width: 500px;
         height: 150px;
     }
-    .sudocru-div{
+    .automata-div{
         text-align: left;
         margin-top: 10px;
         width: 500px;
         height: 150px;
     }
-    .sudocru-div:hover{
+    .automata-div:hover{
         text-align: left;
         margin-top: 10px;
         width: 500px;
