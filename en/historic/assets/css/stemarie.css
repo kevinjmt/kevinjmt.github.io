@@ -273,6 +273,27 @@ p{
     border: 5px solid mediumseagreen; 
     border-radius: 25px;
 }
+.maths-div{
+    transition: 0.5s;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: brown;
+    border: 5px solid brown; 
+    border-radius: 25px;
+}
+.maths-div:hover{
+    text-shadow: rgb(255, 104, 104) 1px 1px 1px;
+    box-shadow: rgb(255, 104, 104) 3px 3px 3px;
+    transition: 0.5s;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: darkred;
+    background-color: rgb(255, 246, 228);
+    border: 5px solid darkred; 
+    border-radius: 25px;
+}
 .sudocru-div{
     transition: 0.5s;
     justify-content: center;
@@ -497,6 +518,18 @@ p{
         width: 300px;
         height: 150px;
     }
+    .maths-div{
+        text-align: left;
+        margin-top: 10px;
+        width: 300px;
+        height: 150px;
+    }
+    .maths-div:hover{
+        text-align: left;
+        margin-top: 10px;
+        width: 300px;
+        height: 150px;
+    }
     .more-preojects-div{
         text-align: left;
         margin-top: 10px;
@@ -607,6 +640,18 @@ p{
         height: 150px;
     }
     .cubetools-div:hover{
+        text-align: left;
+        margin-top: 10px;
+        width: 300px;
+        height: 150px;
+    }
+    .maths-div{
+        text-align: left;
+        margin-top: 10px;
+        width: 300px;
+        height: 150px;
+    }
+    .maths-div:hover{
         text-align: left;
         margin-top: 10px;
         width: 300px;
@@ -725,6 +770,18 @@ p{
         height: 150px;
     }
     .cubetools-div:hover{
+        text-align: left;
+        margin-top: 10px;
+        width: 500px;
+        height: 150px;
+    }
+    .maths-div{
+        text-align: left;
+        margin-top: 10px;
+        width: 500px;
+        height: 150px;
+    }
+    .maths-div:hover{
         text-align: left;
         margin-top: 10px;
         width: 500px;

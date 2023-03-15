@@ -165,7 +165,6 @@ ul{
 .hero-img{
     width: calc(150px + (300 - 150) * ((100vw - 320px) / (1140 - 320)));
     z-index: 1;
-    border-radius: 8%; 
 }
 .hero-svg{
     position: absolute;
@@ -190,6 +189,10 @@ p{
 .cv-text{
     font-size: calc(14px + (20 - 14) * ((100vw - 320px) / (1500 - 320)));
     color: black;
+}
+.download-github{
+    display: flex; 
+    justify-content: center;
 }
 .github-text{
     font-size: calc(14px + (20 - 14) * ((100vw - 320px) / (1500 - 320)));
