@@ -167,7 +167,7 @@ ul{
     border-radius: 100px;
 }
 .hero-img{
-    width: calc(250px + (500 - 250) * ((100vw - 320px) / (1140 - 320)));
+    width: calc(250px + (500 - 250) * ((100vw - 320px) / (1500 - 320)));
     z-index: 1;
     border-radius: 8%; 
 }
@@ -658,6 +658,7 @@ p{
     .svg-phone{
         display: inline;
         width: max-content;
+        margin-top: -100px;
     }
     .hero-text{
         justify-content: center;
