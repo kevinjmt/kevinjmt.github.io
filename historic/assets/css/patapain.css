@@ -228,15 +228,15 @@ p{
     box-shadow: lightblue 3px 3px 3px;
 }
 .download-github-div:hover{
-    text-shadow: violet 1px 1px 1px;
-    box-shadow: violet 3px 3px 3px;
+    text-shadow: darkorange 1px 1px 1px;
+    box-shadow: darkorange 3px 3px 3px;
     transition: 0.5s;
     justify-content: center;
     align-items: center;
     display: flex;
-    color: purple;
-    background-color: rgb(255, 231, 255);
-    border: 5px solid purple; 
+    color: coral;
+    background-color: rgb(255, 202, 181);
+    border: 5px solid coral; 
     border-radius: 25px;
 }
 
