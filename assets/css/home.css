@@ -274,46 +274,46 @@ p{
     flex-direction: column;
     align-items: center;
 }
-.jkeys-div{
+.jkuisine-div{
     transition: 0.5s;
     justify-content: center;
     align-items: center;
     display: flex;
-    color: darkgreen;
-    border: 5px solid darkgreen; 
+    color: orange;
+    border: 5px solid orange; 
     border-radius: 25px;
 }
-.jkeys-div:hover{
-    text-shadow: rgb(255, 205, 104) 1px 1px 1px;
-    box-shadow: rgb(255, 205, 104) 3px 3px 3px;
+.jkuisine-div:hover{
+    text-shadow: #ffd9d0 1px 1px 1px;
+    box-shadow: #ffd9d0 3px 3px 3px;
     transition: 0.5s;
     justify-content: center;
     align-items: center;
     display: flex;
-    color: mediumseagreen;
-    background-color: rgb(255, 246, 228);
-    border: 5px solid mediumseagreen; 
+    color: darkorange;
+    background-color: #ffd9d0;
+    border: 5px solid darkorange; 
     border-radius: 25px;
 }
-.sudocru-div{
+.ezit-div{
     transition: 0.5s;
     justify-content: center;
     align-items: center;
     display: flex;
-    color: darkblue;
-    border: 5px solid darkblue; 
+    color: lightsteelblue;
+    border: 5px solid lightsteelblue; 
     border-radius: 25px;
 }
-.sudocru-div:hover{
-    text-shadow: rgb(255, 205, 104) 1px 1px 1px;
-    box-shadow: rgb(255, 205, 104) 3px 3px 3px;
+.ezit-div:hover{
+    text-shadow: lightsteelblue 1px 1px 1px;
+    box-shadow: lightsteelblue 3px 3px 3px;
     transition: 0.5s;
     justify-content: center;
     align-items: center;
     display: flex;
-    color: blue;
-    background-color: rgb(255, 246, 228);
-    border: 5px solid blue; 
+    color: steelblue;
+    background-color: lightblue;
+    border: 5px solid steelblue; 
     border-radius: 25px;
 }
 .more-preojects-div{
@@ -464,26 +464,25 @@ p{
     }
     */
 
-    
-    .jkeys-div{
+    .jkuisine-div{
         text-align: left;
         margin-top: 10px;
         width: 250px;
         height: 150px;
     }
-    .jkeys-div:hover{
+    .jkuisine-div:hover{
         text-align: left;
         margin-top: 10px;
         width: 250px;
         height: 150px;
     }
-    .sudocru-div{
+    .ezit-div{
         text-align: left;
         margin-top: 10px;
         width: 250px;
         height: 150px;
     }
-    .sudocru-div:hover{
+    .ezit-div:hover{
         text-align: left;
         margin-top: 10px;
         width: 250px;
@@ -576,25 +575,25 @@ p{
         display: flex;
         flex-direction: column;
     }    
-    .jkeys-div{
+    .jkuisine-div{
         text-align: left;
         margin-top: 10px;
         width: 300px;
         height: 150px;
     }
-    .jkeys-div:hover{
+    .jkuisine-div:hover{
         text-align: left;
         margin-top: 10px;
         width: 300px;
         height: 150px;
     }
-    .sudocru-div{
+    .ezit-div{
         text-align: left;
         margin-top: 10px;
         width: 300px;
         height: 150px;
     }
-    .sudocru-div:hover{
+    .ezit-div:hover{
         text-align: left;
         margin-top: 10px;
         width: 300px;
@@ -684,26 +683,25 @@ p{
         display: flex;
         flex-direction: row;
     }
-    
-    .jkeys-div{
+    .jkuisine-div{
         text-align: left;
         margin-top: 10px;
         width: 300px;
         height: 150px;
     }
-    .jkeys-div:hover{
+    .jkuisine-div:hover{
         text-align: left;
         margin-top: 10px;
         width: 300px;
         height: 150px;
     }
-    .sudocru-div{
+    .ezit-div{
         text-align: left;
         margin-top: 10px;
         width: 300px;
         height: 150px;
     }
-    .sudocru-div:hover{
+    .ezit-div:hover{
         text-align: left;
         margin-top: 10px;
         width: 300px;

@@ -268,6 +268,48 @@ p{
     border: 5px solid mediumseagreen; 
     border-radius: 25px;
 }
+.jkuisine-div{
+    transition: 0.5s;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: orange;
+    border: 5px solid orange; 
+    border-radius: 25px;
+}
+.jkuisine-div:hover{
+    text-shadow: #ffd9d0 1px 1px 1px;
+    box-shadow: #ffd9d0 3px 3px 3px;
+    transition: 0.5s;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: darkorange;
+    background-color: #ffd9d0;
+    border: 5px solid darkorange; 
+    border-radius: 25px;
+}
+.ezit-div{
+    transition: 0.5s;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: lightsteelblue;
+    border: 5px solid lightsteelblue; 
+    border-radius: 25px;
+}
+.ezit-div:hover{
+    text-shadow: lightsteelblue 1px 1px 1px;
+    box-shadow: lightsteelblue 3px 3px 3px;
+    transition: 0.5s;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: steelblue;
+    background-color: lightblue;
+    border: 5px solid steelblue; 
+    border-radius: 25px;
+}
 .automata-div{
     transition: 0.5s;
     justify-content: center;
@@ -490,6 +532,30 @@ p{
         margin-top: 10px;
         width: 300px;
         height: 150px;
+    }    
+    .jkuisine-div{
+        text-align: left;
+        margin-top: 10px;
+        width: 300px;
+        height: 150px;
+    }
+    .jkuisine-div:hover{
+        text-align: left;
+        margin-top: 10px;
+        width: 300px;
+        height: 150px;
+    }
+    .ezit-div{
+        text-align: left;
+        margin-top: 10px;
+        width: 300px;
+        height: 150px;
+    }
+    .ezit-div:hover{
+        text-align: left;
+        margin-top: 10px;
+        width: 300px;
+        height: 150px;
     }
     .sudocru-div{
         text-align: left;
@@ -613,6 +679,30 @@ p{
         width: 300px;
         height: 150px;
     }
+    .jkuisine-div{
+        text-align: left;
+        margin-top: 10px;
+        width: 300px;
+        height: 150px;
+    }
+    .jkuisine-div:hover{
+        text-align: left;
+        margin-top: 10px;
+        width: 300px;
+        height: 150px;
+    }
+    .ezit-div{
+        text-align: left;
+        margin-top: 10px;
+        width: 300px;
+        height: 150px;
+    }
+    .ezit-div:hover{
+        text-align: left;
+        margin-top: 10px;
+        width: 300px;
+        height: 150px;
+    }
     .automata-div{
         text-align: left;
         margin-top: 10px;
@@ -723,6 +813,30 @@ p{
         height: 150px;
     }
     .jkeys-div:hover{
+        text-align: left;
+        margin-top: 10px;
+        width: 500px;
+        height: 150px;
+    }
+    .jkuisine-div{
+        text-align: left;
+        margin-top: 10px;
+        width: 500px;
+        height: 150px;
+    }
+    .jkuisine-div:hover{
+        text-align: left;
+        margin-top: 10px;
+        width: 500px;
+        height: 150px;
+    }
+    .ezit-div{
+        text-align: left;
+        margin-top: 10px;
+        width: 500px;
+        height: 150px;
+    }
+    .ezit-div:hover{
         text-align: left;
         margin-top: 10px;
         width: 500px;
