@@ -380,19 +380,6 @@ p{
     color: black;
 }
 
-.footer{
-    background-color: lightgrey;
-    display: flex;
-    flex-direction: column;
-}
-.footercol a{
-    transition: 0.5s;
-    color: gray;
-}
-.footercol a:hover{
-    transition: 0,5s;
-    color: #1b7eb7;
-}
 
 
 
@@ -553,19 +540,6 @@ p{
         padding: 0;
         width: 70%;
     }
-    .footer{
-        align-items: center;
-        padding-bottom: 50px;
-    }
-    .footerbox{
-        display: flex;
-        flex-direction: column;
-    }
-    .footercol{
-        display: flex;
-        flex-direction: column;
-        padding: 0 5%;
-    }
 }
 
 
@@ -676,19 +650,6 @@ p{
         padding: 0;
         width: 50%;
     }
-    .footer{
-        align-items: center;
-        padding-bottom: 50px;
-    }
-    .footerbox{
-        display: flex;
-        flex-direction: row;
-    }
-    .footercol{
-        display: flex;
-        flex-direction: column;
-        padding: 0 10%;
-    }
 }
 
 
@@ -795,18 +756,5 @@ p{
     }
     .section{
         padding: 25px 20%;
-    }
-    .footer{
-        align-items: center;
-        padding-bottom: 50px;
-    }
-    .footerbox{
-        display: flex;
-        flex-direction: row;
-    }
-    .footercol{
-        display: flex;
-        flex-direction: column;
-        padding: 0 15%;
     }
 }
