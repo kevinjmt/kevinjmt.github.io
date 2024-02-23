@@ -331,6 +331,27 @@ p{
     border: 5px solid black; 
     border-radius: 25px;
 }
+.kjos-div{
+    transition: 0.5s;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: steelblue;
+    border: 5px solid steelblue; 
+    border-radius: 25px;
+}
+.kjos-div:hover{
+    text-shadow: lightgray 1px 1px 1px;
+    box-shadow: lightgray 3px 3px 3px;
+    transition: 0.5s;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: steelblue;
+    background-color: rgb(222, 233, 242);
+    border: 5px solid steelblue; 
+    border-radius: 25px;
+}
 .sudocru-div{
     transition: 0.5s;
     justify-content: center;
@@ -568,6 +589,18 @@ p{
         width: 300px;
         height: 150px;
     }
+    .kjos-div{
+        text-align: left;
+        margin-top: 10px;
+        width: 300px;
+        height: 150px;
+    }
+    .kjos-div:hover{
+        text-align: left;
+        margin-top: 10px;
+        width: 300px;
+        height: 150px;
+    }
     .cubetools-div{
         text-align: left;
         margin-top: 10px;
@@ -684,6 +717,18 @@ p{
         height: 150px;
     }
     .automata-div:hover{
+        text-align: left;
+        margin-top: 10px;
+        width: 300px;
+        height: 150px;
+    }
+    .kjos-div{
+        text-align: left;
+        margin-top: 10px;
+        width: 300px;
+        height: 150px;
+    }
+    .kjos-div:hover{
         text-align: left;
         margin-top: 10px;
         width: 300px;
@@ -810,6 +855,18 @@ p{
         height: 150px;
     }
     .automata-div:hover{
+        text-align: left;
+        margin-top: 10px;
+        width: 500px;
+        height: 150px;
+    }
+    .kjos-div{
+        text-align: left;
+        margin-top: 10px;
+        width: 500px;
+        height: 150px;
+    }
+    .kjos-div:hover{
         text-align: left;
         margin-top: 10px;
         width: 500px;
