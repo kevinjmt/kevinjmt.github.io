@@ -274,25 +274,25 @@ p{
     flex-direction: column;
     align-items: center;
 }
-.jkuisine-div{
+.kjos-div{
     transition: 0.5s;
     justify-content: center;
     align-items: center;
     display: flex;
-    color: orange;
-    border: 5px solid orange; 
+    color: steelblue;
+    border: 5px solid steelblue; 
     border-radius: 25px;
 }
-.jkuisine-div:hover{
-    text-shadow: #ffd9d0 1px 1px 1px;
-    box-shadow: #ffd9d0 3px 3px 3px;
+.kjos-div:hover{
+    text-shadow: lightgray 1px 1px 1px;
+    box-shadow: lightgray 3px 3px 3px;
     transition: 0.5s;
     justify-content: center;
     align-items: center;
     display: flex;
-    color: darkorange;
-    background-color: #ffd9d0;
-    border: 5px solid darkorange; 
+    color: steelblue;
+    background-color: rgb(222, 233, 242);
+    border: 5px solid steelblue; 
     border-radius: 25px;
 }
 .ezit-div{
@@ -451,13 +451,13 @@ p{
     }
     */
 
-    .jkuisine-div{
+    .kjos-div{
         text-align: left;
         margin-top: 10px;
         width: 250px;
         height: 150px;
     }
-    .jkuisine-div:hover{
+    .kjos-div:hover{
         text-align: left;
         margin-top: 10px;
         width: 250px;
@@ -549,13 +549,13 @@ p{
         display: flex;
         flex-direction: column;
     }    
-    .jkuisine-div{
+    .kjos-div{
         text-align: left;
         margin-top: 10px;
         width: 300px;
         height: 150px;
     }
-    .jkuisine-div:hover{
+    .kjos-div:hover{
         text-align: left;
         margin-top: 10px;
         width: 300px;
@@ -644,13 +644,13 @@ p{
         display: flex;
         flex-direction: row;
     }
-    .jkuisine-div{
+    .kjos-div{
         text-align: left;
         margin-top: 10px;
         width: 300px;
         height: 150px;
     }
-    .jkuisine-div:hover{
+    .kjos-div:hover{
         text-align: left;
         margin-top: 10px;
         width: 300px;
