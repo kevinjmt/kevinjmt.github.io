@@ -274,6 +274,27 @@ p{
     flex-direction: column;
     align-items: center;
 }
+.jkuisine-div{
+    transition: 0.5s;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: orange;
+    border: 5px solid orange; 
+    border-radius: 25px;
+}
+.jkuisine-div:hover{
+    text-shadow: #ffd9d0 1px 1px 1px;
+    box-shadow: #ffd9d0 3px 3px 3px;
+    transition: 0.5s;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: darkorange;
+    background-color: #ffd9d0;
+    border: 5px solid darkorange; 
+    border-radius: 25px;
+}
 .kjos-div{
     transition: 0.5s;
     justify-content: center;
@@ -451,6 +472,18 @@ p{
     }
     */
 
+    .jkuisine-div{
+        text-align: left;
+        margin-top: 10px;
+        width: 250px;
+        height: 150px;
+    }
+    .jkuisine-div:hover{
+        text-align: left;
+        margin-top: 10px;
+        width: 250px;
+        height: 150px;
+    }
     .kjos-div{
         text-align: left;
         margin-top: 10px;
@@ -549,6 +582,18 @@ p{
         display: flex;
         flex-direction: column;
     }    
+    .jkuisine-div{
+        text-align: left;
+        margin-top: 10px;
+        width: 300px;
+        height: 150px;
+    }
+    .jkuisine-div:hover{
+        text-align: left;
+        margin-top: 10px;
+        width: 300px;
+        height: 150px;
+    }
     .kjos-div{
         text-align: left;
         margin-top: 10px;
@@ -643,6 +688,18 @@ p{
     .projects-buttons-cols{
         display: flex;
         flex-direction: row;
+    }
+    .jkuisine-div{
+        text-align: left;
+        margin-top: 10px;
+        width: 300px;
+        height: 150px;
+    }
+    .jkuisine-div:hover{
+        text-align: left;
+        margin-top: 10px;
+        width: 300px;
+        height: 150px;
     }
     .kjos-div{
         text-align: left;
