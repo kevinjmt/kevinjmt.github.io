@@ -247,6 +247,48 @@ p{
     align-items: center;
     background: linear-gradient(90deg, white, white, rgb(234, 250, 255), white, white);
 }
+.decathlon-div{
+    transition: 0.5s;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: darkblue;
+    border: 5px solid darkblue; 
+    border-radius: 25px;
+}
+.decathlon:hover{
+    text-shadow: rgb(104, 144, 255) 1px 1px 1px;
+    box-shadow: rgb(104, 144, 255) 3px 3px 3px;
+    transition: 0.5s;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: blue;
+    background-color: rgb(228, 238, 255);
+    border: 5px solid blue; 
+    border-radius: 25px;
+}
+.article-div{
+    transition: 0.5s;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: darkred;
+    border: 5px solid darkred; 
+    border-radius: 25px;
+}
+.article-div:hover{
+    text-shadow: rgb(255, 104, 104) 1px 1px 1px;
+    box-shadow: rgb(255, 104, 104) 1px 1px 1px;
+    transition: 0.5s;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: mediumvioletred;
+    background-color: rgb(255, 205, 205);
+    border: 5px solid mediumvioletred; 
+    border-radius: 25px;
+}
 .jkeys-div{
     transition: 0.5s;
     justify-content: center;
@@ -549,7 +591,30 @@ p{
     }
     */
 
-    
+    .decathlon-div{
+        text-align: left;
+        margin-top: 10px;
+        width: 300px;
+        height: 150px;
+    }
+    .decathlon-div:hover{
+        text-align: left;
+        margin-top: 10px;
+        width: 300px;
+        height: 150px;
+    }  
+    .article-div{
+        text-align: left;
+        margin-top: 10px;
+        width: 300px;
+        height: 150px;
+    }
+    .article-div:hover{
+        text-align: left;
+        margin-top: 10px;
+        width: 300px;
+        height: 150px;
+    }   
     .jkeys-div{
         text-align: left;
         margin-top: 10px;
@@ -706,7 +771,31 @@ p{
     .projects-buttons-cols{
         display: flex;
         flex-direction: column;
-    }    
+    }             
+    .decathlon-div{
+        text-align: left;
+        margin-top: 10px;
+        width: 300px;
+        height: 150px;
+    }
+    .decathlon-div:hover{
+        text-align: left;
+        margin-top: 10px;
+        width: 300px;
+        height: 150px;
+    }
+    .article-div{
+        text-align: left;
+        margin-top: 10px;
+        width: 300px;
+        height: 150px;
+    }
+    .article-div:hover{
+        text-align: left;
+        margin-top: 10px;
+        width: 300px;
+        height: 150px;
+    }
     .jkeys-div{
         text-align: left;
         margin-top: 10px;
@@ -857,6 +946,30 @@ p{
         flex-direction: row;
     }
     
+    .decathlon-div{
+        text-align: left;
+        margin-top: 10px;
+        width: 500px;
+        height: 150px;
+    }
+    .decathlon-div:hover{
+        text-align: left;
+        margin-top: 10px;
+        width: 500px;
+        height: 150px;
+    }
+    .article-div{
+        text-align: left;
+        margin-top: 10px;
+        width: 500px;
+        height: 150px;
+    }
+    .article-div:hover{
+        text-align: left;
+        margin-top: 10px;
+        width: 500px;
+        height: 150px;
+    }
     .jkeys-div{
         text-align: left;
         margin-top: 10px;

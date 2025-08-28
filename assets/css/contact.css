@@ -364,6 +364,7 @@ p{
     padding: 10px 0;
 }
 .send-button:hover{
+    cursor: pointer;
     width: 60%;
     align-self: center;
     transition: 0.5s;
