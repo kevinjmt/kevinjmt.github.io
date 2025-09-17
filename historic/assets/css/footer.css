@@ -1,0 +1,104 @@
+/*     ---   RESETS   ---     */
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+    margin: 0; 
+    padding: 0;
+}
+nav{
+    margin: 0;
+}
+footer{
+    margin: 0;
+    padding: 0;
+}
+a,
+a:active,
+a:visited,
+a:hover{
+    text-decoration: none;
+}
+.footercol,
+.footercol a,
+.footercol a:visited,
+.footercol a:hover,
+.footercol a:active{
+    text-decoration: none;
+}
+
+/*    ---   GLOBALS   ---    */
+
+.footer{
+    background-color: lightgrey;
+    display: flex;
+    flex-direction: column;
+}
+.footercol a{
+    font-family: Montserrat;
+    font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (1140 - 320)));
+    transition: 0.5s;
+    color: gray;
+}
+.footercol a:hover{
+    transition: 0,5s;
+    color: #1b7eb7;
+}
+
+
+
+/*  ---   RESPONSIVE   ---  */
+
+/* PHONES */
+@media (max-width: 767px){
+    .footer{
+        align-items: center;
+        padding-bottom: 50px;
+    }
+    .footerbox{
+        display: flex;
+        flex-direction: column;
+    }
+    .footercol{
+        display: flex;
+        flex-direction: column;
+        padding: 0 5vw;
+    }
+}
+
+
+/* TABLETS */
+@media (min-width: 768px){
+    .footer{
+        align-items: center;
+        padding-bottom: 50px;
+    }
+    .footerbox{
+        display: flex;
+        flex-direction: row;
+    }
+    .footercol{
+        display: flex;
+        flex-direction: column;
+        padding: 0 5vw;
+    }
+}
+
+
+/* PCs */
+@media (min-width: 1024px){
+    .footer{
+        align-items: center;
+        padding-bottom: 50px;
+    }
+    .footerbox{
+        display: flex;
+        flex-direction: row;
+    }
+    .footercol{
+        display: flex;
+        flex-direction: column;
+        padding: 0 10vw;
+    }
+}

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>KJ - Home</title>
+	<link rel="stylesheet" href="../assets/css/home.css">
+	<link rel="stylesheet" href="../assets/css/footer.css">
+	<link rel="shortcut icon" type="image/png" href="../assets/icons/kjicon.png">
+	<meta property="og:title" content="Kévin JAMET" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://kevinjmt.github.io/" />
+	<meta property="og:description" content="A curious, passionate, creative and committed student at a computer engineering school" />
+	<meta property="og:image" content="https://kevinjmt.github.io/assets/icons/kjicon.png" />	
+	<meta property="og:image:secure_url" content="https://kevinjmt.github.io/assets/icons/kjicon.png" />
+	<meta http-equiv='cache-control' content='no-cache'> 
+	<meta http-equiv='expires' content='0'> 
+	<meta http-equiv='pragma' content='no-cache'>
+
+	<!-- PRELOAD -->
+	<link rel="preload" href="../assets/imgs/kj-hero.png" as="image">
+</head>
+
+<body>
+	<nav>
+		<div></div>
+		<div class="kjbrand">
+			<a href="./">
+				<img class="imgtitle" src="../assets/icons/kjicon.png" >
+			</a>
+		</div>
+		<div class="menutitles">
+			<a href="./">Home</a>
+			<a href="./portfolio">Portfolio</a>
+			<a href="./myprojects">My Projects</a>
+			<a href="./contact">Contact</a>
+			<a href="../.."><img src="../assets/icons/fr.png" class="flag"></a>
+		</div>
+		<div class="iloveburgers" onclick="eatoneburger()">
+			<div class="ham">
+				<div class="bur">
+					<span class="ger q"></span>
+					<span class="ger w"></span>
+					<span class="ger e"></span>
+				</div>
+			</div>
+			<script>
+				document.querySelector(".ham").addEventListener("click", function(){
+					document.querySelector(".q").classList.toggle("a")
+					document.querySelector(".w").classList.toggle("b")
+					document.querySelector(".e").classList.toggle("c")
+				})
+				function eatoneburger(){
+					document.querySelector(".menutitles").classList.toggle("show");
+				}
+			</script>
+		</div>
+	</nav>
+
+	
+
+	<div class="pagebody">
+
+		<div class="hero-block">
+
+			<div class="hero-items">
+				<img src="../../assets/imgs/kj-hero.png" class="hero-img">
+				<img src="../../assets/imgs/hero-mainblob.svg" class="hero-imgs hero-svg svg-phone">
+			</div>
+			<div class="hero-text">
+				<h4 class="enbubble">
+					STUDENT - COMPUTER ENGINEERING
+				</h4>
+				<h1 class="hero-title">
+					Kévin JAMET
+				</h1>
+				<h3 class="subtitle">
+					Curious, passionate, creative and invested student
+				</h3>
+				
+				<div class="hero-buttons">
+					<div class="hero-buttons-cols">
+						<a class="download-cv" target="_blank" href="../../assets/downloads/CV - Kévin JAMET - EN.pdf">
+							<div class="download-cv-div cv-shadow">
+								<img style="height: 40px; margin-right: 10%;" src="../../assets/icons/file-solid.svg">
+								<h2 class="cv-text">My CV</h2>
+							</div>
+						</a>
+						<a class="github" target="_blank" href="https://github.com/kevinjmt">
+							<div class="download-github-div">
+								<img style="height: 40px; margin-right: 10%;" src="../../assets/icons/github.svg">
+								<h2 class="github-text">My GitHub</h2>
+							</div>
+						</a>
+					</div>
+				</div>
+				
+				<h3 class="subtitle" style="color: brown;">
+					Looking for an IT internship, <a href="#news">read more</a>.
+				</h3>
+			</div>
+
+		</div>
+
+		
+		<div style="margin-top: 15px;" class="hero-buttons discover-button">
+			<div class="projects-buttons-cols">
+				<a class="download-cv" href="#news">
+					<div class="download-cv-div">
+						<img style="height: 40px; margin-right: 10%;" src="../../assets/icons/chevron-down-solid.svg">
+						<h2 class="cv-text">Read more</h2>
+					</div>
+				</a>
+			</div>
+		</div>
+
+		<div id="news" class="section my-last-projects">
+			<h1 class="title">
+				NEWS
+			</h1>
+			<div class="section my-last-projects" style="background-color: lightsteelblue; border-radius: 25px; box-shadow: 10px 10px 10px lightslategray;">
+				<h2>Internship search</h2>
+				<h3>I'm currently looking for a 6-month internship!</h3>
+				<h4 style="font-weight: 300;">This must be a paid internship starting in February 2026 and ending in August 2026, with the aim of being hired on an open-ended contract at the end of this period.</h4>
+				<a class="download-cv" href="./contact/">
+					<div class="download-cv-div">
+						<img style="height: 40px; margin-right: 10%;" src="../assets/icons/paper-plane-solid.svg">
+						<h2 class="cv-text">Contact me</h2>
+					</div>
+				</a>
+			</div>
+		</div>
+
+		<!--
+		<div style="margin: 25px 0;" class="hero-buttons in-dev-button">
+			<div class="in-dev">
+				<img style="height: 40px;" src="../../assets/icons/person-digging-solid.svg">
+				<h2 class="cv-text">This website is in development</h2>
+			</div>
+		</div>
+		-->
+
+
+		<div id="portfolio" class="section my-portfolio">
+			<h1 class="title">
+				MY PORTFOLIO
+			</h1>
+			<img src="../../assets/imgs/blob1.svg" style="padding: 0 30% 10% 0 ;" class="hero-imgs hero-svg">
+			<h3>Discover my background, my training and much more!</h3>
+			<a class="download-cv" href="./portfolio">
+				<div class="download-cv-div">
+					<img style="height: 40px; margin-right: 10%;" src="../../assets/icons/clipboard-user-solid.svg">
+					<h2 class="cv-text">Read more</h2>
+				</div>
+			</a>
+		</div>
+
+		<div class="section my-last-projects">
+			<h1 class="title">
+				MY LATEST PROJECTS
+			</h1>
+			<h3>Here are the latest projects I've done recently!</h3>
+			<div class="hero-buttons">
+				<div class="projects-buttons-cols">
+					<a class="download-cv" target="_blank">
+						<div class="jkuisine-div">
+							<img style="height: 50px; margin-right: 10%;" src="../assets/icons/psyls.png">
+							<div>
+								<h2 class="cv-text">Serveur LSP pour le PsyC</h2>
+								<h3>at Asterios Technologies</h3>
+							</div>
+						</div>
+					</a>
+					<a class="download-cv" target="_blank" href="https://kevinjmt.github.io/KJOS/">
+						<div class="kjos-div">
+							<img style="height: 75px; margin-right: 10%;" src="../../assets/icons/kjos-icon.png">
+							<div>
+								<h2 class="cv-text">KJOS</h2>
+								<h3>A Debloated Windows</h3>
+							</div>
+						</div>
+					</a>
+					<a class="download-cv" href="./myprojects/">
+						<div class="more-preojects-div">
+							<img style="height: 75px; margin-right: 10%;" src="../../assets/icons/angles-right-solid.svg">
+							<h2 class="cv-text">View All</h2>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="section my-contact">
+			<h1 class="title">
+				MY CONTACT
+			</h1>
+			<h3>Add me to your contacts and all my social medias!</h3>
+			<img src="../../assets/imgs/blob2.svg" style="padding: 0 0 10% 30% ;" class="hero-imgs hero-svg">
+			<div style="display: flex; flex-direction: column; align-items: center;">
+				<img class="contact-qr" src="../../assets/imgs/contact.png">
+				<h3>Scan the QR to add my contact or download it using the buttons below</h3>
+			</div>
+			<div class="hero-buttons-cols">
+				<a class="download-cv" target="_blank" href="../../assets/downloads/Kévin JAMET.vcf">
+					<div class="download-cv-div cv-shadow">
+						<img style="height: 40px; margin-right: 10%;" src="../../assets/icons/address-card-solid.svg">
+						<h2 class="cv-text">My Contact</h2>
+					</div>
+				</a>
+				<a class="download-cv" href="./contact">
+					<div class="download-cv-div">
+						<img style="height: 40px; margin-right: 10%;" src="../../assets/icons/angles-right-solid.svg">
+						<h2 class="cv-text">Contact me</h2>
+					</div>
+				</a>
+			</div>
+		</div>
+
+		<div class="section my-passion">
+			<h1 class="title">
+				MY PASSION
+			</h1>
+			<h3>Discover my life, what motivates me and makes me passionate for so many years!</h3>
+			<div class="hero-buttons-cols">
+				<a class="download-cv" href="./portfolio/#2016">
+					<div class="download-cv-div">
+						<img style="height: 40px; margin-right: 10%;" src="../../assets/icons/angles-right-solid.svg">
+						<h2 class="cv-text">Discover me</h2>
+					</div>
+				</a>
+			</div>
+		</div>
+
+
+	</div>
+
+
+	<footer class="footer">
+		<a href="../" style="padding-top: 5vh;">
+			<img class="imgtitle" src="../assets/icons/kjicon.png" >
+		</a>
+        <p style=" padding-top: 20px;">Made with ❤️ by KJ</p>
+		<div class="footerbox">
+			<div class="footercol">
+				<p>Documents</p>
+				<a target="_blank" href="../assets/downloads/CV - Kévin JAMET - EN.pdf">CV</a>
+				<a target="_blank" href="../assets/downloads/Kévin JAMET.vcf">Contact</a>
+			</div>
+			<div class="footercol">
+				<p>Links</p>
+				<a target="_blank" href="https://discordapp.com/users/1009783547722215505">Discord</a>
+				<a target="_blank" href="https://x.com/_kjprojects">X</a>
+				<a target="_blank" href="https://www.youtube.com/channel/UCP6D55Eu7XCB6tDRhHjaLRw">YouTube</a>
+				<a target="_blank" href="https://www.instagram.com/_kjprojects">Instagram</a>
+				<a target="_blank" href="https://www.linkedin.com/in/k%C3%A9vin-jamet-12a22222b/">LinkedIn</a>
+				<a target="_blank" href="https://github.com/kevinjmt">GitHub</a>
+			</div>
+		</div>
+		
+        <p style=" padding: 20px 0;">©️ Copyright KJ 2025</p>
+	</footer>
+</body>
+
+</html>

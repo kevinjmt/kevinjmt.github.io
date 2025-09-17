@@ -1,0 +1,703 @@
+/*     ---   RESETS   ---     */
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+    margin: 0; 
+    padding: 0;
+}
+nav{
+    margin: 0;
+}
+footer{
+    margin: 0;
+    padding: 0;
+}
+a,
+a:active,
+a:visited,
+a:hover{
+    text-decoration: none;
+}
+.mention-link,
+.mention-link:hover,
+.mention-link:active,
+.mention-link:visited{
+    text-decoration: none;
+}
+.footercol,
+.footercol a,
+.footercol a:visited,
+.footercol a:hover,
+.footercol a:active{
+    text-decoration: none;
+}
+
+/*    ---   GLOBALS   ---    */
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url("../../../assets/fonts/Montserrat-Black.ttf");
+}
+nav{
+    margin-bottom: 0;
+    height: 5rem;
+    width: 100%;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 0fr 1fr 2fr;
+    grid-template-rows: 100%;
+    border-radius: 0.5rem;
+    z-index: 1001;
+    background-color: rgba(255, 255, 255, 0.025);
+}
+
+.imgtitle{
+    text-align: center;
+    width: 3rem;
+    height: 3rem;
+}
+.kjbrand{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.navigationbar{
+    align-items: row;
+}
+
+.iloveburgers{
+    display: none;
+}
+
+.menutitles{
+    margin: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.menutitles a{
+    color: rgb(92, 91, 91);
+    text-decoration: none;
+    margin: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: 0.1s;
+    font-family: 'Montserrat', sans-serif;
+    font-size: larger;
+    transition: all 0.5s ease;
+}
+.menutitles a:hover{
+    color: #1b7eb7;
+    transition: all 0.5s ease;
+}
+
+.ham{
+    width: 50;
+    height: 50;
+    border-radius: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.bur{
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.ger{
+    width: 20px;
+    height: 3px;
+    border-radius: 3px;
+    background: rgb(92, 91, 91);
+    transition: 0.25s;
+}
+
+.q{
+    transform-origin: 0 0;
+}
+
+.e{
+    transform-origin: 0 100%;
+}
+
+.q.a{
+    transform: rotate(46.5deg) translate(0, -2px);
+    width: 28px;
+}
+
+.w.b{
+    opacity: 0;
+    transform: scale(0);
+}
+
+.e.c{
+    transform: rotate(-45deg) translate(0.5px, 1.5px);
+    width: 28px;
+}
+
+ul{
+    list-style: none;
+}
+.pagebody{
+    margin: 3% 0 10% 0;
+}
+
+.hero-block{
+    justify-content: center;
+}
+.bubble{
+    max-width: 120px;
+    padding: 5px 15px;
+    color: white;
+    background-color: black;
+    border-radius: 100px;
+}
+.hero-img{
+    width: calc(150px + (250 - 150) * ((100vw - 320px) / (1140 - 320)));
+    z-index: 1;
+    border-radius: 8%; 
+}
+.hero-svg{
+    position: absolute;
+    z-index: -1;
+}
+.hero-title{
+    font-size: calc(40px + (60 - 40) * ((100vw - 320px) / (1140 - 320)));
+}
+h1{
+    font-size: calc(26px + (32 - 26) * ((100vw - 320px) / (1140 - 320)));
+}
+h2{
+    font-size: calc(22px + (30 - 22) * ((100vw - 320px) / (1140 - 320)));
+}
+p{
+    font-size: calc(16px + (20 - 16) * ((100vw - 320px) / (1140 - 320)));
+}
+.hero-buttons{
+    display: flex;
+    justify-content: center;
+}
+.cv-text{
+    font-size: calc(14px + (20 - 14) * ((100vw - 320px) / (1500 - 320)));
+    color: black;
+}
+.github-text{
+    font-size: calc(14px + (20 - 14) * ((100vw - 320px) / (1500 - 320)));
+    color: black;
+}
+.download-cv, .github{
+    margin-top: 100px;
+    display: flex;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0 10px;
+}
+.download-cv-div, .download-github-div{
+    transition: 0.5s;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: black;
+    border: 5px solid black; 
+    border-radius: 25px;
+}
+.download-cv-div:hover{
+    text-shadow: lightblue 1px 1px 1px;
+    transition: 0.5s;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: rgb(96, 126, 136);
+    background-color: rgb(237, 251, 255);
+    border: 5px solid rgb(96, 126, 136); 
+    border-radius: 25px;
+}
+.cv-shadow:hover{
+    box-shadow: lightblue 3px 3px 3px;
+}
+.download-github-div:hover{
+    text-shadow: violet 1px 1px 1px;
+    box-shadow: violet 3px 3px 3px;
+    transition: 0.5s;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: purple;
+    background-color: rgb(255, 231, 255);
+    border: 5px solid purple; 
+    border-radius: 25px;
+}
+
+.pagebody{
+    background: rgb(255, 255, 255, 0.9);
+}
+.section{
+    margin: 25px 0;
+    text-align: center;
+}
+.my-portfolio, .my-contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*
+    background: linear-gradient(90deg, white, white, rgb(234, 250, 255), white, white);
+    */
+}
+.jkeys-div{
+    transition: 0.5s;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: darkgreen;
+    border: 5px solid darkgreen; 
+    border-radius: 25px;
+}
+.jkeys-div:hover{
+    text-shadow: rgb(255, 205, 104) 1px 1px 1px;
+    box-shadow: rgb(255, 205, 104) 3px 3px 3px;
+    transition: 0.5s;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: mediumseagreen;
+    background-color: rgb(255, 246, 228);
+    border: 5px solid mediumseagreen; 
+    border-radius: 25px;
+}
+.sudocru-div{
+    transition: 0.5s;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: darkblue;
+    border: 5px solid darkblue; 
+    border-radius: 25px;
+}
+.sudocru-div:hover{
+    text-shadow: rgb(255, 205, 104) 1px 1px 1px;
+    box-shadow: rgb(255, 205, 104) 3px 3px 3px;
+    transition: 0.5s;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: blue;
+    background-color: rgb(255, 246, 228);
+    border: 5px solid blue; 
+    border-radius: 25px;
+}
+.cubetools-div{
+    transition: 0.5s;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: gold;
+    border: 5px solid gold; 
+    border-radius: 25px;
+}
+.cubetools-div:hover{
+    text-shadow: rgb(255, 205, 104) 3px 3px 3px;
+    box-shadow: rgb(255, 205, 104) 3px 3px 3px;
+    transition: 0.5s;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: goldenrod;
+    background-color: rgb(255, 246, 228);
+    border: 5px solid goldenrod; 
+    border-radius: 25px;
+}
+.more-preojects-div{
+    transition: 0.5s;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: black;
+    border: 5px solid black; 
+    border-radius: 25px;
+}
+.more-preojects-div:hover{
+    text-shadow: lightblue 1px 1px 1px;
+    box-shadow: lightblue 3px 3px 3px;
+    transition: 0.5s;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: rgb(96, 126, 136);
+    background-color: rgb(237, 251, 255);
+    border: 5px solid rgb(96, 126, 136); 
+    border-radius: 25px;
+}
+
+.title{
+    margin-top: 100px;
+}
+.mention{
+    background-color: lightgray; 
+    font-style: italic;  
+    padding: 0 10%;
+    border-radius: 15px;
+}
+.mention-text{
+    color: gray;
+}
+.mention-link{
+    transition: 0.5s;
+    color: gray;
+}
+.mention-link:hover{
+    transition: 0.5s;
+    text-shadow: white 3px 3px 3px;
+    color: black;
+}
+
+
+
+
+/*  ---   RESPONSIVE   ---  */
+
+/* PHONES */
+@media (max-width: 767px){
+    nav{
+        grid-template-columns: 15% 70% 15%;
+        box-shadow: 0 10px 10px rgb(180, 178, 178, 0.25);
+        border-radius: 0.5rem;
+    }
+    .kjbrand{
+        justify-content: center;
+        text-align: center;
+        z-index: 2000;
+    }
+    .imgtitle{
+        justify-content: flex-start;
+        align-content: center;
+    }
+    .iloveburgers{
+        display: flex;
+        justify-content: center;
+        align-items:center;
+        z-index: 2000;
+    }
+    .menutitles{
+        position: absolute;
+        width: 100%;
+        height: fit-content;
+        margin: 0 auto;
+        padding: 75px 0 30px 0;
+        box-sizing: border-box;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+        z-index: -100;
+        transition: 0.25s;
+        transform: translate(0, -300px); 
+        color: rgb(92, 91, 91);
+        background: white;
+    }
+    .menutitles.show{
+        transform: translate(0, 5%);
+        z-index: 999;
+    }
+    .menutitles a{
+        color: rgb(92, 91, 91);
+    }
+    .menutitles{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding-bottom: 100%;
+        z-index: -2;
+    }
+    .hero-block{
+        margin: 100px 0;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        padding: 0 5%;
+    }
+    .hero-text{
+        justify-content: center;
+        text-align: center;
+    }
+    .download-cv-div, .download-github-div{
+        margin-top: 10px;
+        width: 250px;
+        height: 75px;
+    }
+    .hero-buttons-cols{
+        display: flex;
+        flex-direction: column;
+    }
+    .project-list{
+        display: flex;
+        flex-direction: column;
+    }
+    .discover-button{
+        display: none;
+    }
+    .projects-buttons-cols{
+        display: flex;
+        flex-direction: column;
+    }
+    .bubble{
+        margin: 25px auto;
+    }
+    /*
+    .my-last-projects{
+        background: linear-gradient(90deg, rgb(234, 250, 255), white, white, white, rgb(234, 250, 255));
+    }
+    .my-portfolio, .my-contact {
+        background: linear-gradient(90deg, white, white, rgb(234, 250, 255), white, white);
+    }
+    */
+    .sudocru-div{
+        text-align: left;
+        margin-top: 10px;
+        width: 300px;
+        height: 150px;
+    }
+    .sudocru-div:hover{
+        text-align: left;
+        margin-top: 10px;
+        width: 300px;
+        height: 150px;
+    }
+    .cubetools-div{
+        text-align: left;
+        margin-top: 10px;
+        width: 300px;
+        height: 150px;
+    }
+    .cubetools-div:hover{
+        text-align: left;
+        margin-top: 10px;
+        width: 300px;
+        height: 150px;
+    }
+    .more-preojects-div{
+        text-align: left;
+        margin-top: 10px;
+        width: 250px;
+        height: 150px;
+    }
+    .more-preojects-div:hover{
+        text-align: left;
+        margin-top: 10px;
+        width: 250px;
+        height: 150px;
+    }
+    .section{
+        padding: 25px 10%;
+    }
+    
+    .svg-phone{
+        display: none;
+    }
+    .hero-svg{
+        padding: 0;
+        width: 70%;
+    }
+}
+
+
+/* TABLETS */
+@media (min-width: 768px){
+    .hero-block{
+        margin: 100px 0;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        padding: 0 10%;
+    }
+    .kjbrand{
+        margin-left: 20%;
+    }
+    .bubble{
+        margin: 25px auto;
+    }
+    .hero-text{
+        justify-content: center;
+        text-align: center;
+    }
+    .download-cv-div, .download-github-div{
+        margin-top: 10px;
+        width: 250px;
+        height: 75px;
+    }
+    .hero-buttons-cols{
+        display: flex;
+        flex-direction: row;
+    }
+    .project-list{
+        display: flex;
+        flex-direction: column;
+    }
+    .discover-button{
+        display: none;
+    }
+    .projects-buttons-cols{
+        display: flex;
+        flex-direction: column;
+    }    
+    .jkeys-div{
+        text-align: left;
+        margin-top: 10px;
+        width: 300px;
+        height: 150px;
+    }
+    .jkeys-div:hover{
+        text-align: left;
+        margin-top: 10px;
+        width: 300px;
+        height: 150px;
+    }
+    .sudocru-div{
+        text-align: left;
+        margin-top: 10px;
+        width: 300px;
+        height: 150px;
+    }
+    .sudocru-div:hover{
+        text-align: left;
+        margin-top: 10px;
+        width: 300px;
+        height: 150px;
+    }
+    .cubetools-div{
+        text-align: left;
+        margin-top: 10px;
+        width: 300px;
+        height: 150px;
+    }
+    .cubetools-div:hover{
+        text-align: left;
+        margin-top: 10px;
+        width: 300px;
+        height: 150px;
+    }
+    .more-preojects-div{
+        text-align: left;
+        margin-top: 10px;
+        width: 300px;
+        height: 150px;
+    }
+    .more-preojects-div:hover{
+        text-align: left;
+        margin-top: 10px;
+        width: 300px;
+        height: 150px;
+    }
+    .section{
+        padding: 25px 15%;
+    }
+    .hero-svg{
+        padding: 0;
+        width: 50%;
+    }
+}
+
+
+/* PCs */
+@media (min-width: 1024px){
+    .hero-block{
+        margin: 150px 0;
+        padding: 0 10%;
+        display: flex;
+        flex-direction: row;
+    }
+    .bubble{
+        margin: 0;
+    }
+    .hero-text{
+        justify-content: center;
+        text-align: left;
+    }
+    .hero-text{
+        margin-left: 100px;
+        justify-content: center;
+        text-align: left;
+    }
+    .project-list{
+        display: flex;
+        flex-direction: row;
+    }
+    .discover-button{
+        display: flex;
+    }
+    .download-cv-div, .download-github-div{
+        margin-top: 10px;
+        width: 250px;
+        height: 75px;
+    }
+    .hero-buttons-cols{
+        display: flex;
+        flex-direction: row;
+    }
+    .projects-buttons-cols{
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .jkeys-div{
+        text-align: left;
+        margin-top: 10px;
+        width: 300px;
+        height: 150px;
+    }
+    .jkeys-div:hover{
+        text-align: left;
+        margin-top: 10px;
+        width: 300px;
+        height: 150px;
+    }
+    .sudocru-div{
+        text-align: left;
+        margin-top: 10px;
+        width: 500px;
+        height: 150px;
+    }
+    .sudocru-div:hover{
+        text-align: left;
+        margin-top: 10px;
+        width: 500px;
+        height: 150px;
+    }
+    .more-preojects-div{
+        text-align: left;
+        margin-top: 10px;
+        width: 300px;
+        height: 150px;
+    }
+    .cubetools-div{
+        text-align: left;
+        margin-top: 10px;
+        width: 500px;
+        height: 150px;
+    }
+    .cubetools-div:hover{
+        text-align: left;
+        margin-top: 10px;
+        width: 500px;
+        height: 150px;
+    }
+    .more-preojects-div:hover{
+        text-align: left;
+        margin-top: 10px;
+        width: 300px;
+        height: 150px;
+    }
+    .section{
+        padding: 25px 20%;
+    }
+}

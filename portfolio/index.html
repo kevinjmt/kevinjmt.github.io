@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>KJ - Portfolio</title>
+	<link rel="stylesheet" href="../assets/css/portfolio.css">
+	<link rel="stylesheet" href="../assets/css/footer.css">
+	<link rel="shortcut icon" type="image/png" href="../assets/icons/kjicon.png">
+	<meta property="og:title" content="Kévin JAMET" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://kevinjmt.github.io/" />
+	<meta property="og:description" content="Un étudiant curieux, passionné, créatif et investit en école d'ingénieur informatique" />
+	<meta property="og:image" content="https://kevinjmt.github.io/assets/icons/kjicon.png" />	
+	<meta property="og:image:secure_url" content="https://kevinjmt.github.io/assets/icons/kjicon.png" />
+
+	<meta http-equiv='cache-control' content='no-cache'> 
+	<meta http-equiv='expires' content='0'> 
+	<meta http-equiv='pragma' content='no-cache'>
+</head>
+
+<body>
+	<nav id="top">
+		<div></div>
+		<div class="kjbrand">	
+			<a href="../">
+				<img class="imgtitle" src="../assets/icons/kjicon.png" >
+			</a>
+		</div>
+		<div class="menutitles">
+			<a href="../">Home</a>
+			<a href="../portfolio">Portfolio</a>
+			<a href="../mesprojets">Mes Projets</a>
+			<a href="../contact">Contact</a>
+			<a href="../en/portfolio"><img src="../assets/icons/uk.png" class="flag"></a>
+		</div>
+		<div class="iloveburgers" onclick="eatoneburger()">
+			<div class="ham">
+				<div class="bur">
+					<span class="ger q"></span>
+					<span class="ger w"></span>
+					<span class="ger e"></span>
+				</div>
+			</div>
+			<script>
+				document.querySelector(".ham").addEventListener("click", function(){
+					document.querySelector(".q").classList.toggle("a")
+					document.querySelector(".w").classList.toggle("b")
+					document.querySelector(".e").classList.toggle("c")
+				})
+				function eatoneburger(){
+					document.querySelector(".menutitles").classList.toggle("show");
+				}
+			</script>
+		</div>
+	</nav>
+
+	
+
+	<div class="pagebody">
+
+		<div class="section my-last-projects">
+			<img src="../assets/imgs/blob5.svg" style=" height: 70%;" class="hero-imgs hero-svg">
+			<h1 class="hero-title">
+				MON PORTFOLIO
+			</h1>
+			<h2>Ma vie, mes projets, mon parcours, mes formations et bien plus !</h2>
+			<h3>Séléctionner une année:</h3>
+			
+			<div class="year-list">
+				<a class="yearmenu" href="#2024"><h2>2024</h2></a>
+				<a class="yearmenu" href="#2023"><h2>2023</h2></a>
+				<a class="yearmenu" href="#2022"><h2>2022</h2></a>
+				<a class="yearmenu" href="#2021"><h2>2021</h2></a>
+				<a class="yearmenu" href="#2020"><h2>2020</h2></a>
+				<a class="yearmenu" href="#2019"><h2>2019</h2></a>
+				<a class="yearmenu" href="#2018"><h2>2018</h2></a>
+				<a class="yearmenu" href="#2017"><h2>2017</h2></a>
+				<a class="yearmenu" href="#2016"><h2>2016</h2></a>
+			</div>
+		</div>
+
+			
+		<div class="section my-last-projects">
+			<h1 class="hero-title year" style="margin-bottom: 100px;">EN CE MOMENT</h1>
+			
+			<img id="epita" style="width: 25%;" src="../assets/icons/epita.png">
+			<h2>EPITA - Kremlin-Bicêtre</h2>
+			<h3>PROMO 2026</h3>
+			<h3>3ème Année - Cycle Ingénieur</h3>
+			<h3 style="margin-bottom: 100px;"><a style="color: #1b7eb7; text-decoration: none;"
+				href="../historic/epita">En savoir plus</a></h3>
+
+			<h4 style="margin: 10vh 0 25vh 0; display: none;">Rien de prévu en ce moment... :/</h4>
+		</div>
+
+
+		<img src="../assets/imgs/blob2.svg" style="padding-left: 10%; height: 80%;" class="hero-imgs hero-svg">
+
+		<div class="section my-last-projects">
+			<h1 id="2024" class="hero-title year">2024</h1>
+			<h3 style="margin-bottom: 100px;"><a style="color: #1b7eb7; text-decoration: none;"
+				 href="#top">Début de Page</a></h3>
+				 
+			<img style="width: 25%; border-radius: 150px;" src="../assets/icons/safran.png">
+			<h2>Stage 4A</h2>
+			<h3><a target="_blank" href="https://www.safran-group.com/fr/societes/asterios-technologies">Asterios Technologies</a></h3>
+			<h3>Développer un LSP en Rust pour le langage PsyC</h3>
+			<h3>(Appartenant au groupe <a target="_blank" href="https://www.safran-group.com/fr/societes/safran-electronics-defense">Safran Electronics & Defense</a>)</h3>
+			<h3 style="margin-bottom: 100px;"><a style="color: #1b7eb7; text-decoration: none;"
+				href="../historic/epita"></a></h3>
+
+			<img style="width: 25%; border-radius: 15px;" src="../assets/icons/upec.png">
+			<h2>License UPEC</h2>
+			<h3>Admis</h3>
+			<h3>(En parralèle de l'EPITA)</h3>
+			
+			<img style="width: 20%; " src="../assets/icons/inrs.png">
+			<h2>Formation INRS - SST (en ligne)</h2>
+			<h3 style="margin-bottom: 100px;">Formation à la santé et à la sécurité au travail</h3>
+
+			<img id="toeic" style="width: 25%;" src="../assets/icons/toeic.png">
+			<h2>TOEIC</h2>
+			<h3>835/990 points</h3>
+			<h3>TOEIC 800 validé</h3>
+			<h3 style="margin-bottom: 100px;"><a style="color: #1b7eb7; text-decoration: none;"
+				href="../historic/toeic">En savoir plus</a></h3>
+				 
+		</div>
+			
+			
+		<div class="section my-last-projects">
+			<h1 id="2023" class="hero-title year">2023</h1>
+			<h3 style="margin-bottom: 100px;"><a style="color: #1b7eb7; text-decoration: none;"
+				 href="#top">Début de Page</a></h3>
+			
+
+			<img id="epita" style="width: 25%;" src="../assets/icons/epita.png">
+			<h2>EPITA - Kremlin-Bicêtre</h2>
+			<h3>PROMO 2026</h3>
+			<h3>Rentrée en Cycle Ingénieur</h3>
+			<h3 style="margin-bottom: 100px;"><a style="color: #1b7eb7; text-decoration: none;"
+				href="../historic/epita">En savoir plus</a></h3>
+				 
+			<img src="../assets/imgs/blob7.svg" style=" height: 80%;" class="hero-imgs hero-svg">
+			
+			<img style="width: 20%; " src="../assets/icons/logo-protection-civile.png">
+			<h2>Formation Premiers Secours Citoyen (PSC1)</h2>
+			<h3>Formation au secourisme de la Protection Civile</h3>
+			<h3 style="margin-bottom: 100px;"><a style="color: #1b7eb7; text-decoration: none;"
+				target="_blank" href="https://www.protection-civile.org/psc/">En savoir plus</a></h3>
+
+			<img id="patapain" style="width: 25%;" src="../assets/icons/pap.png">
+			<h2>Emploi d'été</h2>
+			<h3>Restauration Rapide</h3>
+			<h2><a target="_blank" href="https://www.patapain.com/">Pat A Pain</a></h2>
+			<h4>(Pipact)</h4>
+			<h4>Mai 2023 – Juillet 2023</h4>
+			<h3 style="margin-bottom: 100px;"><a style="color: #1b7eb7; text-decoration: none;"
+				 href="../historic/patapain">En savoir plus</a></h3>
+
+			<img id="dorset" style="width: 20%;" src="../assets/icons/ir.png">
+			<h2>Semestre à l'international (Dublin - Irlande)</h2>
+			<h3>S4 à <a target="_blank" href="https://dorset.ie/">Dorset College (Dublin)</a></h3>
+			<h4>Développement WEB</h4>
+			<h3 style="margin-bottom: 100px;"><a style="color: #1b7eb7; text-decoration: none;"
+				 href="../historic/s4-international">En savoir plus</a></h3>
+		</div>
+			
+		
+		<div class="section my-last-projects">
+			<h1 id="2022" class="hero-title year">2022</h1>
+			<h3 style="margin-bottom: 100px;"><a style="color: #1b7eb7; text-decoration: none;"
+				 href="#top">Début de Page</a></h3>
+
+			<img style="width: 25%;" src="../assets/icons/pap.png">
+			<h2>Emploi d'été</h2>
+			<h3>Restauration Rapide</h3>
+			<h2><a target="_blank" href="https://www.patapain.com/">Pat A Pain</a></h2>
+			<h4>(Pipact)</h4>
+			<h4>Juin 2022 – Août 2022</h4>
+			<h3 style="margin-bottom: 100px;"><a style="color: #1b7eb7; text-decoration: none;"
+				 href="../historic/patapain">En savoir plus</a></h3>
+		</div>
+
+
+					
+		<img src="../assets/imgs/blob6.svg" style="padding-left: 10%; height: 80%;" class="hero-imgs hero-svg">
+
+		
+		<div class="section my-last-projects">
+			<h1 id="2021" class="hero-title year">2021</h1>
+			<h3 style="margin-bottom: 100px;"><a style="color: #1b7eb7; text-decoration: none;"
+				 href="#top">Début de Page</a></h3>
+
+				 
+			
+			<img id="epita" style="width: 25%;" src="../assets/icons/epita.png">
+			<h2>EPITA - Villejuif</h2>
+			<h3>PROMO 2026</h3>
+			<h3>Rentrée en Cycle Préparatoire</h3>
+			<h3 style="margin-bottom: 100px;"><a style="color: #1b7eb7; text-decoration: none;"
+				 href="../historic/epita">En savoir plus</a></h3>
+
+			<img style="width: 25%;" src="../assets/icons/pap.png">
+			<h2>Emploi d'été</h2>
+			<h3>Restauration Rapide</h3>
+			<h2><a target="_blank" href="https://www.patapain.com/">Pat A Pain</a></h2>
+			<h4>(Charles de Gaulle)</h4>
+			<h4>Juin 2021 – Août 2021</h4>
+			<h3 style="margin-bottom: 100px;"><a style="color: #1b7eb7; text-decoration: none;"
+				 href="../historic/patapain">En savoir plus</a></h3>
+
+			<img id="cambridge" style="width: 10%;" src="../assets/icons/cambridge.png">
+			<h2>Diplôme Cambridge</h2>
+			<h3>Certifié B2</h3>
+			<h3 style="margin-bottom: 100px;"><a style="color: #1b7eb7; text-decoration: none;" 
+				href="../historic/cambridge">En savoir plus</a></h3>
+
+			<img id="bac" style="width: 10%; margin-top: 50px;" src="../assets/icons/graduation-cap-solid.svg">
+			<h2>Diplôme Baccalauréat 2021</h2>
+			<h3>Mention Très Bien</h3>
+			<h3 style="margin-bottom: 100px;"><a style="color: #1b7eb7; text-decoration: none;"
+				 href="../historic/bac">En savoir plus</a></h3>
+
+			<h1 id="2020" class="hero-title year">2020</h1>
+			<h3 style="margin-bottom: 100px;"><a style="color: #1b7eb7; text-decoration: none;"
+				 href="#top">Début de Page</a></h3>
+
+			<img src="../assets/imgs/blob2.svg" style=" height: 80%;" class="hero-imgs hero-svg">
+		</div> 
+		
+
+		
+		<div class="section my-last-projects">
+			<img style="width: 10%; " src="../assets/icons/id-card-solid.svg">
+			<h2>Obtention du permis de conduire</h2>
+			<h3 style="margin-bottom: 100px;">Permis B (AAC)</h3>
+
+			<img id="hsk" style="width: 25%;" src="../assets/icons/hsk.png">
+			<h2>Diplôme HSK 3</h2>
+			<h3>Certifié A2-B1</h3>
+			<h3 style="margin-bottom: 100px;"><a style="color: #1b7eb7; text-decoration: none;"
+				 href="../historic/hsk">En savoir plus</a></h3>
+
+
+			<h1 id="2019" class="hero-title year">2019</h1>
+			<h3 style="margin-bottom: 100px;"><a style="color: #1b7eb7; text-decoration: none;"
+				 href="#top">Début de Page</a></h3>
+				 			
+
+			<img style="width: 10%;" src="../assets/icons/cambridge.png">
+			<h2>Diplôme Cambridge</h2>
+			<h3>Certifié B1</h3>
+			<h3 style="margin-bottom: 100px;"><a style="color: #1b7eb7; text-decoration: none;"
+				 href="../historic/cambridge">En savoir plus</a></h3>
+
+			<img id="paragonid" style="width: 25%;" src="../assets/icons/paragonid.png">
+			<h2>Stage d'observation</h2>
+			<h3>Paragon ID (Argent s/ Sauldre)</h3>
+			<h3>Production de cartes électroniques et magnétiques</h3>
+			<h3 style="margin-bottom: 100px;"><a style="color: #1b7eb7; text-decoration: none;"
+				 href="../historic/paragonid">En savoir plus</a></h3>
+		</div>
+
+		<img src="../assets/imgs/blob8.svg" style="padding-left: 5%; height: 80%;" class="hero-imgs hero-svg">
+		
+		<div class="section my-last-projects">
+			<img id="uk2019" style="width: 20%;" src="../assets/icons/uk.png">
+			<h2>Voyage Linguistique</h2>
+			<h3>(Royaume-Uni - Londres & Cambridge)</h3>
+			<h4>1 semaine</h4>
+			<h3 style="margin-bottom: 100px;"><a style="color: #1b7eb7; text-decoration: none;"
+				 href="../historic/royaume-uni-2019">En savoir plus</a></h3>
+
+
+			<h1 id="2018" class="hero-title year">2018</h1>
+			<h3 style="margin-bottom: 100px;"><a style="color: #1b7eb7; text-decoration: none;"
+				 href="#top">Début de Page</a></h3>
+
+			<img id="it2018" style="width: 20%;" src="../assets/icons/it.png">
+			<h2>Voyage Linguistique</h2>
+			<h3>(Italie - Rome & Pompei)</h3>
+			<h4>1 semaine</h4>
+			<h3 style="margin-bottom: 100px;"><a style="color: #1b7eb7; text-decoration: none;"
+				 href="../historic/italie-2018">En savoir plus</a></h3>
+			
+			<img id="ch2018" style="width: 20%;" src="../assets/icons/ch.png">
+			<h2>Voyage Linguistique</h2>
+			<h3>(Chine - Pékin & Xi'an)</h3>
+			<h3>(中国 - 北京 & 西安)</h3>
+			<h4>2 semaine</h4>
+			<h4>Camp d'Automne 2018</h4>
+			<h4>2018年秋令营</h4>
+			<h4>(invité par le gouvernement chinois)</h4>
+			<h3 style="margin-bottom: 100px;"><a style="color: #1b7eb7; text-decoration: none;"
+				 href="../historic/chine-2018">En savoir plus</a></h3>
+
+			<img src="../assets/imgs/blob4.svg" style=" height: 80%;" class="hero-imgs hero-svg">
+						
+			<img id="esbc" style="width: 10%;" src="../assets/icons/esbc.png">
+			<h2>ESBC - Lycée Ste Marie - Bourges</h2>
+			<h3>Rentrée au Lycée Ste Marie</h3>
+			<h3 style="margin-bottom: 100px;"><a style="color: #1b7eb7; text-decoration: none;"
+				 href="../historic/college-lycee-ste-marie-bourges">En savoir plus</a></h3>
+
+				 
+			<img style="width: 25%;" src="../assets/icons/hsk.png">
+			<h2>Diplôme HSK 2</h2>
+			<h3>Certifié A2</h3>
+			<h3 style="margin-bottom: 100px;"><a style="color: #1b7eb7; text-decoration: none;"
+				 href="../historic/hsk">En savoir plus</a></h3>
+		</div>
+
+		
+		<div class="section my-last-projects">
+			<h1 id="2017" class="hero-title year">2017</h1>
+			<h3 style="margin-bottom: 100px;"><a style="color: #1b7eb7; text-decoration: none;"
+				 href="#top">Début de Page</a></h3>
+
+			<img style="width: 25%;" src="../assets/icons/hsk.png">
+			<h2>Diplôme HSK 1</h2>
+			<h3>Certifié A1</h3>
+			<h3 style="margin-bottom: 100px;"><a style="color: #1b7eb7; text-decoration: none;"
+				 href="../historic/hsk">En savoir plus</a></h3>
+		</div>
+
+				 			
+		<img src="../assets/imgs/blob1.svg" style="padding-left: 10%; height: 80%;" class="hero-imgs hero-svg">
+
+		
+		<div class="section my-last-projects">
+			<img id="onoffpc" style="width: 25%;" src="../assets/icons/onoff.png">
+			<h2>Stage d'observation</h2>
+			<h3>ON/OFF PC (Sancoins)</h3>
+			<h3>Dépannage et réparation de systèmes informatiques</h3>
+			<h3 style="margin-bottom: 100px;"><a style="color: #1b7eb7; text-decoration: none;"
+				 href="../historic/on-off-pc">En savoir plus</a></h3>
+
+			<h1 id="2016" class="hero-title year">2016</h1>
+			<h3 style="margin-bottom: 100px;"><a style="color: #1b7eb7; text-decoration: none;"
+				href="#top">Début de Page</a></h3>
+
+			<h2 id="me">Ma vie</h2>
+			<h3>Ce qui me motive et me passionne depuis tant d'années</h3>
+			<h3 style="margin-bottom: 100px;"><a style="color: #1b7eb7; text-decoration: none;"
+				href="../historic/medecouvrir">En savoir plus</a></h3>
+				
+			<h3>⬆️ Scroll ⬆️</h3>
+			<h3>Pour parcourir les étapes de ma vie !</h3>
+		</div>
+
+	</div>
+
+
+	<footer class="footer">
+		<a href="../" style="padding-top: 5vh;">
+			<img class="imgtitle" src="../assets/icons/kjicon.png" >
+		</a>
+        <p style=" padding-top: 20px;">Made with ❤️ by KJ</p>
+		<div class="footerbox">
+			<div class="footercol">
+				<p>Documents</p>
+				<a target="_blank" href="../assets/downloads/CV - Kévin JAMET.pdf">CV</a>
+				<a target="_blank" href="../assets/downloads/Kévin JAMET.vcf">Contact</a>
+			</div>
+			<div class="footercol">
+				<p>Liens</p>
+				<a target="_blank" href="https://discordapp.com/users/1009783547722215505">Discord</a>
+				<a target="_blank" href="https://x.com/_kjprojects">X</a>
+				<a target="_blank" href="https://www.youtube.com/channel/UCP6D55Eu7XCB6tDRhHjaLRw">YouTube</a>
+				<a target="_blank" href="https://www.instagram.com/_kjprojects">Instagram</a>
+				<a target="_blank" href="https://www.linkedin.com/in/k%C3%A9vin-jamet-12a22222b/">LinkedIn</a>
+				<a target="_blank" href="https://github.com/kevinjmt">GitHub</a>
+			</div>
+		</div>
+		
+        <p style=" padding: 20px 0;">©️ Copyright KJ 2025</p>
+	</footer>
+</body>
+
+</html>
