@@ -295,6 +295,27 @@ p{
     border: 5px solid darkorange; 
     border-radius: 25px;
 }
+.automata-div{
+    transition: 0.5s;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: gray;
+    border: 5px solid gray; 
+    border-radius: 25px;
+}
+.automata-div:hover{
+    text-shadow: lightgray 1px 1px 1px;
+    box-shadow: lightgray 3px 3px 3px;
+    transition: 0.5s;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: black;
+    background-color: lightgray;
+    border: 5px solid black; 
+    border-radius: 25px;
+}
 .kjos-div{
     transition: 0.5s;
     justify-content: center;
@@ -484,6 +505,18 @@ p{
         width: 250px;
         height: 150px;
     }
+    .automata-div{
+        text-align: left;
+        margin-top: 10px;
+        width: 250px;
+        height: 150px;
+    }
+    .automata-div:hover{
+        text-align: left;
+        margin-top: 10px;
+        width: 250px;
+        height: 150px;
+    }
     .kjos-div{
         text-align: left;
         margin-top: 10px;
@@ -594,6 +627,18 @@ p{
         width: 300px;
         height: 150px;
     }
+    .automata-div{
+        text-align: left;
+        margin-top: 10px;
+        width: 300px;
+        height: 150px;
+    }
+    .automata-div:hover{
+        text-align: left;
+        margin-top: 10px;
+        width: 300px;
+        height: 150px;
+    }
     .kjos-div{
         text-align: left;
         margin-top: 10px;
@@ -696,6 +741,18 @@ p{
         height: 150px;
     }
     .jkuisine-div:hover{
+        text-align: left;
+        margin-top: 10px;
+        width: 300px;
+        height: 150px;
+    }
+    .automata-div{
+        text-align: left;
+        margin-top: 10px;
+        width: 300px;
+        height: 150px;
+    }
+    .automata-div:hover{
         text-align: left;
         margin-top: 10px;
         width: 300px;
