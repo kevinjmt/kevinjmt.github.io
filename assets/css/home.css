@@ -378,6 +378,27 @@ p{
     border: 5px solid rgb(96, 126, 136); 
     border-radius: 25px;
 }
+.decathlon-div{
+    transition: 0.5s;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: darkblue;
+    border: 5px solid darkblue; 
+    border-radius: 25px;
+}
+.decathlon:hover{
+    text-shadow: rgb(104, 144, 255) 1px 1px 1px;
+    box-shadow: rgb(104, 144, 255) 3px 3px 3px;
+    transition: 0.5s;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: blue;
+    background-color: rgb(228, 238, 255);
+    border: 5px solid blue; 
+    border-radius: 25px;
+}
 
 
 
@@ -541,6 +562,18 @@ p{
         width: 250px;
         height: 150px;
     }
+    .decathlon-div{
+        text-align: left;
+        margin-top: 10px;
+        width: 250px;
+        height: 150px;
+    }
+    .decathlon-div:hover{
+        text-align: left;
+        margin-top: 10px;
+        width: 250px;
+        height: 150px;
+    }
     .more-preojects-div{
         text-align: left;
         margin-top: 10px;
@@ -663,6 +696,18 @@ p{
         width: 300px;
         height: 150px;
     }
+    .decathlon-div{
+        text-align: left;
+        margin-top: 10px;
+        width: 300px;
+        height: 150px;
+    }
+    .decathlon-div:hover{
+        text-align: left;
+        margin-top: 10px;
+        width: 300px;
+        height: 150px;
+    }
     .more-preojects-div{
         text-align: left;
         margin-top: 10px;
@@ -777,6 +822,18 @@ p{
         height: 150px;
     }
     .ezit-div:hover{
+        text-align: left;
+        margin-top: 10px;
+        width: 300px;
+        height: 150px;
+    }
+    .decathlon-div{
+        text-align: left;
+        margin-top: 10px;
+        width: 300px;
+        height: 150px;
+    }
+    .decathlon-div:hover{
         text-align: left;
         margin-top: 10px;
         width: 300px;
