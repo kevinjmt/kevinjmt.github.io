@@ -153,14 +153,14 @@ ul{
     justify-content: center;
 }
 .bubble{
-    max-width: 362px;
+    max-width: 350px;
     padding: 5px 15px;
     color: white;
     background-color: black;
     border-radius: 100px;
 }
 .enbubble{
-    max-width: 335px;
+    max-width: 200px;
     padding: 5px 15px;
     color: white;
     background-color: black;
