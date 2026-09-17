@@ -1,706 +1,128 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>KJ - My Projects</title>
+	<title>Kévin JAMET — My Projects</title>
+	<meta name="description" content="Tous les projets de Kévin JAMET, du plus récent au plus ancien : embarqué, OS, web, IA.">
+	<link rel="stylesheet" href="../../assets/css/theme.css">
 	<link rel="stylesheet" href="../../assets/css/myprojects.css">
 	<link rel="stylesheet" href="../../assets/css/footer.css">
 	<link rel="shortcut icon" type="image/png" href="../../assets/icons/kjicon.png">
-	<meta property="og:title" content="Kévin JAMET" />
+	<meta property="og:title" content="Kévin JAMET — Mes Projets" />
 	<meta property="og:type" content="website" />
-	<meta property="og:url" content="https://kevinjmt.github.io/" />
-	<meta property="og:description" content="A curious, passionate, creative and committed student at a computer engineering school" />
-	<meta property="og:image" content="https://kevinjmt.github.io/assets/icons/kjicon.png" />	
-	<meta property="og:image:secure_url" content="https://kevinjmt.github.io/assets/icons/kjicon.png" />
-
-	<meta http-equiv='cache-control' content='no-cache'> 
-	<meta http-equiv='expires' content='0'> 
-	<meta http-equiv='pragma' content='no-cache'>
+	<meta property="og:url" content="https://kevinjmt.github.io/mesprojets" />
+	<meta property="og:image" content="https://kevinjmt.github.io/assets/icons/kjicon.png" />
 </head>
-
 <body>
-	<nav>
+	<nav id="top">
 		<div></div>
-		<div class="kjbrand">
-			<a href="../">
-				<img class="imgtitle" src="../../assets/icons/kjicon.png" >
-			</a>
+		<div class="kjbrand"><a href="../"><img class="imgtitle" src="../../assets/icons/kjicon.png" alt="KJ"><span class="brand-name">Kévin JAMET<small>Embedded Engineer</small></span></a></div>
+		<div class="menutitles" id="menu">
+			<a href="../">Home</a><a href="../portfolio">Portfolio</a><a href="../myprojects" class="active">My Projects</a><a href="../contact">Contact</a>
+			<a href="../../mesprojets"><img src="../../assets/icons/fr.png" class="flag" alt="EN"></a>
 		</div>
-		<div class="menutitles">
-			<a href="../">Home</a>
-			<a href="../portfolio">Portfolio</a>
-			<a href="../myprojects">My Projects</a>
-			<a href="../contact">Contact</a>
-			<a href="../../mesprojets"><img src="../../assets/icons/fr.png" class="flag"></a>
-		</div>
-		<div class="iloveburgers" onclick="eatoneburger()">
-			<div class="ham">
-				<div class="bur">
-					<span class="ger q"></span>
-					<span class="ger w"></span>
-					<span class="ger e"></span>
-				</div>
-			</div>
-			<script>
-				document.querySelector(".ham").addEventListener("click", function(){
-					document.querySelector(".q").classList.toggle("a")
-					document.querySelector(".w").classList.toggle("b")
-					document.querySelector(".e").classList.toggle("c")
-				})
-				function eatoneburger(){
-					document.querySelector(".menutitles").classList.toggle("show");
-				}
-			</script>
-		</div>
+		<div class="iloveburgers"><div class="ham" id="burger" role="button" aria-label="Menu" tabindex="0"><div class="bur"><span class="ger q"></span><span class="ger w"></span><span class="ger e"></span></div></div></div>
 	</nav>
 
-	
-
-	<div class="pagebody">
-
-		<img src="../../assets/imgs/blob1.svg" style=" height: 80%;" class="hero-imgs hero-svg">
-		<div class="section my-last-projects">
-			<h1 class="hero-title">
-				MY LATEST PROJECTS
-			</h1>
-			<h2>All my projects from the most recent to the oldest!</h2>			
-			<h3>Select a year:</h3>
-			<div style="display: flex; flex-direction: row; justify-content: center; ">
-				<a class="yearmenu" href="#2026"><h2>2026</h2></a>
-				<a class="yearmenu" href="#2025"><h2>2025</h2></a>
-				<a class="yearmenu" href="#2024"><h2>2024</h2></a>
-				<a class="yearmenu" href="#2023"><h2>2023</h2></a>
-				<a class="yearmenu" href="#2022"><h2>2022</h2></a>
+	<div class="pagebody container">
+		<header class="page-hero">
+			<p class="eyebrow"><span class="dot"></span> Projets · 2022 → 2026</p>
+			<h1 class="hero-title">My <span class="grad">projects</span></h1>
+			<p class="lead">All my projects, newest first. Filter by area or browse by year.</p>
+			<div class="filter-row" id="filters">
+				<button class="filter-btn active" data-f="all">All</button>
+				<button class="filter-btn" data-f="embedded">Embedded</button>
+				<button class="filter-btn" data-f="os">OS / Systems</button>
+				<button class="filter-btn" data-f="web">Web / App</button>
+				<button class="filter-btn" data-f="ia">AI / Data</button>
 			</div>
-
-			
-			
-			<h1 class="hero-title year">
-				IN PROGRESS
-                <h4 style="margin: 10vh 0 25vh 0;">Nothing here for the moment... :/</h4>
-			</h1>
-
-			<h3>Xilinx FPGA, System Verilog, Verilog, TCL, DDR4, AXI</h3>
-			<h4>(MARCH 2026 -> AUGUST 2026)</h4>
-			<div class="hero-buttons">
-				<div class="projects-buttons-cols">
-					<a class="github" target="_blank" href="https://riscv.org/">
-						<div class="sudocru-div">
-							<img style="height: 50px; margin-right: 10%; border-radius: 5px;" src="../../assets/icons/RISC-V_icon.png">
-							<div style="display: flex; flex-direction: column;">
-								<h2 class="cv-text">Exploring the RISC-V architecture</h2>
-								<h3>For the industry needs</h3>
-							</div>
-						</div>
-					</a>
-				</div>
+			<div class="year-nav year-list" style="margin-top:14px;">
+				<a class="yearmenu" href="#2026"><h2>2026</h2></a><a class="yearmenu" href="#2025"><h2>2025</h2></a><a class="yearmenu" href="#2024"><h2>2024</h2></a><a class="yearmenu" href="#2023"><h2>2023</h2></a><a class="yearmenu" href="#2022"><h2>2022</h2></a>
 			</div>
+		</header>
 
-			<h3>C - Kicad 8.0 - STM32 - Soldering</h3>
-			<h4>(SEPTEMBER 2024 - ...)</h4>
-			<div class="section my-last-projects">
-				<div class="hero-buttons">
-					<div class="projects-buttons-cols">
-						<a class="download-cv" target="_blank">
-							<div class="automata-div">
-								<img style="height: 50px; margin-right: 10%;" src="../../assets/icons/mouse.png">
-								<div>
-									<h2 class="cv-text">Micromouse</h2>
-									<h3>Build my own Micromouse</h3>
-								</div>
-							</div>
-						</a>
-					</div>
-				</div>
+		<section class="proj-year reveal"><div class="proj-year-head"><span class="year-badge">Ongoing</span></div>
+			<div class="proj-grid">
+				<a class="p-card" data-tags="embedded" target="_blank" href="https://riscv.org/"><img src="../../assets/icons/RISC-V_icon.png" alt="RISC-V"><div><p class="p-date">Mars 2026 → Août 2026</p><h2>Exploration de l'archi. RISC-V</h2><h3>Pour des besoins industriels</h3><p class="p-tech">FPGA · SystemVerilog · DDR4 · AXI</p></div></a>
+				<div class="p-card" data-tags="embedded"><img src="../../assets/icons/mouse.png" alt="Micromouse"><div><p class="p-date">Sept 2024 → …</p><h2>Micromouse</h2><h3>Fabriquer sa propre Micromouse</h3><p class="p-tech">C · KiCad 8 · STM32 · Soudure</p></div></div>
 			</div>
+		</section>
 
-
-
-			<h4 style="margin: 10vh 0 25vh 0; display: none;">Nothing planned at the moment... :/</h4>
-		</div>
-
-		<div class="section my-last-projects">
-			<h1 id="2026" class="hero-title year">2026</h1>
-			<h3 style="margin-bottom: 100px;"><a style="color: #1b7eb7; text-decoration: none;"
-				 href="#top">Début de Page</a></h3>
-
-			<h3>Python</h3>
-			<h4>(JANUARY 2026)</h4>
-			<div class="section my-last-projects">
-				<div class="hero-buttons">
-					<div class="projects-buttons-cols">
-						<a class="download-cv" target="_blank">
-							<div class="kjos-div">
-								<img style="height: 50px; margin-right: 10%;" src="../../../assets/icons/kubernetes.png">
-								<div>
-									<h2 class="cv-text">SYDI</h2>
-									<h3>Rebuild Kubernetes from scratch</h3>
-								</div>
-							</div>
-						</a>
-					</div>
-				</div>
+		<section class="proj-year reveal"><div class="proj-year-head"><span class="year-badge" id="2026">2026</span><a class="top-link" href="#top">↑ Top</a></div>
+			<div class="proj-grid">
+				<div class="p-card" data-tags="os"><img src="../../assets/icons/kubernetes.png" alt="SYDI"><div><p class="p-date">Janvier 2026 · Python</p><h2>SYDI</h2><h3>Refaire Kubernetes</h3></div></div>
 			</div>
+		</section>
 
-		</div>
-
-		<div class="section my-last-projects">
-			<h1 id="2025" class="hero-title year">2025</h1>
-			<h3 style="margin-bottom: 100px;"><a style="color: #1b7eb7; text-decoration: none;"
-				 href="#top">Top of Page</a></h3>
-
-			<h3>C - Nordic SemiConductors - Zephyr</h3>
-			<h4>(MARCH 2025 - FEBRUARY 2026)</h4>
-			<div class="section my-last-projects">
-				<div class="hero-buttons">
-					<div class="projects-buttons-cols">
-						<a class="download-cv" target="_blank">
-							<div class="decathlon-div">
-								<img style="height: 50px; margin-right: 10%;" src="../../assets/icons/decathlon.png">
-								<div>
-									<h2 class="cv-text">Final Year Project at Decathlon</h2>
-									<h3>Migration to Zephyr</h3>
-								</div>
-							</div>
-						</a>
-					</div>
-				</div>
+		<section class="proj-year reveal"><div class="proj-year-head"><span class="year-badge" id="2025">2025</span><a class="top-link" href="#top">↑ Top</a></div>
+			<div class="proj-grid">
+				<div class="p-card" data-tags="embedded"><img src="../../assets/icons/decathlon.png" alt="Decathlon"><div><p class="p-date">Mars 2025 → Fév 2026 · C · Zephyr</p><h2>PFE — Decathlon</h2><h3>Migration sur Zephyr · Nordic</h3></div></div>
+				<div class="p-card" data-tags="ia"><img src="../../assets/icons/newspaper.png" alt="ERO2"><div><p class="p-date">Déc 2025 → Jan 2026 · Python</p><h2>ERO2</h2><h3>Modéliser une charge serveur</h3></div></div>
+				<div class="p-card" data-tags="os"><img src="../../assets/icons/docker.png" alt="VIRLI"><div><p class="p-date">Déc 2025 → Jan 2026 · C · Linux</p><h2>VIRLI</h2><h3>Refaire Docker</h3></div></div>
+				<div class="p-card" data-tags="ia"><img src="../../assets/icons/nvidia.png" alt="IRGPU"><div><p class="p-date">Déc 2025 · C++ · CUDA</p><h2>IRGPU</h2><h3>Reconnaissance de mouvement</h3></div></div>
+				<div class="p-card" data-tags="embedded"><img src="../../assets/icons/linux-platform.png" alt="Linux"><div><p class="p-date">Oct 2025 · C</p><h2>Pilote Linux MFRC522</h2><h3>Driver SPI sous Linux</h3></div></div>
+				<a class="p-card" data-tags="embedded" target="_blank" href="https://blog.gistre.epita.fr/posts/kevin.jamet-2025-05-27-why_is_latency_so_important_in_e-sports/"><img src="../../assets/icons/newspaper.png" alt="Article"><div><p class="p-date">Mai → Juil 2025 · Anglais</p><h2>Article scientifique</h2><h3>Latence &amp; e-sport (GISTRE Blog)</h3></div></a>
+				<div class="p-card" data-tags="embedded"><img src="../../assets/icons/iot.png" alt="IoT"><div><p class="p-date">Mai → Juil 2025 · NodeRed · MQTT · LoRa</p><h2>Système IoT</h2><h3>Élaboration et conception</h3></div></div>
+				<div class="p-card" data-tags="web"><img src="../../assets/icons/twitter.svg" alt="TinyX"><div><p class="p-date">Avr 2025 · Java · Redis · Quarkus</p><h2>TinyX</h2><h3>Refaire le backend de X</h3></div></div>
+				<div class="p-card" data-tags="embedded"><img src="../../assets/icons/microchip-solid.svg" alt="CPU"><div><p class="p-date">Mars → Mai 2025 · VHDL</p><h2>CPU ARM7 en VHDL</h2><h3>Design processeur</h3></div></div>
+				<div class="p-card" data-tags="embedded"><img src="../../assets/icons/laptop-code-solid.svg" alt="IoT CLI"><div><p class="p-date">Mars → Mai 2025 · STM32 · C</p><h2>Interfaçage système IoT</h2><h3>Méthodes et CLI</h3></div></div>
+				<div class="p-card" data-tags="embedded"><img src="../../assets/icons/soldering.png" alt="Soudure"><div><p class="p-date">Fév → Juin 2025 · KiCad</p><h2>Appareil électronique</h2><h3>Design &amp; soudure</h3></div></div>
 			</div>
+		</section>
 
-			<h3>Python</h3>
-			<h4>(DECEMBER 2025 - JANUARY 2026)</h4>
-			<div class="section my-last-projects">
-				<div class="hero-buttons">
-					<div class="projects-buttons-cols">
-						<a class="download-cv" target="_blank">
-							<div class="article-div">
-								<img style="height: 50px; margin-right: 10%;" src="../../../assets/icons/newspaper.png">
-								<div>
-									<h2 class="cv-text">ERO2</h2>
-									<h3>Modeling a server load</h3>
-								</div>
-							</div>
-						</a>
-					</div>
-				</div>
+		<section class="proj-year reveal"><div class="proj-year-head"><span class="year-badge" id="2024">2024</span><a class="top-link" href="#top">↑ Top</a></div>
+			<div class="proj-grid">
+				<div class="p-card" data-tags="os"><img src="../../assets/icons/psyls.png" alt="PsyC"><div><p class="p-date">Sept 2024 → Jan 2025 · Rust</p><h2>Serveur LSP pour PsyC</h2><h3>Asterios Technologies · Tree-sitter</h3></div></div>
+				<div class="p-card" data-tags="os"><img src="../../assets/icons/psyls-extension.png" alt="VSCode"><div><p class="p-date">2024 · TypeScript</p><h2>Extension VS Code</h2><h3>Asterios Technologies</h3></div></div>
+				<a class="p-card" data-tags="os" target="_blank" href="https://kevinjmt.github.io/KJOS/"><img src="../../assets/icons/kjos-icon.png" alt="KJOS"><div><p class="p-date">Juil 2024 · NTLite</p><h2>KJOS / KJOS Lite</h2><h3>Un Windows debloated</h3></div></a>
+				<a class="p-card" data-tags="web" target="_blank" href="https://kevinjmt.github.io/configmaker"><img src="../../assets/icons/configmaker.png" alt="ConfigMaker"><div><p class="p-date">Juil 2024 · Excel</p><h2>Config Maker</h2><h3>Calculateur de config PC</h3></div></a>
+				<div class="p-card" data-tags="web"><img src="../../assets/icons/laptop-code-solid.svg" alt="PING"><div><p class="p-date">Juin → Juil 2024 · Java · React</p><h2>PING</h2><h3>Développer un IDE</h3></div></div>
+				<div class="p-card" data-tags="embedded"><img src="../../assets/icons/smart-home.png" alt="FABOC"><div><p class="p-date">Juin 2024 · C++</p><h2>FABOC</h2><h3>Fabriquer un objet connecté</h3></div></div>
+				<div class="p-card" data-tags="ia"><img src="../../assets/icons/diagram-project-solid.svg" alt="ERO1"><div><p class="p-date">Mai → Juin 2024 · Python</p><h2>ERO1</h2><h3>Déneiger Montréal</h3></div></div>
+				<div class="p-card" data-tags="ia"><img src="../../assets/icons/brain-solid.svg" alt="IA"><div><p class="p-date">Avr 2024 · Python · Numpy</p><h2>IA Cancer du Sein</h2><h3>Détection (repo privé)</h3></div></div>
+				<div class="p-card" data-tags="os"><img src="../../assets/icons/tiger.png" alt="Tiger"><div><p class="p-date">Fév → Avr 2024 · C++</p><h2>Tiger</h2><h3>Compilateur Tiger (privé)</h3></div></div>
+				<div class="p-card" data-tags="os"><img src="../../assets/icons/terminal-solid.svg" alt="42sh"><div><p class="p-date">Jan 2024 · C</p><h2>42sh</h2><h3>Shell POSIX (privé)</h3></div></div>
 			</div>
+		</section>
 
-			<img src="../../assets/imgs/blob7.svg" style=" height: 80%;" class="hero-imgs hero-svg">
+		<section class="proj-year reveal"><div class="proj-year-head"><span class="year-badge" id="2023">2023</span><a class="top-link" href="#top">↑ Top</a></div>
+			<div class="proj-grid">
+				<a class="p-card" data-tags="web" target="_blank" href="https://kevinjmt.github.io/JKuisine/en_savoir_plus/"><img src="../../assets/icons/jkuisine.png" alt="JKuisine"><div><p class="p-date">Août 2023 · HTML · CSS · JS</p><h2>JKuisine</h2><h3>Le site de cuisine 🧑‍🍳</h3></div></a>
+				<a class="p-card" data-tags="web" target="_blank" href="https://kevinjmt.github.io/EzIT/en_savoir_plus/"><img src="../../assets/icons/ezit.png" alt="EzIT"><div><p class="p-date">Août 2023</p><h2>EzIT</h2><h3>Les rédactions d'IT pour tous</h3></div></a>
+				<div class="p-card" data-tags="web"><img src="../../assets/icons/automata.png" alt="Automata"><div><p class="p-date">Fév → Avr 2023 · Java</p><h2>AUTOMATA</h2><h3>Jeu inspiré de Factorio</h3></div></div>
+				<a class="p-card" data-tags="web" target="_blank" href="https://github.com/kevinjmt/kevinjmt.github.io"><img src="../../assets/icons/kjicon.png" alt="KJ"><div><p class="p-date">Fév 2023 · HTML · CSS</p><h2>KJ</h2><h3>Site web &amp; portfolio</h3></div></a>
+				<a class="p-card" data-tags="web" target="_blank" href="https://kevinjmt.github.io/JKeysWebsite"><img src="../../assets/icons/jkey.png" alt="JKeys"><div><p class="p-date">Fév 2023 · Python</p><h2>JKeys / JKeysLite</h2><h3>Gestionnaire de mots de passe</h3></div></a>
+				<a class="p-card" data-tags="web" target="_blank" href="https://github.com/kevinjmt/StudentManagementSystem"><img src="../../assets/icons/school-solid.svg" alt="SMS"><div><p class="p-date">Fév 2023 · Java</p><h2>SMS</h2><h3>Gestion d'étudiants</h3></div></a>
+			</div>
+		</section>
 
-			<h3>C - Linux</h3>
-			<h4>(DECEMBER 2025 - JANUARY 2026)</h4>
-			<div class="section my-last-projects">
-				<div class="hero-buttons">
-					<div class="projects-buttons-cols">
-						<a class="download-cv" target="_blank">
-							<div class="kjos-div">
-								<img style="height: 50px; margin-right: 10%;" src="../../../assets/icons/docker.png">
-								<div>
-									<h2 class="cv-text">VIRLI</h2>
-									<h3>Rebuild Docker from scratch</h3>
-								</div>
-							</div>
-						</a>
-					</div>
-				</div>
+		<section class="proj-year reveal"><div class="proj-year-head"><span class="year-badge" id="2022">2022</span><a class="top-link" href="#top">↑ Top</a></div>
+			<div class="proj-grid">
+				<a class="p-card" data-tags="ia" target="_blank" href="https://github.com/SudOCRu/SudOCRu"><img src="../../assets/icons/SudOCRu.png" alt="SudOCRu"><div><p class="p-date">Sept → Déc 2022 · C</p><h2>SudOCRu</h2><h3>Solveur Sudoku par OCR</h3></div></a>
+				<a class="p-card" data-tags="web" target="_blank" href="https://github.com/ForixM/CubeTools"><img src="../../assets/icons/CubeTools.png" alt="CubeTools"><div><p class="p-date">Jan → Juin 2022 · C#</p><h2>CubeTools</h2><h3>Explorateur de fichiers cross-platform</h3></div></a>
 			</div>
-
-			<h3>C++ - CUDA</h3>
-			<h4>(DECEMBER 2025)</h4>
-			<div class="section my-last-projects">
-				<div class="hero-buttons">
-					<div class="projects-buttons-cols">
-						<a class="download-cv" target="_blank">
-							<div class="excel-div">
-								<img style="height: 50px; margin-right: 10%;" src="../../../assets/icons/nvidia.png">
-								<div>
-									<h2 class="cv-text">IRGPU</h2>
-									<h3>Motion Recognition</h3>
-								</div>
-							</div>
-						</a>
-					</div>
-				</div>
-			</div>
-			
-			<h3>C</h3>
-			<h4>(October 2025)</h4>
-			<div class="section my-last-projects">
-				<div class="hero-buttons">
-					<div class="projects-buttons-cols">
-						<a class="download-cv" target="_blank">
-							<div class="automata-div">
-								<img style="height: 50px; margin-right: 10%;" src="../../assets/icons/linux-platform.png">
-								<div>
-									<h2 class="cv-text">Linux Driver Development</h2>
-									<h3>Driver of MFRC522 device</h3>
-								</div>
-							</div>
-						</a>
-					</div>
-				</div>
-			</div>
-
-			<h3>Written in English</h3>
-			<h4>(MAY 2025 - JULY 2025)</h4>
-			<div class="section my-last-projects">
-				<div class="hero-buttons">
-					<div class="projects-buttons-cols">
-						<a class="download-cv" target="_blank" href="https://blog.gistre.epita.fr/posts/kevin.jamet-2025-05-27-why_is_latency_so_important_in_e-sports/">
-							<div class="article-div">
-								<img style="height: 50px; margin-right: 10%;" src="../../assets/icons/newspaper.png">
-								<div>
-									<h2 class="cv-text">Writing a scientific paper</h2>
-									<h3>on electronic stuff</h3>
-								</div>
-							</div>
-						</a>
-					</div>
-				</div>
-			</div>
-
-			<h3>NodeRed - MQTT - LoRaWAN - ArduinoIDE - C++</h3>
-			<h4>(MAY 2025 - JULY 2025)</h4>
-			<div class="section my-last-projects">
-				<div class="hero-buttons">
-					<div class="projects-buttons-cols">
-						<a class="download-cv" target="_blank">
-							<div class="automata-div">
-								<img style="height: 50px; margin-right: 10%;" src="../../assets/icons/iot.png">
-								<div>
-									<h2 class="cv-text">IOT device</h2>
-									<h3>Developping and designing</h3>
-								</div>
-							</div>
-						</a>
-					</div>
-				</div>
-			</div>
-
-			<h3>Java - NoSQL - Redis - Quarkus</h3>
-			<h4>(APRIL 2025)</h4>
-			<div class="section my-last-projects">
-				<div class="hero-buttons">
-					<div class="projects-buttons-cols">
-						<a class="download-cv" target="_blank">
-							<div class="automata-div">
-								<img style="height: 50px; margin-right: 10%;" src="../../assets/icons/twitter.svg">
-								<div>
-									<h2 class="cv-text">TinyX</h2>
-									<h3>Redo X backend in Java</h3>
-								</div>
-							</div>
-						</a>
-					</div>
-				</div>
-			</div>
-
-			<h3>VHDL</h3>
-			<h4>(MARCH 2025 - MAY 2025)</h4>
-			<div class="section my-last-projects">
-				<div class="hero-buttons">
-					<div class="projects-buttons-cols">
-						<a class="download-cv" target="_blank">
-							<div class="automata-div">
-								<img style="height: 50px; margin-right: 10%;" src="../../assets/icons/microchip-solid.svg">
-								<div>
-									<h2 class="cv-text">Design an ARM7 CPU</h2>
-									<h3>using VHDL language</h3>
-								</div>
-							</div>
-						</a>
-					</div>
-				</div>
-			</div>
-
-			<h3>STM32 CubeIDE - C</h3>
-			<h4>(MARCH 2025 - MAY 2025)</h4>
-			<div class="section my-last-projects">
-				<div class="hero-buttons">
-					<div class="projects-buttons-cols">
-						<a class="download-cv" target="_blank">
-							<div class="automata-div">
-								<img style="height: 50px; margin-right: 10%;" src="../../assets/icons/laptop-code-solid.svg">
-								<div>
-									<h2 class="cv-text">Interfacing an unknown device</h2>
-									<h3>using custom methods and CLI</h3>
-								</div>
-							</div>
-						</a>
-					</div>
-				</div>
-			</div>
-
-			<h3>Kicad - Soldering</h3>
-			<h4>(FEBRUARY 2025 - JUNE 2025)</h4>
-			<div class="section my-last-projects">
-				<div class="hero-buttons">
-					<div class="projects-buttons-cols">
-						<a class="download-cv" target="_blank">
-							<div class="automata-div">
-								<img style="height: 50px; margin-right: 10%;" src="../../assets/icons/soldering.png">
-								<div>
-									<h2 class="cv-text">Build an electronic device</h2>
-									<h3>designing and soldering</h3>
-								</div>
-							</div>
-						</a>
-					</div>
-				</div>
-			</div>
-				 
-		</div>
-		
-		<img src="../../assets/imgs/blob4.svg" style=" height: 60%;" class="hero-imgs hero-svg">
-
-		<div class="section my-last-projects">
-			<h1 id="2024" class="hero-title year">2024</h1>
-			<h3 style="margin-bottom: 100px;"><a style="color: #1b7eb7; text-decoration: none;"
-				 href="#top">Top of Page</a></h3>
-
-			<h3>Rust - TreeSitter - LSP - TowerLSP - Neovim - VS Code</h3>
-			<h4>(SEPTEMBER 2024 - JANUARY 2025)</h4>
-			<div class="section my-last-projects">
-				<div class="hero-buttons">
-					<div class="projects-buttons-cols">
-						<a class="download-cv" target="_blank">
-							<div class="jkuisine-div">
-								<img style="height: 50px; margin-right: 10%;" src="../../assets/icons/psyls.png">
-								<div>
-									<h2 class="cv-text">LSP Server for PsyC</h2>
-									<h3>at Asterios Technologies</h3>
-								</div>
-							</div>
-						</a>
-						<a class="download-cv" target="_blank">
-							<div class="jkuisine-div">
-								<img style="height: 100px; margin-right: 10%;" src="../../assets/icons/psyls-extension.png">
-								<div>
-									<h2 class="cv-text">VS Code Extension</h2>
-									<h3>at Asterios Technologies</h3>
-								</div>
-							</div>
-						</a>
-					</div>
-				</div>
-			</div>
-
-			<h3>NTLite</h3>
-			<h4>(July 2024)</h4>
-			<div class="hero-buttons">
-				<div class="projects-buttons-cols">
-					<a class="download-cv" target="_blank" href="https://kevinjmt.github.io/KJOS/">
-						<div class="kjos-div">
-							<img style="height: 75px; margin-right: 10%;" src="../../assets/icons/kjos-icon.png">
-							<div>
-								<h2 class="cv-text">KJOS</h2>
-								<h3>A Debloated Windows</h3>
-							</div>
-						</div>
-					</a>
-					<a class="download-cv" target="_blank" href="https://kevinjmt.github.io/KJOS/">
-						<div class="kjos-div">
-							<img style="height: 75px; margin-right: 10%; opacity: 60%;" src="../../assets/icons/kjos-icon.png">
-							<div>
-								<h2 class="cv-text">KJOS Lite</h2>
-								<h3>A Debloated Windows</h3>
-							</div>
-						</div>
-					</a>
-				</div>
-			</div>
-
-			<h3>MS Excel</h3>
-			<h4>(JULY 2024)</h4>
-			<div class="hero-buttons">
-				<div class="projects-buttons-cols">
-					<a class="download-cv" target="_blank" href="https://kevinjmt.github.io/configmaker">
-						<div class="excel-div">
-							<img style="height: 75px; margin-right: 10%;" src="../../assets/icons/configmaker.png">
-							<div>
-								<h2 class="cv-text">Config Maker</h2>
-								<h3>PC Config Calculator</h3>
-							</div>
-						</div>
-					</a>
-				</div>
-			</div>
-
-			<h3>Java - HTML - CSS - JS - React</h3>
-			<h4>(JUNE 2024 - JULY 2024)</h4>
-			<div class="hero-buttons">
-				<div class="projects-buttons-cols">
-					<a class="download-cv" target="_blank">
-						<div class="automata-div">
-							<img style="height: 75px; margin-right: 10%;" src="../../assets/icons/laptop-code-solid.svg">
-							<div>
-								<h2 class="cv-text">PING</h2>
-								<h3>Build an unique IDE</h3>
-							</div>
-						</div>
-					</a>
-				</div>
-			</div>
-
-			<img src="../../assets/imgs/blob3.svg" style=" height: 70%;" class="hero-imgs hero-svg">
-
-			<h3>C++</h3>
-			<h4>(JUNE 2024)</h4>
-			<div class="hero-buttons">
-				<div class="projects-buttons-cols">
-					<a class="download-cv" target="_blank">
-						<div class="automata-div">
-							<img style="height: 75px; margin-right: 10%;" src="../../assets/icons/smart-home.png">
-							<div>
-								<h2 class="cv-text">FABOC</h2>
-								<h3>Build a connected object</h3>
-							</div>
-						</div>
-					</a>
-				</div>
-			</div>
-
-			<h3>Python</h3>
-			<h4>(MAY 2024 - JUNE 2024)</h4>
-			<div class="hero-buttons">
-				<div class="projects-buttons-cols">
-					<a class="download-cv" target="_blank">
-						<div class="automata-div">
-							<img style="height: 75px; margin-right: 10%;" src="../../assets/icons/diagram-project-solid.svg">
-							<div>
-								<h2 class="cv-text">ERO1</h2>
-								<h3>Snow removal in Montreal</h3>
-							</div>
-						</div>
-					</a>
-				</div>
-			</div>
-
-			<h3>Python - Numpy</h3>
-			<h4>(APRIL 2024)</h4>
-			<div class="hero-buttons">
-				<div class="projects-buttons-cols">
-					<a class="download-cv" target="_blank">
-						<div class="automata-div">
-							<img style="height: 75px; margin-right: 10%;" src="../../assets/icons/brain-solid.svg">
-							<div>
-								<h2 class="cv-text">Breast Cancer AI</h2>
-								<h3>Cancer detection (private repo)</h3>
-							</div>
-						</div>
-					</a>
-				</div>
-			</div>
-
-			<h3>C++</h3>
-			<h4>(FEBRUARY 2024 - APRIL 2024)</h4>
-			<div class="hero-buttons">
-				<div class="projects-buttons-cols">
-					<a class="download-cv" target="_blank">
-						<div class="cubetools-div">
-							<img style="height: 75px; margin-right: 10%;" src="../../assets/icons/tiger.png">
-							<div>
-								<h2 class="cv-text">Tiger</h2>
-								<h3>A Tiger compiler (private repo)</h3>
-							</div>
-						</div>
-					</a>
-				</div>
-			</div>
-			
-			<h3>C</h3>
-			<h4>(JANUARY 2024)</h4>
-			<div class="hero-buttons">
-				<div class="projects-buttons-cols">
-					<a class="download-cv" target="_blank">
-						<div class="automata-div">
-							<img style="height: 75px; margin-right: 10%;" src="../../assets/icons/terminal-solid.svg">
-							<div>
-								<h2 class="cv-text">42sh</h2>
-								<h3>A POSIX shell (private repo)</h3>
-							</div>
-						</div>
-					</a>
-				</div>
-			</div>
-				 
-		</div>
-		
-		<img src="../../assets/imgs/blob7.svg" style=" height: 80%;" class="hero-imgs hero-svg">
-		
-		<div class="section my-last-projects">
-			<h1 id="2023" class="hero-title year">
-				2023
-			</h1>
-			<h3 style="margin-bottom: 100px;"><a style="color: #1b7eb7; text-decoration: none;" href="#top">Top of Page</a></h3>
-
-			<h3>HTML - CSS - JavaScript</h3>
-			<h4>(AOUT 2023)</h4>
-			<div class="hero-buttons">
-				<div class="projects-buttons-cols">
-					<a class="download-cv" target="_blank" href="https://kevinjmt.github.io/JKuisine/en_savoir_plus/">
-						<div class="jkuisine-div">
-							<img style="height: 100px; margin-right: 10%;" src="../../assets/icons/jkuisine.png">
-							<div>
-								<h2 class="cv-text">JKuisine</h2>
-								<h3>The cooking website! 🧑‍🍳</h3>
-							</div>
-						</div>
-					</a>
-					<a class="download-cv" target="_blank" href="https://kevinjmt.github.io/EzIT/en_savoir_plus/">
-						<div class="ezit-div">
-							<img style="height: 100px; margin-right: 10%;" src="../../assets/icons/ezit.png">
-							<div>
-								<h2 class="cv-text">EzIT</h2>
-								<h3>IT articles for everybody</h3>
-							</div>
-						</div>
-					</a>
-				</div>
-			</div>
-			
-			<h3>Java</h3>
-			<h4>(FEBRUARY 2023 -> APRIL 2023 )</h4>
-			<div class="hero-buttons">
-				<div class="projects-buttons-cols">
-					<a class="download-cv" target="_blank">
-						<div class="automata-div">
-							<img style="height: 100px; margin-right: 10%;" src="../../assets/icons/automata.png">
-							<div>
-								<h2 class="cv-text">AUTOMATA</h2>
-								<h3>A Factorio's inspired game</h3>
-							</div>
-						</div>
-					</a>
-				</div>
-			</div>
-
-			<h3>HTML - CSS</h3>
-			<h4>(FEBRUARY 2023)</h4>
-			<div class="hero-buttons">
-				<div class="projects-buttons-cols">
-					<a class="download-cv" target="_blank" href="https://github.com/kevinjmt/kevinjmt.github.io">
-						<div class="automata-div">
-							<img style="height: 100px; margin-right: 10%;" src="../../assets/icons/kjicon.png">
-							<div>
-								<h2 class="cv-text">KJ</h2>
-								<h3>My Website and Portfolio</h3>
-							</div>
-						</div>
-					</a>
-				</div>
-			</div>
-			<h3>Python</h3>
-			<h4>(FEBRUARY 2023)</h4>
-			<div class="hero-buttons">
-				<div class="projects-buttons-cols">
-					<a class="download-cv" target="_blank" href="https://kevinjmt.github.io/JKeysWebsite">
-						<div class="jkeys-div">
-							<img style="height: 100px; margin-right: 10%;" src="../../assets/icons/jkey.png">
-							<div>
-								<h2 class="cv-text">JKeys</h2>
-								<h3>A password manager</h3>
-							</div>
-						</div>
-					</a>
-					<a class="download-cv" target="_blank" href="https://github.com/kevinjmt/JKeysLite">
-						<div class="jkeys-div">
-							<img style="height: 100px; margin-right: 10%;" src="../../assets/icons/jkey.png">
-							<div>
-								<h2 class="cv-text">JKeysLite</h2>
-								<h3>A password manager (Lite)</h3>
-							</div>
-						</div>
-					</a>
-				</div>
-			</div>
-			<h3>Java</h3>
-			<h4>(FEBRUARY 2023)</h4>
-			<div class="hero-buttons">
-				<div class="projects-buttons-cols">
-					<a class="download-cv" target="_blank" href="https://github.com/kevinjmt/StudentManagementSystem">
-						<div class="automata-div">
-							<img style="height: 50px; margin-right: 10%;" src="../../assets/icons/school-solid.svg">
-							<div>
-								<h2 class="cv-text">SMS</h2>
-								<h3>An app to manage students</h3>
-							</div>
-						</div>
-					</a>
-				</div>
-			</div>
-			<img src="../../assets/imgs/blob2.svg" style=" height: 80%;" class="hero-imgs hero-svg">
-		</div>
-
-		
-		<div class="section my-last-projects">
-			<h1 id="2022" class="hero-title year">
-				2022
-			</h1>
-			<h3 style="margin-bottom: 100px;"><a style="color: #1b7eb7; text-decoration: none;" href="#top">Top of Page</a></h3>
-
-			<h3>C</h3>
-			<h4>(SEPTEMBER 2022 -> DECEMBER 2022)</h4>
-			<div class="hero-buttons">
-				<div class="projects-buttons-cols">
-					<a class="github" target="_blank" href="https://github.com/SudOCRu/SudOCRu">
-						<div class="sudocru-div">
-							<img style="height: 100px; margin-right: 10%;" src="../../assets/icons/SudOCRu.png">
-							<div style="display: flex; flex-direction: column;">
-								<h2 class="cv-text">SudOCRu</h2>
-								<h3>An OCR Sudoku Solver</h3>
-							</div>
-						</div>
-					</a>
-				</div>
-			</div>
-			<h3>C#</h3>
-			<h4>(JANUARY 2022 -> JUNE 2022)</h4>
-			<div class="hero-buttons">
-				<div class="projects-buttons-cols">
-					<a class="github" target="_blank" href="https://github.com/ForixM/CubeTools">
-						<div class="cubetools-div">
-							<img style="height: 100px; margin-right: 10%;" src="../../assets/icons/CubeTools.png">
-							<div style="display: flex; flex-direction: column;">
-								<h2 class="cv-text">CubeTools</h2>
-								<h3>Cross-platform file explorer</h3>
-							</div>
-						</div>
-					</a>
-				</div>
-			</div>
-		</div>
-
-
+		</section>
 	</div>
 
-
 	<footer class="footer">
-		<a href="../../" style="padding-top: 5vh;">
-			<img class="imgtitle" src="../../assets/icons/kjicon.png" >
-		</a>
-        <p style=" padding-top: 20px;">Made with ❤️ by KJ</p>
-		<div class="footerbox">
-			<div class="footercol">
-				<p>Documents</p>
-				<a target="_blank" href="../../assets/downloads/CV - Kévin JAMET - EN.pdf">CV</a>
-				<a target="_blank" href="../../assets/downloads/Kévin JAMET.vcf">Contact</a>
-			</div>
-			<div class="footercol">
-				<p>Links</p>
-				<a target="_blank" href="https://discordapp.com/users/1009783547722215505">Discord</a>
-				<a target="_blank" href="https://x.com/_kjprojects">X</a>
-				<a target="_blank" href="https://www.youtube.com/channel/UCP6D55Eu7XCB6tDRhHjaLRw">YouTube</a>
-				<a target="_blank" href="https://www.instagram.com/_kjprojects">Instagram</a>
-				<a target="_blank" href="https://www.linkedin.com/in/k%C3%A9vin-jamet-12a22222b/">LinkedIn</a>
-				<a target="_blank" href="https://github.com/kevinjmt">GitHub</a>
-			</div>
-		</div>
-		
-        <p style=" padding: 20px 0;">©️ Copyright KJ 2025</p>
+		<a href="../" style="padding-top: 2vh; z-index:1;"><img class="imgtitle" src="../../assets/icons/kjicon.png" alt="KJ"></a>
+		<p style="padding-top: 12px; z-index:1;">Made with ❤️ by KJ · 2026 edition</p>
+		<div class="footerbox"><div class="footercol"><p>Documents</p><a target="_blank" href="../../assets/downloads/CV - Kévin JAMET.pdf">CV</a><a target="_blank" href="../../assets/downloads/Kévin JAMET.vcf">Contact</a></div>
+		<div class="footercol"><p>Liens</p><a target="_blank" href="https://discordapp.com/users/1009783547722215505">Discord</a><a target="_blank" href="https://x.com/_kjprojects">X</a><a target="_blank" href="https://www.youtube.com/channel/UCP6D55Eu7XCB6tDRhHjaLRw">YouTube</a><a target="_blank" href="https://www.instagram.com/_kjprojects">Instagram</a><a target="_blank" href="https://www.linkedin.com/in/k%C3%A9vin-jamet-12a22222b/">LinkedIn</a><a target="_blank" href="https://github.com/kevinjmt">GitHub</a></div></div>
+		<p style="padding: 20px 0 0 0; z-index:1; color:#7e88a3;">©️ Copyright KJ 2026</p>
 	</footer>
+<script>
+const burger=document.getElementById('burger'),menu=document.getElementById('menu');
+burger.addEventListener('click',()=>{menu.classList.toggle('show');document.querySelector('.q').classList.toggle('a');document.querySelector('.w').classList.toggle('b');document.querySelector('.e').classList.toggle('c');});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);}}),{threshold:.08});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+document.getElementById('filters').addEventListener('click',e=>{
+  const btn=e.target.closest('.filter-btn'); if(!btn) return;
+  document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active')); btn.classList.add('active');
+  const f=btn.dataset.f;
+  document.querySelectorAll('.p-card').forEach(c=>{ c.style.display=(f==='all'||c.dataset.tags===f)?'':'none'; });
+});
+</script>
 </body>
-
 </html>

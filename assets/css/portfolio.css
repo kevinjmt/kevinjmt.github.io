@@ -1,648 +1,84 @@
-/*     ---   RESETS   ---     */
-html{
-    scroll-behavior: smooth;
+/* KJ 2026 — Portfolio timeline (Montserrat kept) */
+@import url("./theme.css");
+
+.page-hero { padding: 56px 0 8px 0; text-align: center; }
+.year-nav {
+  position: sticky; top: calc(var(--nav-h) + 20px); z-index: 50;
+  display: flex; gap: 8px; flex-wrap: wrap;
+  background: rgba(255,255,255,.75); backdrop-filter: blur(14px);
+  border: 1px solid var(--line); border-radius: var(--radius-pill);
+  padding: 8px; margin: 22px 0 8px 0; box-shadow: var(--shadow-sm);
+  width: fit-content; max-width: 100%;
 }
-body{
-    font-family: 'Montserrat', sans-serif;
-    margin: 0; 
-    padding: 0;
+.yearmenu, .yearmenu:active, .yearmenu:visited {
+  color: var(--muted); font-weight: 900; font-size: .88rem;
+  padding: 9px 15px; border-radius: var(--radius-pill); margin: 0 !important;
+  transition: all .2s ease;
 }
-nav{
-    margin: 0;
+.yearmenu h2 { font-size: .88rem !important; margin: 0; }
+.yearmenu:hover { background: rgba(10,15,30,.07); color: var(--ink); }
+.year-list { display: flex; flex-wrap: wrap; gap: 4px; }
+
+.timeline { position: relative; margin: 26px 0 0 0; padding-left: 30px; }
+.timeline::before {
+  content: ""; position: absolute; left: 9px; top: 8px; bottom: 8px; width: 2px;
+  background: linear-gradient(180deg, var(--brand), var(--accent), var(--brand-2));
+  border-radius: 2px; opacity: .5;
 }
-footer{
-    margin: 0;
-    padding: 0;
+.year-block { margin: 0 0 54px 0; position: relative; }
+.year-badge {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-size: 1.6rem; font-weight: 900; letter-spacing: -.03em;
+  background: var(--ink); color: #fff;
+  padding: 10px 22px; border-radius: var(--radius-pill);
+  box-shadow: var(--shadow-md); margin: 0 0 18px -30px;
+  position: relative;
 }
-a,
-a:active,
-a:visited,
-a:hover{
-    text-decoration: none;
+.year-badge::before {
+  content: ""; width: 12px; height: 12px; border-radius: 50%;
+  background: var(--brand-2); box-shadow: 0 0 0 5px rgba(0,194,216,.2);
 }
-.footercol,
-.footercol a,
-.footercol a:visited,
-.footercol a:hover,
-.footercol a:active{
-    text-decoration: none;
+.year, .year:active, .year:hover, .year:visited { margin: 0; font-size: 1.6rem; }
+.top-link { font-size: .82rem; font-weight: 800; color: var(--muted) !important; }
+.top-link:hover { color: var(--brand-ink) !important; }
+
+.t-card {
+  background: var(--surface); border: 1px solid var(--line);
+  border-radius: var(--radius); padding: 22px;
+  display: flex; gap: 18px; align-items: flex-start;
+  margin: 0 0 14px 0; box-shadow: var(--shadow-sm);
+  transition: transform .2s ease, box-shadow .25s ease;
+}
+.t-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+.t-card img { width: 64px !important; height: 64px !important; object-fit: contain; border-radius: 14px; background: var(--bg-soft); padding: 8px; flex-shrink: 0; }
+.t-card h2 { margin: 0 0 4px 0; font-size: 1.08rem !important; }
+.t-card h3, .t-card h4 { margin: 2px 0; color: var(--muted); font-weight: 700; }
+.t-card h3 { font-size: .94rem !important; }
+.t-card h4 { font-size: .84rem !important; }
+.t-card a { color: var(--brand-ink); font-weight: 800; }
+.t-card a:hover { text-decoration: underline; }
+.t-body { flex: 1; min-width: 0; }
+
+.now-card {
+  border: 1px dashed var(--line-strong);
+  background: linear-gradient(180deg, var(--surface), var(--surface-2));
+  text-align: center; padding: 34px;
+}
+@media (max-width: 700px) {
+  .t-card { flex-direction: row; padding: 18px; }
+  .t-card img { width: 52px !important; height: 52px !important; }
+  .year-nav { top: 84px; }
 }
 
-/*    ---   GLOBALS   ---    */
-
-@font-face {
-    font-family: 'Montserrat';
-    src: url("../fonts/Montserrat-Black.ttf");
-}
-nav{
-    margin-bottom: 0;
-    height: 5rem;
-    width: 100%;
-    display: grid;
-    grid-auto-flow: column;
-    grid-template-columns: 0fr 1fr 2fr;
-    grid-template-rows: 100%;
-    border-radius: 0.5rem;
-    z-index: 1001;
-    background-color: rgba(255, 255, 255, 0.025);
-}
-
-.imgtitle{
-    text-align: center;
-    width: 3rem;
-    height: 3rem;
-}
-
-.kjbrand{
-    display: flex;
-    justify-content: left;
-    align-items: center;
-}
-.flag{
-    width: 30px; 
-}
-
-.navigationbar{
-    align-items: row;
-}
-
-.iloveburgers{
-    display: none;
-}
-
-.menutitles{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-.menutitles a{
-    color: rgb(92, 91, 91);
-    text-decoration: none;
-    margin: 10px;
-    font-size: 1rem;
-    font-weight: bold;
-    transition: 0.1s;
-    font-family: 'Montserrat', sans-serif;
-    font-size: larger;
-    transition: all 0.5s ease;
-}
-.menutitles a:hover{
-    color: #1b7eb7;
-    transition: all 0.5s ease;
-}
-
-.ham{
-    width: 50;
-    height: 50;
-    border-radius: 25%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    transition: 0.25s;
-}
-
-.bur{
-    width: 20px;
-    height: 20px;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-}
-
-.ger{
-    width: 20px;
-    height: 3px;
-    border-radius: 3px;
-    background: rgb(92, 91, 91);
-    transition: 0.25s;
-}
-
-.q{
-    transform-origin: 0 0;
-}
-
-.e{
-    transform-origin: 0 100%;
-}
-
-.q.a{
-    transform: rotate(46.5deg) translate(0, -2px);
-    width: 28px;
-}
-
-.w.b{
-    opacity: 0;
-    transform: scale(0);
-}
-
-.e.c{
-    transform: rotate(-45deg) translate(0.5px, 1.5px);
-    width: 28px;
-}
-
-ul{
-    list-style: none;
-}
-.pagebody{
-    margin: 3% 0 10% 0;
-}
-
-.hero-block{
-    justify-content: center;
-}
-.bubble{
-    max-width: 350px;
-    padding: 5px 15px;
-    color: white;
-    background-color: black;
-    border-radius: 100px;
-}
-.hero-img{
-    width: calc(250px + (500 - 250) * ((100vw - 320px) / (1140 - 320)));
-    z-index: 1;
-    border-radius: 8%; 
-}
-.hero-svg{
-    position: absolute;
-    z-index: -1;
-}
-.hero-title{
-    margin: 200px 0 0 0;
-    font-size: calc(40px + (60 - 40) * ((100vw - 320px) / (1140 - 320)));
-}
-h1{
-    font-size: calc(26px + (32 - 26) * ((100vw - 320px) / (1140 - 320)));
-}
-h2{
-    font-size: calc(22px + (30 - 22) * ((100vw - 320px) / (1140 - 320)));
-}
-p{
-    font-size: calc(16px + (20 - 16) * ((100vw - 320px) / (1140 - 320)));
-}
-.hero-buttons{
-    display: flex;
-    justify-content: center;
-}
-.cv-text{
-    font-size: calc(14px + (20 - 14) * ((100vw - 320px) / (1500 - 320)));
-    color: black;
-}
-.github-text{
-    font-size: calc(14px + (20 - 14) * ((100vw - 320px) / (1500 - 320)));
-    color: black;
-}
-.download-cv, .github{
-    margin-top: 100px;
-    display: flex;
-    font-family: 'Montserrat', sans-serif;
-    margin: 0 10px;
-}
-.download-cv-div, .download-github-div{
-    transition: 0.5s;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    color: black;
-    border: 5px solid black; 
-    border-radius: 25px;
-}
-.download-cv-div:hover{
-    text-shadow: lightblue 1px 1px 1px;
-    box-shadow: lightblue 3px 3px 3px;
-    transition: 0.5s;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    color: rgb(96, 126, 136);
-    background-color: rgb(237, 251, 255);
-    border: 5px solid rgb(96, 126, 136); 
-    border-radius: 25px;
-}
-.download-github-div:hover{
-    text-shadow: violet 1px 1px 1px;
-    box-shadow: violet 3px 3px 3px;
-    transition: 0.5s;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    color: purple;
-    background-color: rgb(255, 231, 255);
-    border: 5px solid purple; 
-    border-radius: 25px;
-}
-
-.pagebody{
-    background: rgb(255, 255, 255, 0.9);
-}
-.section{
-    margin: 25px 0;
-    padding: 50px 0;
-    text-align: center;
-}
-.my-portfolio, .my-contact {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /*
-    background: linear-gradient(90deg, white, white, rgb(234, 250, 255), white, white);
-    */
-}
-.jkeys-div{
-    transition: 0.5s;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    color: darkgreen;
-    border: 5px solid darkgreen; 
-    border-radius: 25px;
-}
-.jkeys-div:hover{
-    text-shadow: rgb(255, 205, 104) 1px 1px 1px;
-    box-shadow: rgb(255, 205, 104) 3px 3px 3px;
-    transition: 0.5s;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    color: mediumseagreen;
-    background-color: rgb(255, 246, 228);
-    border: 5px solid mediumseagreen; 
-    border-radius: 25px;
-}
-.sudocru-div{
-    transition: 0.5s;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    color: darkblue;
-    border: 5px solid darkblue; 
-    border-radius: 25px;
-}
-.sudocru-div:hover{
-    text-shadow: rgb(255, 205, 104) 1px 1px 1px;
-    box-shadow: rgb(255, 205, 104) 3px 3px 3px;
-    transition: 0.5s;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    color: blue;
-    background-color: rgb(255, 246, 228);
-    border: 5px solid blue; 
-    border-radius: 25px;
-}
-.more-preojects-div{
-    transition: 0.5s;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    color: black;
-    border: 5px solid black; 
-    border-radius: 25px;
-}
-.more-preojects-div:hover{
-    text-shadow: lightblue 1px 1px 1px;
-    box-shadow: lightblue 3px 3px 3px;
-    transition: 0.5s;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    color: rgb(96, 126, 136);
-    background-color: rgb(237, 251, 255);
-    border: 5px solid rgb(96, 126, 136); 
-    border-radius: 25px;
-}
-
-.year,
-.year:active,
-.year:hover,
-.year:visited{
-    text-decoration: none;
-    margin: 200px 0 0 0;
-}
-.yearmenu,
-.yearmenu:active,
-.yearmenu:hover,
-.yearmenu:visited{
-    color: #1b7eb7;
-    text-decoration: none;
-    text-decoration: none;
-    margin: 0 15px;
-}
-.year-list{
-    display: flex; 
-    flex-direction: row; 
-    justify-content: center; 
-}
-
-
-
-
-/*  ---   RESPONSIVE   ---  */
-
-/* PHONES */
-@media (max-width: 767px){
-    nav{
-        grid-template-columns: 15% 70% 15%;
-        box-shadow: 0 10px 10px rgb(180, 178, 178, 0.25);
-        border-radius: 0.5rem;
-    }
-    .kjbrand{
-        justify-content: center;
-        text-align: center;
-        z-index: 2000;
-    }
-    .flag{
-        margin-right: 0;
-    }
-    .imgtitle{
-        justify-content: flex-start;
-        align-content: center;
-    }
-    .iloveburgers{
-        display: flex;
-        justify-content: center;
-        align-items:center;
-        z-index: 2000;
-    }
-    .menutitles{
-        position: absolute;
-        width: 100%;
-        height: fit-content;
-        margin: 0 auto;
-        padding: 75px 0 30px 0;
-        box-sizing: border-box;
-        justify-content: flex-start;
-        align-items: center;
-        flex-direction: column;
-        z-index: -100;
-        transition: 0.25s;
-        transform: translate(0, -300px); 
-        color: rgb(92, 91, 91);
-        background: white;
-    }
-    .menutitles.show{
-        transform: translate(0, 5%);
-        z-index: 999;
-    }
-    .menutitles a{
-        color: rgb(92, 91, 91);
-    }
-    .menutitles{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        padding-bottom: 100%;
-        z-index: -2;
-    }
-    .hero-block{
-        justify-content: center;
-        align-items: center;
-        display: flex;
-        flex-direction: column;
-        padding: 0 5%;
-    }
-    .hero-text{
-        justify-content: center;
-        text-align: center;
-    }
-    .hero-svg{
-        padding: 0;
-        width: 50%;
-    }
-    .download-cv-div, .download-github-div{
-        margin-top: 10px;
-        width: 250px;
-        height: 75px;
-    }
-    .hero-buttons-cols{
-        display: flex;
-        flex-direction: column;
-    }
-    .projects-buttons-cols{
-        display: flex;
-        flex-direction: column;
-    }
-    .bubble{
-        margin: 25px auto;
-    }
-    /*
-    .my-last-projects{
-        background: linear-gradient(90deg, rgb(234, 250, 255), white, white, white, rgb(234, 250, 255));
-    }
-    .my-portfolio, .my-contact {
-        background: linear-gradient(90deg, white, white, rgb(234, 250, 255), white, white);
-    }
-    */
-    .year-list{
-        flex-direction: column; 
-    }
-    
-
-    
-    .jkeys-div{
-        text-align: left;
-        margin-top: 10px;
-        width: 250px;
-        height: 150px;
-    }
-    .jkeys-div:hover{
-        text-align: left;
-        margin-top: 10px;
-        width: 250px;
-        height: 150px;
-    }
-    .sudocru-div{
-        text-align: left;
-        margin-top: 10px;
-        width: 250px;
-        height: 150px;
-    }
-    .sudocru-div:hover{
-        text-align: left;
-        margin-top: 10px;
-        width: 250px;
-        height: 150px;
-    }
-    .more-preojects-div{
-        text-align: left;
-        margin-top: 10px;
-        width: 250px;
-        height: 150px;
-    }
-    .more-preojects-div:hover{
-        text-align: left;
-        margin-top: 10px;
-        width: 250px;
-        height: 150px;
-    }
-    .section{
-        padding: 0 10%;
-    }
-}
-
-
-/* TABLETS */
-@media (min-width: 768px){
-    .hero-block{
-        justify-content: center;
-        align-items: center;
-        display: flex;
-        flex-direction: column;
-        padding: 0 10%;
-    }
-    .kjbrand{
-        margin-left: 20%;
-    }
-    .flag{
-        margin-right: 0;
-    }
-    .bubble{
-        margin: 25px auto;
-    }
-    .hero-text{
-        justify-content: center;
-        text-align: center;
-    }
-    .hero-svg{
-        padding: 0;
-        width: 50%;
-    }
-    .download-cv-div, .download-github-div{
-        margin-top: 10px;
-        width: 250px;
-        height: 75px;
-    }
-    .hero-buttons-cols{
-        display: flex;
-        flex-direction: row;
-    }
-    .projects-buttons-cols{
-        display: flex;
-        flex-direction: column;
-    }    
-    .jkeys-div{
-        text-align: left;
-        margin-top: 10px;
-        width: 300px;
-        height: 150px;
-    }
-    .jkeys-div:hover{
-        text-align: left;
-        margin-top: 10px;
-        width: 300px;
-        height: 150px;
-    }
-    .sudocru-div{
-        text-align: left;
-        margin-top: 10px;
-        width: 300px;
-        height: 150px;
-    }
-    .sudocru-div:hover{
-        text-align: left;
-        margin-top: 10px;
-        width: 300px;
-        height: 150px;
-    }
-    .year-list{
-        flex-direction: column; 
-    }
-    .more-preojects-div{
-        text-align: left;
-        margin-top: 10px;
-        width: 300px;
-        height: 150px;
-    }
-    .more-preojects-div:hover{
-        text-align: left;
-        margin-top: 10px;
-        width: 300px;
-        height: 150px;
-    }
-    .section{
-        padding: 0 15%;
-    }
-}
-
-
-/* PCs */
-@media (min-width: 1024px){
-    .hero-block{
-        padding: 0 10%;
-        display: flex;
-        flex-direction: row;
-        padding-bottom: 100px;
-    }
-    .flag{
-        margin-right: 25px;
-    }
-    .bubble{
-        margin: 0;
-    }
-    .hero-text{
-        justify-content: center;
-        text-align: left;
-    }
-    .hero-text{
-        justify-content: center;
-        text-align: left;
-    }
-    .download-cv-div, .download-github-div{
-        margin-top: 10px;
-        width: 250px;
-        height: 75px;
-    }
-    .hero-buttons-cols{
-        display: flex;
-        flex-direction: row;
-    }
-    .projects-buttons-cols{
-        display: flex;
-        flex-direction: row;
-    }
-    
-    .jkeys-div{
-        text-align: left;
-        margin-top: 10px;
-        width: 300px;
-        height: 150px;
-    }
-    .jkeys-div:hover{
-        text-align: left;
-        margin-top: 10px;
-        width: 300px;
-        height: 150px;
-    }
-    .sudocru-div{
-        text-align: left;
-        margin-top: 10px;
-        width: 300px;
-        height: 150px;
-    }
-    .sudocru-div:hover{
-        text-align: left;
-        margin-top: 10px;
-        width: 300px;
-        height: 150px;
-    }
-    .year-list{
-        flex-direction: row; 
-    }
-    .more-preojects-div{
-        text-align: left;
-        margin-top: 10px;
-        width: 300px;
-        height: 150px;
-    }
-    .more-preojects-div:hover{
-        text-align: left;
-        margin-top: 10px;
-        width: 300px;
-        height: 150px;
-    }
-    .section{
-        padding: 0 20%;
-    }
-}
+/* ---------- Centering overrides ---------- */
+.page-hero { text-align: center; }
+.page-hero .lead { margin-left: auto; margin-right: auto; }
+.year-nav { margin-left: auto; margin-right: auto; justify-content: center; }
+.year-list { justify-content: center; }
+.timeline { padding-left: 0; }
+.timeline::before { display: none; }
+.year-block { text-align: center; }
+.year-badge { margin: 0 auto 18px auto; }
+.t-card { flex-direction: column; align-items: center; text-align: center; }
+.t-body { text-align: center; }
+.top-link { display: inline-block; margin-bottom: 14px; }

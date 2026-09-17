@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>KJ - Home</title>
+	<title>Kévin JAMET — Ingénieur Embarqué</title>
+	<meta name="description" content="Portfolio de Kévin JAMET, ingénieur informatique embarqué : RISC-V, Zephyr, Linux, systèmes embarqués.">
+	<link rel="stylesheet" href="./assets/css/theme.css">
 	<link rel="stylesheet" href="./assets/css/home.css">
 	<link rel="stylesheet" href="./assets/css/footer.css">
 	<link rel="shortcut icon" type="image/png" href="./assets/icons/kjicon.png">
@@ -12,232 +14,155 @@
 	<meta property="og:title" content="Kévin JAMET" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://kevinjmt.github.io/" />
-	<meta property="og:description" content="Un étudiant curieux, passionné, créatif et investit en école d'ingénieur informatique" />
-	<meta property="og:image" content="https://kevinjmt.github.io/assets/icons/kjicon.png" />	
-	<meta property="og:image:secure_url" content="https://kevinjmt.github.io/assets/icons/kjicon.png" />
-	<meta http-equiv='cache-control' content='no-cache'> 
-	<meta http-equiv='expires' content='0'> 
-	<meta http-equiv='pragma' content='no-cache'>
-
-	<!-- PRELOAD -->
-	<link rel="preload" href="./assets/imgs/kj-hero.png" as="image">  
+	<meta property="og:description" content="Ingénieur curieux, passionné, créatif et investi — informatique embarquée" />
+	<meta property="og:image" content="https://kevinjmt.github.io/assets/icons/kjicon.png" />
+	<link rel="preload" href="./assets/imgs/kj-hero.png" as="image">
 </head>
 
 <body>
 	<nav>
 		<div></div>
 		<div class="kjbrand">
-			<a href="./">
-				<img class="imgtitle" src="assets/icons/kjicon.png" >
+			<a href="./" aria-label="Accueil KJ">
+				<img class="imgtitle" src="assets/icons/kjicon.png" alt="KJ">
+				<span class="brand-name">Kévin JAMET<small>Embedded Engineer</small></span>
 			</a>
 		</div>
-		<div class="menutitles">
-			<a href="./">Home</a>
+		<div class="menutitles" id="menu">
+			<a href="./" class="active">Home</a>
 			<a href="./portfolio">Portfolio</a>
 			<a href="./mesprojets">Mes Projets</a>
 			<a href="./contact">Contact</a>
-			<a href="./en/"><img src="./assets/icons/uk.png" class="flag"></a>
+			<a href="./en/" aria-label="English version"><img src="./assets/icons/uk.png" class="flag" alt="EN"></a>
 		</div>
-		<div class="iloveburgers" onclick="eatoneburger()">
-			<div class="ham">
+		<div class="iloveburgers">
+			<div class="ham" id="burger" role="button" aria-label="Menu" tabindex="0">
 				<div class="bur">
 					<span class="ger q"></span>
 					<span class="ger w"></span>
 					<span class="ger e"></span>
 				</div>
 			</div>
-			<script>
-				document.querySelector(".ham").addEventListener("click", function(){
-					document.querySelector(".q").classList.toggle("a")
-					document.querySelector(".w").classList.toggle("b")
-					document.querySelector(".e").classList.toggle("c")
-				})
-				function eatoneburger(){
-					document.querySelector(".menutitles").classList.toggle("show");
-				}
-			</script>
 		</div>
 	</nav>
 
-	
+	<div class="pagebody container">
 
-	<div class="pagebody">
-
-		<div class="hero-block">
-
+		<header class="hero-block">
 			<div class="hero-items">
-				<img src="./assets/imgs/kj-hero.png" class="hero-img">
-				<img src="./assets/imgs/hero-mainblob.svg" class="hero-imgs hero-svg svg-phone">
+				<img src="./assets/imgs/kj-hero.png" class="hero-img" alt="Portrait de Kévin JAMET">
+				<div class="hero-float f1"><span class="pulse"></span> Disponible — CDI Embarqué</div>
+				<div class="hero-float f2">⚡ Zephyr • RISC-V • Linux</div>
 			</div>
 			<div class="hero-text">
-				<h4 class="bubble">
-					INGÉNIEUR INFORMATIQUE EMBARQUÉ
-				</h4>
-				<h1 class="hero-title">
-					Kévin JAMET
-				</h1>
-				<h3 class="subtitle">
-					Ingénieur curieux, passionné, créatif et investi
-				</h3>
-				
-				<div class="hero-buttons">
-					<div class="hero-buttons-cols">
-						<a class="download-cv" target="_blank" href="./assets/downloads/CV - Kévin JAMET.pdf">
-							<div class="download-cv-div cv-shadow">
-								<img style="height: 40px; margin-right: 10%;" src="./assets/icons/file-solid.svg">
-								<h2 class="cv-text">Mon CV</h2>
-							</div>
-						</a>
-						<a class="github" target="_blank" href="https://github.com/kevinjmt">
-							<div class="download-github-div">
-								<img style="height: 40px; margin-right: 10%;" src="./assets/icons/github.svg">
-								<h2 class="github-text">Mon GitHub</h2>
-							</div>
-						</a>
-					</div>
+				<p class="eyebrow"><span class="dot"></span> Ingénieur informatique embarqué</p>
+				<h1 class="hero-title">Kévin <span class="grad">JAMET</span></h1>
+				<p class="lead">Ingénieur curieux, passionné, créatif et investi. Je conçois des systèmes embarqués robustes — du driver Linux au firmware Zephyr, jusqu'à l'exploration RISC-V.</p>
+				<div class="btn-row">
+					<a class="btn btn-primary" target="_blank" href="./assets/downloads/CV - Kévin JAMET.pdf">📄 Mon CV</a>
+					<a class="btn btn-ghost" target="_blank" href="https://github.com/kevinjmt">⌨ Mon GitHub</a>
+					<a class="btn btn-ghost" href="#news">↓ En savoir plus</a>
+				</div>
+				<div class="hero-stats">
+					<div><strong>EPITA '26</strong><span>GISTRE — Systèmes</span></div>
+					<div><strong>RISC-V</strong><span>Stage Elsys Design</span></div>
+					<div><strong>Zephyr</strong><span>PFE Decathlon</span></div>
 				</div>
 			</div>
+		</header>
 
-		</div>
-
-		
-		<div style="margin-top: 15px;" class="hero-buttons discover-button">
-			<div class="projects-buttons-cols">
-				<a class="download-cv" href="#news">
-					<div class="download-cv-div">
-						<img style="height: 40px; margin-right: 10%;" src="./assets/icons/chevron-down-solid.svg">
-						<h2 class="cv-text">En savoir plus</h2>
-					</div>
-				</a>
+		<div id="news" class="avail reveal">
+			<div>
+				<p class="eyebrow" style="background:rgba(255,255,255,.14);border-color:rgba(255,255,255,.2);color:#fff;">● News 2026</p>
+				<h2>Je recherche un CDI en Systèmes Embarqués</h2>
+				<p>Firmware, drivers, architecture — disponible et motivé. Discutons de votre besoin.</p>
 			</div>
+			<a class="btn btn-ghost" href="./contact/">✉ Me contacter →</a>
 		</div>
 
-		<div id="news" class="section my-last-projects">
-			<h1 class="title">
-				NEWS
-			</h1>
-			<div class="section my-last-projects" style="background-color: lightsteelblue; border-radius: 25px; box-shadow: 10px 10px 10px lightslategray;">
-				<h2>Recherche d'emploi</h2>
-				<h3>Je recherche actuellement un CDI en Systèmes Embarqués !</h3>
-				<a class="download-cv" href="./contact/">
-					<div class="download-cv-div">
-						<img style="height: 40px; margin-right: 10%;" src="./assets/icons/paper-plane-solid.svg">
-						<h2 class="cv-text">Me Contacter</h2>
-					</div>
-				</a>
-			</div>
-		</div>
-
-		<!--
-		<div style="margin: 25px 0;" class="hero-buttons in-dev-button">
-			<div class="in-dev">
-				<img style="height: 40px;" src="./assets/icons/person-digging-solid.svg">
-				<h2 class="cv-text">Ce site est en développement</h2>
-			</div>
-		</div>
-		-->
-
-
-		<div id="portfolio" class="section my-portfolio">
-			<h1 class="title">
-				MON PORTFOLIO
-			</h1>
-			<img src="./assets/imgs/blob1.svg" style="padding: 0 30% 10% 0 ;" class="hero-imgs hero-svg">
-			<h3>Découvrir mon parcours, mes formations et bien plus !</h3>
-			<a class="download-cv" href="./portfolio">
-				<div class="download-cv-div">
-					<img style="height: 40px; margin-right: 10%;" src="./assets/icons/clipboard-user-solid.svg">
-					<h2 class="cv-text">En savoir plus</h2>
+		<section id="portfolio" class="section reveal">
+			<div class="sec-head">
+				<div>
+					<p class="eyebrow">01 — Parcours</p>
+					<h1 class="title">Mon Portfolio</h1>
+					<p class="lead">Parcours, formations, expériences — de 2016 à aujourd'hui, une trajectoire guidée par la curiosité technique.</p>
 				</div>
-			</a>
-		</div>
+				<a class="link-arrow" href="./portfolio">Explorer →</a>
+			</div>
+			<div class="bento">
+				<div class="card span-7">
+					<p class="eyebrow">🎓 Formation</p>
+					<h2 style="margin:0">EPITA — Promo 2026 · GISTRE</h2>
+					<p class="lead">Cycle ingénieur, majeure Systèmes, Réseaux & Embarqué. Délégué de majeure. Licence UPEC en parallèle.</p>
+					<div class="meta"><span class="chip chip-blue">C / C++ / Rust</span><span class="chip">Linux embarqué</span><span class="chip">VHDL / FPGA</span><span class="chip">TOEIC 835</span></div>
+				</div>
+				<div class="card span-5">
+					<p class="eyebrow">💼 En ce moment</p>
+					<h2 style="margin:0">Stage de fin d'études — Elsys Design</h2>
+					<p class="lead">Exploration de l'architecture et de l'ISA RISC-V pour une application industrielle · Sophia Antipolis.</p>
+					<div class="btn-row"><a class="btn btn-sm btn-primary" href="./portfolio#2026">Voir le parcours →</a></div>
+				</div>
+			</div>
+		</section>
 
-		<div class="section my-last-projects">
-			<h1 class="title">
-				MES DERNIERS PROJETS
-			</h1>
-			<h3>Voici les derniers projets que j'ai réalisés récemment !</h3>
-			<div class="hero-buttons">
-				<div class="projects-buttons-cols">
-                    <a class="download-cv" target="_blank">
-                        <div class="decathlon-div">
-                            <img style="height: 50px; margin-right: 10%;" src="../../assets/icons/decathlon.png">
-                            <div>
-                                <h2 class="cv-text">PFE - Decathlon</h2>
-                                <h3>Migration sur Zephyr</h3>
-                            </div>
-                        </div>
-                    </a>
-                    <a class="download-cv" target="_blank">
-                        <div class="automata-div">
-                            <img style="height: 50px; margin-right: 10%;" src="../../assets/icons/linux-platform.png">
-                            <div>
-                                <h2 class="cv-text">Développement d'un pilote Linux</h2>
-                                <h3>Pilote d'un MFRC522</h3>
-                            </div>
-                        </div>
-                    </a>
-					<a class="download-cv" href="./mesprojets">
-						<div class="more-preojects-div">
-							<img style="height: 75px; margin-right: 10%;" src="./assets/icons/angles-right-solid.svg">
-							<h2 class="cv-text">Voir Tout</h2>
+		<section class="section reveal">
+			<div class="sec-head">
+				<div>
+					<p class="eyebrow">02 — Sélection</p>
+					<h1 class="title">Mes derniers projets</h1>
+					<p class="lead">Firmware, OS, tooling — une sélection récente. Le reste est sur la page projets.</p>
+				</div>
+				<a class="link-arrow" href="./mesprojets">Voir tout →</a>
+			</div>
+			<div class="bento">
+				<div class="card span-4 proj">
+					<img src="./assets/icons/decathlon.png" alt="Decathlon">
+					<div><h2>PFE — Decathlon</h2><h3>Migration firmware vers Zephyr</h3><div class="meta"><span class="chip">C</span><span class="chip">Zephyr</span><span class="chip">Nordic</span></div></div>
+				</div>
+				<div class="card span-4 proj">
+					<img src="./assets/icons/linux-platform.png" alt="Linux">
+					<div><h2>Pilote Linux MFRC522</h2><h3>Driver SPI sous Linux</h3><div class="meta"><span class="chip">C</span><span class="chip">Linux</span><span class="chip">SPI</span></div></div>
+				</div>
+				<a class="card span-4 proj" href="./mesprojets" style="justify-content:center;text-align:center;">
+					<div><h2>Voir tout →</h2><h3>20+ projets de 2022 à 2026</h3></div>
+				</a>
+			</div>
+		</section>
+
+		<section class="section reveal">
+			<div class="sec-head">
+				<div>
+					<p class="eyebrow">03 — Contact</p>
+					<h1 class="title">Travaillons ensemble</h1>
+					<p class="lead">Scannez le QR pour m'ajouter à vos contacts, ou passez par la page contact.</p>
+				</div>
+			</div>
+			<div class="bento">
+				<div class="card span-7" style="display:flex;gap:22px;align-items:center;flex-wrap:wrap;">
+					<img class="contact-qr" src="./assets/imgs/contact.png" alt="QR contact">
+					<div style="flex:1;min-width:220px;">
+						<h2 style="margin:0 0 6px 0;">Kévin JAMET</h2>
+						<p class="lead" style="margin:0 0 14px 0;">vCard téléchargeable + formulaire direct.</p>
+						<div class="btn-row" style="margin-top:0;">
+							<a class="btn btn-primary btn-sm" target="_blank" href="./assets/downloads/Kévin JAMET.vcf">⤓ Mon contact</a>
+							<a class="btn btn-sm" href="./contact">Me contacter →</a>
 						</div>
-					</a>
+					</div>
+				</div>
+				<div class="card span-5">
+					<p class="eyebrow">❤ Passion</p>
+					<h2 style="margin:0 0 6px 0;">Au-delà du code</h2>
+					<p class="lead">Ce qui me motive et me passionne depuis des années — langues, voyages, bidouille hardware.</p>
+					<div class="btn-row"><a class="btn btn-sm" href="./portfolio/#2016">Me découvrir →</a></div>
 				</div>
 			</div>
-		</div>
-
-		<div class="section my-contact">
-			<h1 class="title">
-				MON CONTACT
-			</h1>
-			<h3>Ajoutez-moi à vos contacts ainsi que sur tous mes réseaux !</h3>
-			<img src="./assets/imgs/blob2.svg" style="padding: 0 0 10% 30% ;" class="hero-imgs hero-svg">
-			<div style="display: flex; flex-direction: column; align-items: center;">
-				<img class="contact-qr" src="./assets/imgs/contact.png">
-				<h3>Scannez le QR pour ajouter mon contact ou télécharger le grâce aux boutons ci-dessous</h3>
-			</div>
-			<div class="hero-buttons-cols">
-				<a class="download-cv" target="_blank" href="./assets/downloads/Kévin JAMET.vcf">
-					<div class="download-cv-div cv-shadow">
-						<img style="height: 40px; margin-right: 10%;" src="./assets/icons/address-card-solid.svg">
-						<h2 class="cv-text">Mon Contact</h2>
-					</div>
-				</a>
-				<a class="download-cv" href="./contact">
-					<div class="download-cv-div">
-						<img style="height: 40px; margin-right: 10%;" src="./assets/icons/angles-right-solid.svg">
-						<h2 class="cv-text">Me contacter</h2>
-					</div>
-				</a>
-			</div>
-		</div>
-
-		<div class="section my-passion">
-			<h1 class="title">
-				MA PASSION
-			</h1>
-			<h3>Découvrir ma vie, ce qui me motive et me passionne depuis tant d'années !</h3>
-			<div class="hero-buttons-cols">
-				<a class="download-cv" href="./portfolio/#2016">
-					<div class="download-cv-div">
-						<img style="height: 40px; margin-right: 10%;" src="./assets/icons/angles-right-solid.svg">
-						<h2 class="cv-text">Me découvrir</h2>
-					</div>
-				</a>
-			</div>
-		</div>
-
+		</section>
 
 	</div>
 
-
-
 	<footer class="footer">
-		<a href="./" style="padding-top: 5vh;">
-			<img class="imgtitle" src="./assets/icons/kjicon.png" >
-		</a>
-        <p style=" padding-top: 20px;">Made with ❤️ by KJ</p>
+		<a href="./" style="padding-top: 2vh; z-index:1;"><img class="imgtitle" src="./assets/icons/kjicon.png" alt="KJ"></a>
+		<p style="padding-top: 12px; z-index:1;">Made with ❤️ by KJ · 2026 edition</p>
 		<div class="footerbox">
 			<div class="footercol">
 				<p>Documents</p>
@@ -254,9 +179,23 @@
 				<a target="_blank" href="https://github.com/kevinjmt">GitHub</a>
 			</div>
 		</div>
-		
-        <p style=" padding: 20px 0;">©️ Copyright KJ 2025</p>
+		<p style="padding: 20px 0 0 0; z-index:1; color:#7e88a3;">©️ Copyright KJ 2026</p>
 	</footer>
+
+<script>
+const burger = document.getElementById('burger');
+const menu = document.getElementById('menu');
+function toggleMenu(){
+  menu.classList.toggle('show');
+  document.querySelector('.q').classList.toggle('a');
+  document.querySelector('.w').classList.toggle('b');
+  document.querySelector('.e').classList.toggle('c');
+}
+burger.addEventListener('click', toggleMenu);
+burger.addEventListener('keydown', e => { if(e.key==='Enter'||e.key===' '){ e.preventDefault(); toggleMenu(); }});
+const io = new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); io.unobserve(e.target);} }), {threshold:.12});
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
 </body>
 
 </html>

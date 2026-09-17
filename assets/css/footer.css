@@ -1,104 +1,38 @@
-/*     ---   RESETS   ---     */
-html{
-    scroll-behavior: smooth;
+/* KJ 2026 — Footer (Montserrat kept) */
+.footer {
+  background: #0a0f1e;
+  color: #cbd2e1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 56px 24px 28px 24px;
+  margin-top: 80px;
+  border-top: 1px solid rgba(255,255,255,.08);
+  position: relative;
+  overflow: hidden;
 }
-body{
-    font-family: 'Montserrat', sans-serif;
-    margin: 0; 
-    padding: 0;
+.footer::before {
+  content: "";
+  position: absolute;
+  width: 640px; height: 280px;
+  top: -140px; left: 50%; transform: translateX(-50%);
+  background: radial-gradient(closest-side, rgba(35,71,255,.35), transparent);
+  filter: blur(10px);
+  pointer-events: none;
 }
-nav{
-    margin: 0;
+.footer .imgtitle { width: 52px; height: 52px; border-radius: 16px; background: #fff; padding: 5px; }
+.footerbox { display: flex; gap: 64px; margin-top: 28px; z-index: 1; flex-wrap: wrap; justify-content: center; }
+.footercol { display: flex; flex-direction: column; gap: 8px; min-width: 160px; }
+.footercol p {
+  font-size: .74rem; font-weight: 900; letter-spacing: .18em; text-transform: uppercase;
+  color: #7e88a3; margin: 0 0 8px 0;
 }
-footer{
-    margin: 0;
-    padding: 0;
+.footercol a {
+  font-size: .94rem; font-weight: 700; color: #cbd2e1;
+  padding: 4px 0; transition: color .2s ease, transform .2s ease;
 }
-a,
-a:active,
-a:visited,
-a:hover{
-    text-decoration: none;
-}
-.footercol,
-.footercol a,
-.footercol a:visited,
-.footercol a:hover,
-.footercol a:active{
-    text-decoration: none;
-}
-
-/*    ---   GLOBALS   ---    */
-
-.footer{
-    background-color: lightgrey;
-    display: flex;
-    flex-direction: column;
-}
-.footercol a{
-    font-family: Montserrat;
-    font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (1140 - 320)));
-    transition: 0.5s;
-    color: gray;
-}
-.footercol a:hover{
-    transition: 0,5s;
-    color: #1b7eb7;
-}
-
-
-
-/*  ---   RESPONSIVE   ---  */
-
-/* PHONES */
-@media (max-width: 767px){
-    .footer{
-        align-items: center;
-        padding-bottom: 50px;
-    }
-    .footerbox{
-        display: flex;
-        flex-direction: column;
-    }
-    .footercol{
-        display: flex;
-        flex-direction: column;
-        padding: 0 5vw;
-    }
-}
-
-
-/* TABLETS */
-@media (min-width: 768px){
-    .footer{
-        align-items: center;
-        padding-bottom: 50px;
-    }
-    .footerbox{
-        display: flex;
-        flex-direction: row;
-    }
-    .footercol{
-        display: flex;
-        flex-direction: column;
-        padding: 0 5vw;
-    }
-}
-
-
-/* PCs */
-@media (min-width: 1024px){
-    .footer{
-        align-items: center;
-        padding-bottom: 50px;
-    }
-    .footerbox{
-        display: flex;
-        flex-direction: row;
-    }
-    .footercol{
-        display: flex;
-        flex-direction: column;
-        padding: 0 10vw;
-    }
+.footercol a:hover { color: #fff; transform: translateX(3px); }
+.footer p { margin: 10px 0; }
+@media (max-width: 767px) {
+  .footerbox { flex-direction: row; gap: 40px; }
 }
