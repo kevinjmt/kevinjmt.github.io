@@ -61,7 +61,7 @@ a, a:active, a:visited, a:hover { text-decoration: none; color: inherit; }
 
 /* ---------- Layout ---------- */
 .container { width: min(var(--max), calc(100% - 40px)); margin: 0 auto; text-align: center; }
-.pagebody { margin: 0; padding: 0 0 40px 0; background: transparent; text-align: center; }
+.pagebody { margin: 0 auto; padding: 0 0 40px 0; background: transparent; text-align: center; }
 .section { margin: 0; padding: 72px 0 8px 0; text-align: center; }
 
 /* ---------- Nav (glass, sticky) ---------- */
