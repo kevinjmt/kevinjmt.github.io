@@ -11,51 +11,19 @@
 }
 .hero-items {
   position: relative;
-  background: linear-gradient(180deg, #0a0f1e 0%, #1c2a8a 60%, #2347ff 100%);
-  border-radius: var(--radius-lg);
-  padding: 28px;
-  overflow: hidden;
-  box-shadow: var(--shadow-lg);
-  border: 1px solid rgba(255,255,255,.14);
-  min-height: 480px;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
-}
-.hero-items::before {
-  content: "";
-  position: absolute; inset: 0;
-  background:
-    radial-gradient(420px 320px at 20% 18%, rgba(0,194,216,.45), transparent 60%),
-    radial-gradient(520px 380px at 85% 90%, rgba(124,92,255,.5), transparent 60%);
-}
-.hero-items::after {
-  content: "EMBEDDED • RISC-V • ZEPHYR • LINUX";
-  position: absolute; top: 22px; left: 24px; right: 24px;
-  font-size: .7rem; font-weight: 900; letter-spacing: .22em;
-  color: rgba(255,255,255,.72);
+  padding: 0;
+  background: none;
 }
 .hero-img {
   position: relative; z-index: 1;
   width: min(100%, 380px) !important;
   border-radius: 22px !important;
-  border: 1px solid rgba(255,255,255,.35);
-  box-shadow: 0 20px 60px rgba(0,0,0,.35);
-  background: #fff;
+  box-shadow: none;
 }
-.hero-float {
-  position: absolute; z-index: 2;
-  background: rgba(255,255,255,.92);
-  backdrop-filter: blur(12px);
-  border-radius: 16px;
-  padding: 12px 14px;
-  box-shadow: var(--shadow-md);
-  display: flex; gap: 10px; align-items: center;
-  font-size: .82rem; font-weight: 800;
-}
-.hero-float.f1 { left: 18px; bottom: 22px; }
-.hero-float.f2 { right: 18px; top: 64px; }
-.hero-float .pulse { width: 10px; height: 10px; border-radius: 50%; background: var(--success); box-shadow: 0 0 0 6px rgba(12,166,120,.18); }
+.hero-float { display: none; }
 
 .hero-text { position: relative; z-index: 1; }
 .bubble, .enbubble {
