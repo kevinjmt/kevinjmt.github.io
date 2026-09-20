@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Kévin JAMET — Embedded Engineer</title>
 	<meta name="description" content="Portfolio of Kévin JAMET, embedded software engineer: RISC-V, Zephyr, Linux, embedded systems.">
-	<link rel="stylesheet" href="../assets/css/theme.css?v=4">
+	<link rel="stylesheet" href="../assets/css/theme.css?v=8">
 	<link rel="stylesheet" href="../assets/css/home.css?v=5">
 	<link rel="stylesheet" href="../assets/css/footer.css?v=4">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
@@ -20,6 +20,9 @@
 </head>
 
 <body>
+	<div class="bg-orb bg-orb-blue bg-pos-1" data-bg-parallax="0.08" aria-hidden="true"></div>
+	<div class="bg-orb bg-orb-cyan bg-pos-2" data-bg-parallax="0.16" aria-hidden="true"></div>
+	<div class="bg-orb bg-orb-violet bg-pos-3" data-bg-parallax="0.24" aria-hidden="true"></div>
 	<nav>
 		<div></div>
 		<div class="kjbrand">
@@ -133,5 +136,6 @@ burger.addEventListener('click',toggleMenu);
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);}}),{threshold:.12});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 </script>
+	<script src="../../assets/js/parallax.js?v=3"></script>
 </body>
 </html>

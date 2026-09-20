@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Kévin JAMET — Mes Projets</title>
 	<meta name="description" content="Tous les projets de Kévin JAMET, du plus récent au plus ancien : embarqué, OS, web, IA.">
-	<link rel="stylesheet" href="../assets/css/theme.css?v=4">
+	<link rel="stylesheet" href="../assets/css/theme.css?v=8">
 	<link rel="stylesheet" href="../assets/css/myprojects.css?v=4">
 	<link rel="stylesheet" href="../assets/css/footer.css?v=4">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
@@ -16,6 +16,9 @@
 	<meta property="og:image" content="https://kevinjmt.github.io/assets/icons/kjicon.png" />
 </head>
 <body>
+	<div class="bg-orb bg-orb-blue bg-pos-1" data-bg-parallax="0.08" aria-hidden="true"></div>
+	<div class="bg-orb bg-orb-cyan bg-pos-2" data-bg-parallax="0.16" aria-hidden="true"></div>
+	<div class="bg-orb bg-orb-violet bg-pos-3" data-bg-parallax="0.24" aria-hidden="true"></div>
 	<nav id="top">
 		<div></div>
 		<div class="kjbrand"><a href="../"><img class="imgtitle" src="../assets/icons/kjicon.png" alt="KJ"><span class="brand-name">Kévin JAMET<small>Embedded Engineer</small></span></a></div>
@@ -125,5 +128,6 @@ document.getElementById('filters').addEventListener('click',e=>{
   document.querySelectorAll('.p-card').forEach(c=>{ c.style.display=(f==='all'||c.dataset.tags===f)?'':'none'; });
 });
 </script>
+	<script src="../assets/js/parallax.js?v=3"></script>
 </body>
 </html>
