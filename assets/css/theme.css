@@ -373,8 +373,6 @@ body.leaving .pagebody, body.leaving .footer {
   .menutitles::-webkit-scrollbar { display: none; }
   .menutitles.show { transform: translate(-50%, 0); opacity: 1; pointer-events: auto; }
   .menutitles a { flex: 0 0 auto; padding: 9px 15px; font-size: .88rem; justify-content: center; }
-  .nav-indicator { display: none; }
-  .menutitles a.active { background: rgba(64,127,205,.10); }
   .bento { grid-template-columns: 1fr; }
   .span-7, .span-5, .span-6, .span-4, .span-8 { grid-column: span 1; }
   .section { padding: 48px 0 4px 0; }

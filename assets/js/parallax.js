@@ -98,7 +98,6 @@
     var bar = document.querySelector('.menutitles');
     var active = bar ? bar.querySelector('a.active') : null;
     if (!bar || !active) return;
-    if (!window.matchMedia('(min-width: 861px)').matches) return;
     var pill = document.createElement('span');
     pill.className = 'nav-indicator';
     pill.setAttribute('aria-hidden', 'true');
