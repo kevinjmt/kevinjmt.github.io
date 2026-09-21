@@ -124,6 +124,7 @@
         window.setTimeout(function () {
           document.body.classList.add('leaving');
           document.body.classList.remove('scrolled');
+          pill.classList.add('exit');
           window.setTimeout(function () { window.location.href = a.href; }, wasScrolled ? 315 : 110);
         }, 285);
       });
