@@ -1,7 +1,10 @@
-/* KJ 2026 — Portfolio timeline (Montserrat kept) */
+/* KJ 2026 — Portfolio historic journey (Montserrat kept) */
 @import url("./theme.css");
 
 .page-hero { padding: 56px 0 8px 0; text-align: center; }
+.page-hero .lead { margin-left: auto; margin-right: auto; }
+
+/* Sticky scrollable year pill (kept) */
 .year-nav {
   position: sticky; top: calc(var(--nav-h) + 20px); z-index: 50;
   display: flex; gap: 8px; flex-wrap: nowrap; align-items: center;
@@ -11,11 +14,14 @@
   scroll-behavior: smooth;
   background: rgba(255,255,255,.75); backdrop-filter: blur(14px);
   border: 1px solid var(--line); border-radius: var(--radius-pill);
-  padding: 8px; margin: 22px 0 8px 0; box-shadow: var(--shadow-sm);
+  padding: 8px; margin: 22px auto 8px auto; box-shadow: var(--shadow-sm);
   width: fit-content; max-width: 100%;
+  justify-content: flex-start;
+  text-align: center;
 }
 .year-nav::-webkit-scrollbar { display: none; }
 .year-nav .yearmenu { flex: 0 0 auto; }
+.year-nav.year-list { justify-content: flex-start; flex-wrap: nowrap; overflow-x: auto; }
 .yearmenu, .yearmenu:active, .yearmenu:visited {
   color: var(--muted); font-weight: 900; font-size: .88rem;
   padding: 9px 15px; border-radius: var(--radius-pill); margin: 0 !important;
@@ -23,58 +29,67 @@
 }
 .yearmenu h2 { font-size: .88rem !important; margin: 0; }
 .yearmenu:hover { background: rgba(10,15,30,.07); color: var(--ink); }
-.year-list { display: flex; flex-wrap: wrap; gap: 4px; }
-
-.timeline { position: relative; margin: 26px 0 0 0; padding-left: 30px; }
-.timeline::before {
-  content: ""; position: absolute; left: 9px; top: 8px; bottom: 8px; width: 2px;
-  background: linear-gradient(180deg, var(--brand), var(--accent), var(--brand-2));
-  border-radius: 2px; opacity: .5;
-}
-.year-block { margin: 0 0 54px 0; position: relative; }
-.year-badge {
-  display: inline-flex; align-items: center; gap: 10px;
-  font-size: 1.6rem; font-weight: 900; letter-spacing: -.03em;
-  background: var(--ink); color: #fff;
-  padding: 10px 22px; border-radius: var(--radius-pill);
-  box-shadow: var(--shadow-md); margin: 0 0 18px -30px;
-  position: relative;
-}
-.year-badge::before {
-  content: ""; width: 12px; height: 12px; border-radius: 50%;
-  background: var(--brand-2); box-shadow: 0 0 0 5px rgba(0,194,216,.2);
-}
-.year, .year:active, .year:hover, .year:visited { margin: 0; font-size: 1.6rem; }
-.top-link { font-size: .82rem; font-weight: 800; color: var(--muted) !important; }
+.year-list { display: flex; flex-wrap: wrap; gap: 4px; justify-content: center; }
+.top-link { font-size: .82rem; font-weight: 800; color: var(--muted) !important; display: inline-block; margin-bottom: 14px; }
 .top-link:hover { color: var(--brand-ink) !important; }
 
-.t-card {
-  background: var(--surface); border: 1px solid var(--line);
-  border-radius: var(--radius); padding: 22px;
-  display: flex; gap: 18px; align-items: flex-start;
-  margin: 0 0 14px 0; box-shadow: var(--shadow-sm);
-  transition: transform .2s ease, box-shadow .25s ease;
+/* ---------- Journey ---------- */
+.journey { position: relative; margin-top: 12px; }
+.chapter { margin: 0 0 72px 0; }
+.chapter-head { display: flex; align-items: baseline; justify-content: center; gap: 14px; margin-bottom: 22px; flex-wrap: wrap; }
+.chapter-year .num {
+  font-size: clamp(3rem, 8vw, 4.6rem);
+  font-weight: 900; letter-spacing: -.05em; line-height: 1;
+  background: linear-gradient(180deg, #0a0f1e 20%, #2347ff 90%);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
 }
-.t-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
-.t-card img { width: 64px !important; height: 64px !important; object-fit: contain; border-radius: 14px; background: var(--bg-soft); padding: 8px; flex-shrink: 0; }
-.t-card h2 { margin: 0 0 4px 0; font-size: 1.08rem !important; }
-.t-card h3, .t-card h4 { margin: 2px 0; color: var(--muted); font-weight: 700; }
-.t-card h3 { font-size: .94rem !important; }
-.t-card h4 { font-size: .84rem !important; }
-.t-card a { color: var(--brand-ink); font-weight: 800; }
-.t-card a:hover { text-decoration: underline; }
-.t-body { flex: 1; min-width: 0; }
+.chapter-year .tag {
+  font-size: .78rem; font-weight: 900; letter-spacing: .16em; text-transform: uppercase;
+  color: var(--muted); border: 1px solid var(--line-strong);
+  padding: 7px 14px; border-radius: var(--radius-pill); background: var(--surface);
+}
 
-.now-card {
-  border: 1px dashed var(--line-strong);
-  background: linear-gradient(180deg, var(--surface), var(--surface-2));
-  text-align: center; padding: 34px;
+/* Story: free-floating 3D object + boxed text, node in its own gutter */
+.story {
+  display: grid; grid-template-columns: 1fr 90px 1fr;
+  gap: 20px; align-items: center;
+  margin: 0 auto 18px auto; max-width: 980px;
+  text-align: center;
 }
-@media (max-width: 700px) {
-  .t-card { flex-direction: row; padding: 18px; }
-  .t-card img { width: 52px !important; height: 52px !important; }
-  .year-nav { top: 84px; }
+.story .visual { grid-column: 1; }
+.story .story-body { grid-column: 3; }
+.story.flip .visual { grid-column: 3; }
+.story.flip .story-body { grid-column: 1; }
+.visual { perspective: 1200px; animation: floaty 7s ease-in-out infinite; }
+.story.flip .visual { animation-delay: -3.5s; }
+@keyframes floaty { 0%,100% { translate: 0 0; } 50% { translate: 0 -8px; } }
+.tilt {
+  position: relative; min-height: 230px;
+  display: flex; align-items: center; justify-content: center;
+  transform-style: preserve-3d;
+  transition: transform .18s ease-out;
 }
+.tilt img {
+  width: 132px; height: 132px; object-fit: contain;
+  border-radius: 24px;
+  transform: translateZ(60px);
+  filter: drop-shadow(0 18px 28px rgba(10,15,30,.35));
+}
+.story-body {
+  background: var(--surface); border: 1px solid var(--line);
+  border-radius: var(--radius-lg); box-shadow: var(--shadow-sm);
+  padding: 26px 28px;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 8px;
+}
+.story-body .kicker {
+  font-size: .72rem; font-weight: 900; letter-spacing: .18em; text-transform: uppercase;
+  color: var(--brand-ink);
+}
+.story-body h3 { margin: 0; font-size: 1.25rem; letter-spacing: -.02em; }
+.story-body .brief { margin: 0; color: var(--muted); font-weight: 600; max-width: 46ch; }
+.story-body a.more { font-weight: 900; color: var(--brand-ink); }
+.story-body a.more:hover { text-decoration: underline; }
 
 /* Edge fade only where the bar actually scrolls (narrow screens) */
 @media (max-width: 900px) {
@@ -83,17 +98,57 @@
     mask-image: linear-gradient(90deg, transparent, #000 20px, #000 calc(100% - 20px), transparent);
   }
 }
+@media (max-width: 700px) {
+  .year-nav { top: 84px; }
+  .story { grid-template-columns: 1fr; }
+  .story .visual, .story.flip .visual,
+  .story .story-body, .story.flip .story-body { grid-column: 1; }
+  .tilt { min-height: 190px; }
+  .tilt img { width: 100px; height: 100px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .visual { animation: none; }
+  .tilt::after { animation: none; }
+}
 
-/* ---------- Centering overrides ---------- */
-.page-hero { text-align: center; }
-.page-hero .lead { margin-left: auto; margin-right: auto; }
-.year-nav { margin-left: auto; margin-right: auto; justify-content: flex-start; }
-.year-nav.year-list { justify-content: flex-start; flex-wrap: nowrap; overflow-x: auto; }
-.year-list { justify-content: center; }
-.timeline { padding-left: 0; }
-.timeline::before { display: none; }
-.year-block { text-align: center; }
-.year-badge { margin: 0 auto 18px auto; }
-.t-card { flex-direction: column; align-items: center; text-align: center; }
-.t-body { text-align: center; }
-.top-link { display: inline-block; margin-bottom: 14px; }
+/* ---------- History spine + nodes ---------- */
+.journey { position: relative; }
+.journey::before {
+  content: ""; position: absolute; top: 0; bottom: 0; left: 50%;
+  width: 3px; transform: translateX(-50%);
+  background: linear-gradient(180deg,
+    transparent,
+    rgba(35,71,255,.45) 6%,
+    rgba(0,194,216,.45) 94%,
+    transparent);
+  border-radius: 3px;
+}
+.chapter { position: relative; }
+.story { position: relative; }
+.story::before {
+  content: ""; position: absolute; z-index: 2;
+  left: 50%; top: 50%; width: 16px; height: 16px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: var(--surface);
+  border: 4px solid var(--brand);
+  box-shadow: 0 0 0 6px rgba(35,71,255,.15), 0 0 22px rgba(35,71,255,.55);
+}
+
+/* ---------- Orbit ring: object feel around each visual ---------- */
+.tilt::after {
+  content: ""; position: absolute;
+  width: 220px; height: 220px;
+  border: 1px dashed rgba(255,255,255,.35);
+  border-radius: 50%;
+  animation: spin 26s linear infinite;
+  pointer-events: none;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+@media (max-width: 700px) {
+  .journey::before { left: 14px; transform: none; }
+  .story::before { left: 14px; transform: translate(-50%, -50%); }
+  .story { padding-left: 38px; }
+  .chapter-head { justify-content: flex-start; padding-left: 38px; }
+}
