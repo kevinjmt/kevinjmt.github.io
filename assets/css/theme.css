@@ -324,15 +324,15 @@ h1.hero-title, h1.title, h2, h3, .lead, .subtitle,
   from { opacity: 0; transform: translateY(14px); }
   to { opacity: 1; transform: none; }
 }
-body { animation: page-in .55s cubic-bezier(.22,1,.36,1); }
-body.leaving {
+.pagebody, .footer { animation: page-in .55s cubic-bezier(.22,1,.36,1); }
+body.leaving .pagebody, body.leaving .footer {
   opacity: 0;
   transform: translateY(8px);
   transition: opacity .3s ease, transform .3s ease;
 }
 @media (prefers-reduced-motion: reduce) {
-  body { animation: none; }
-  body.leaving { opacity: 1; transform: none; transition: none; }
+  .pagebody, .footer { animation: none; }
+  body.leaving .pagebody, body.leaving .footer { opacity: 1; transform: none; transition: none; }
 }
 
 /* ---------- Responsive nav ---------- */
