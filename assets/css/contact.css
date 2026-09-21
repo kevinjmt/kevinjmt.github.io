@@ -109,9 +109,11 @@
   background: var(--brand);
 }
 @media (max-width: 640px) {
-  .form-row { flex-direction: column; align-items: stretch; }
+  .form-row { display: contents; }
+  .form-row label { order: 1; width: 100%; }
+  .form > label { order: 2; }
   .form-row .send-button { width: 100%; }
-  .send-zone { width: 100%; }
+  .send-zone { order: 3; width: 100%; }
   .confirm-duo { width: 100%; }
   .confirm-duo > button { flex: 1; }
 }
