@@ -102,14 +102,16 @@
     pill.className = 'nav-indicator';
     pill.setAttribute('aria-hidden', 'true');
     bar.appendChild(pill);
-    function move(el) {
+    function move(el, instant) {
+      if (instant) pill.style.transition = 'none';
       pill.style.left = el.offsetLeft + 'px';
       pill.style.top = el.offsetTop + 'px';
       pill.style.width = el.offsetWidth + 'px';
       pill.style.height = el.offsetHeight + 'px';
       pill.style.opacity = '1';
+      if (instant) { void pill.offsetWidth; pill.style.transition = ''; }
     }
-    function goActive() { move(active); }
+    function goActive() { move(active, true); }
     bar.querySelectorAll('a').forEach(function (a) {
       a.addEventListener('click', function (e) {
         var href = a.getAttribute('href') || '';
@@ -118,7 +120,7 @@
         if (a.target === '_blank') return;
         e.preventDefault();
         document.body.classList.add('leaving');
-        move(a);
+        move(a, false);
         window.setTimeout(function () { window.location.href = a.href; }, 380);
       });
     });
