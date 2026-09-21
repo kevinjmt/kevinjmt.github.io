@@ -26,10 +26,10 @@
   background: var(--surface-2); transition: all .2s ease; outline: none;
 }
 #message { min-height: 180px; resize: vertical; }
-#mail:focus, #message:focus { border-color: var(--brand); background: #fff; box-shadow: 0 0 0 4px rgba(35,71,255,.12); }
+#mail:focus, #message:focus { border-color: var(--brand); background: #fff; box-shadow: 0 0 0 4px rgba(64,127,205,.12); }
 .send-button {
   font-family: var(--font); font-weight: 900; cursor: pointer;
-  background: linear-gradient(135deg, #0a0f1e, #2347ff); color: #fff;
+  background: linear-gradient(135deg, #0a0f1e, #407fcd); color: #fff;
   border: none; border-radius: var(--radius-pill); padding: 15px;
   transition: transform .2s ease, box-shadow .25s ease;
   box-shadow: var(--shadow-md); width: 100%;

@@ -34,9 +34,9 @@
 .p3d-visual {
   position: relative; align-self: stretch;
   background:
-    radial-gradient(360px 220px at 20% 10%, rgba(0,194,216,.35), transparent 60%),
-    radial-gradient(420px 260px at 85% 95%, rgba(124,92,255,.4), transparent 60%),
-    linear-gradient(135deg, #0a0f1e 0%, #1a2a9a 60%, #2347ff 100%);
+    radial-gradient(360px 220px at 20% 10%, rgba(110,165,215,.35), transparent 60%),
+    radial-gradient(420px 260px at 85% 95%, rgba(46,73,118,.4), transparent 60%),
+    linear-gradient(135deg, #0a0f1e 0%, #2e4976 60%, #407fcd 100%);
   min-height: 170px;
   display: flex; align-items: center; justify-content: center;
   overflow: hidden;

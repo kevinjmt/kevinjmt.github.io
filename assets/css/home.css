@@ -49,14 +49,14 @@
 /* availability banner */
 .avail {
   display: flex; gap: 18px; align-items: center; justify-content: space-between;
-  background: linear-gradient(135deg, #0a0f1e, #1a2a9a 60%, #2347ff);
+  background: linear-gradient(135deg, #0a0f1e, #2e4976 60%, #407fcd);
   color: #fff; border-radius: var(--radius-lg);
   padding: 28px 28px; margin-top: 36px;
   box-shadow: var(--shadow-lg); overflow: hidden; position: relative;
   flex-wrap: wrap;
 }
 .avail::after { content:""; position:absolute; width:420px; height:420px; right:-120px; top:-120px;
-  background: radial-gradient(closest-side, rgba(0,194,216,.5), transparent); }
+  background: radial-gradient(closest-side, rgba(110,165,215,.5), transparent); }
 .avail h2 { margin: 0; letter-spacing: -.02em; }
 .avail p { margin: 6px 0 0 0; color: rgba(255,255,255,.78); }
 .avail .btn { position: relative; z-index: 1; }
