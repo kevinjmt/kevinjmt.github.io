@@ -63,23 +63,45 @@ a, a:active, a:visited, a:hover { text-decoration: none; color: inherit; }
 .pagebody { margin: 0 auto; padding: 0 0 40px 0; background: transparent; text-align: center; }
 .section { margin: 0; padding: 72px 0 8px 0; text-align: center; }
 
-/* ---------- Nav (glass, sticky) ---------- */
+/* ---------- Nav: flush full-width bar at top, detached pill on scroll ---------- */
 nav {
   position: sticky;
-  top: 12px;
+  top: 0;
   z-index: 1001;
   height: var(--nav-h);
-  width: min(var(--max), calc(100% - 24px));
-  margin: 12px auto 0 auto;
+  width: calc(100% - 0px);
+  max-width: 100%;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 16px;
   padding: 0 10px 0 14px;
-  border-radius: var(--radius-pill);
-  background: rgba(255,255,255,.72);
+  border-radius: 0;
+  background: var(--bg);
   backdrop-filter: blur(18px) saturate(1.4);
   -webkit-backdrop-filter: blur(18px) saturate(1.4);
+  border: 1px solid transparent;
+  border-bottom-color: var(--line);
+  box-shadow: none;
+  transition: width .35s ease, max-width .35s ease, margin .35s ease,
+    border-radius .35s ease, box-shadow .35s ease,
+    background .35s ease, border-color .35s ease;
+}
+body.scrolled nav {
+  width: calc(100% - 24px);
+  max-width: var(--max);
+  margin: 12px auto 0 auto;
+  border-radius: var(--radius-pill);
+  background: rgba(255,255,255,.72);
+  border-color: rgba(255,255,255,.7);
+  box-shadow: var(--shadow-sm);
+}
+body.scrolled nav {
+  width: min(var(--max), calc(100% - 24px));
+  margin: 12px auto 0 auto;
+  border-radius: var(--radius-pill);
+  background: rgba(255,255,255,.72);
   border: 1px solid rgba(255,255,255,.7);
   box-shadow: var(--shadow-sm);
 }
@@ -92,6 +114,7 @@ nav > div:first-child { display: none; }
   padding: 4px;
   box-shadow: var(--shadow-sm);
 }
+nav .imgtitle { box-shadow: none; }
 .brand-name { font-weight: 900; letter-spacing: .02em; font-size: .95rem; line-height: 1; }
 .brand-name small { display: block; font-weight: 700; font-size: .68rem; color: var(--muted); letter-spacing: .14em; text-transform: uppercase; }
 
@@ -289,7 +312,12 @@ h1.hero-title, h1.title, h2, h3, .lead, .subtitle,
 /* ---------- Responsive nav ---------- */
 @media (max-width: 860px) {
   nav { padding: 0 8px 0 12px; }
+  /* spacer balancing the burger so the brand stays centered */
+  nav > div:first-child { display: block; width: 44px; flex: 0 0 auto; }
+  .kjbrand { flex: 1; justify-content: center; text-align: center; }
   .brand-name { display: none; }
+  /* detached pill: brand text appears, centered like desktop */
+  body.scrolled .brand-name { display: block; text-align: center; }
   .iloveburgers { display: flex; align-items: center; justify-content: center; }
   .menutitles {
     position: fixed; top: 88px; left: 12px; right: 12px;

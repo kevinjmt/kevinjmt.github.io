@@ -65,6 +65,14 @@
     updateAll();
   }
 
+  /* ----- Navbar: flush bar at top, detached pill once scrolled ----- */
+  var navClass = 'scrolled';
+  function updateNav() {
+    document.body.classList.toggle(navClass, (window.scrollY || window.pageYOffset || 0) > 8);
+  }
+  window.addEventListener('scroll', updateNav, { passive: true });
+  updateNav();
+
   /* ----- 3D tilt cards (Parsec-style) ----- */
   if (!reduceMotion && finePointer) {
     slice('[data-tilt]').forEach(function (card) {
