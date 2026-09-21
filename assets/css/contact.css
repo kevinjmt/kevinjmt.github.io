@@ -19,18 +19,19 @@
   box-shadow: var(--shadow-sm);
 }
 .form h1 { font-size: 1rem; margin: 0; }
-#mail, #message {
+#mail, #object, #message {
   width: 100%; font-family: var(--font);
   border: 1.5px solid var(--line-strong); border-radius: 14px;
   padding: 14px 16px; font-size: 1rem; color: var(--ink);
   background: var(--surface-2); transition: all .2s ease; outline: none;
 }
 #message { min-height: 180px; resize: vertical; }
-#mail:focus, #message:focus { border-color: var(--brand); background: #fff; box-shadow: 0 0 0 4px rgba(64,127,205,.12); }
+#mail:focus, #object:focus,
+#message:focus { border-color: var(--brand); background: #fff; box-shadow: 0 0 0 4px rgba(64,127,205,.12); }
 .send-button {
   font-family: var(--font); font-weight: 900; cursor: pointer;
   background: linear-gradient(135deg, #0a0f1e, #407fcd); color: #fff;
-  border: none; border-radius: var(--radius-pill); padding: 15px;
+  border: none; border-radius: 14px; padding: 15px;
   transition: transform .2s ease, box-shadow .25s ease;
   box-shadow: var(--shadow-md); width: 100%;
 }
@@ -47,3 +48,12 @@
 .qr-card { justify-content: center; text-align: center; }
 .form { text-align: center; align-items: stretch; }
 .form label { text-align: center; }
+
+/* email + send side by side */
+.form-row { display: flex; gap: 12px; align-items: flex-end; }
+.form-row label { flex: 1; min-width: 0; }
+.form-row .send-button { flex: 0 0 auto; width: auto; margin: 0; padding: 15px 26px; white-space: nowrap; }
+@media (max-width: 640px) {
+  .form-row { flex-direction: column; align-items: stretch; }
+  .form-row .send-button { width: 100%; }
+}
