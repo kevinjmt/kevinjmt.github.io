@@ -84,25 +84,18 @@ nav {
   border: 1px solid transparent;
   border-bottom-color: transparent;
   box-shadow: none;
-  transition: width .35s ease, max-width .35s ease, margin .35s ease,
+  transition: width .35s ease, max-width .35s ease, top .35s ease,
     border-radius .35s ease, box-shadow .35s ease,
     background .35s ease, border-color .35s ease;
 }
 body.scrolled nav {
+  top: 15px;
   width: calc(100% - 24px);
   max-width: var(--max);
-  margin: 12px auto 0 auto;
+  margin: 0 auto;
   border-radius: var(--radius-pill);
   background: rgba(255,255,255,.72);
   border-color: rgba(255,255,255,.7);
-  box-shadow: var(--shadow-sm);
-}
-body.scrolled nav {
-  width: min(var(--max), calc(100% - 24px));
-  margin: 12px auto 0 auto;
-  border-radius: var(--radius-pill);
-  background: rgba(255,255,255,.72);
-  border: 1px solid rgba(255,255,255,.7);
   box-shadow: var(--shadow-sm);
 }
 nav > div:first-child { display: none; }
@@ -318,9 +311,11 @@ h1.hero-title, h1.title, h2, h3, .lead, .subtitle,
   .brand-name { display: none; }
   /* detached pill: brand text appears, centered like desktop */
   body.scrolled .brand-name { display: block; text-align: center; }
+  /* detached pill: same 15px offset on mobile */
+  body.scrolled nav { top: 15px; }
   .iloveburgers { display: flex; align-items: center; justify-content: center; }
   .menutitles {
-    position: fixed; top: 88px; left: 12px; right: 12px;
+    position: fixed; top: 91px; left: 12px; right: 12px;
     flex-direction: column; align-items: stretch;
     background: rgba(255,255,255,.92);
     backdrop-filter: blur(20px);
