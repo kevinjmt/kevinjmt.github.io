@@ -6,7 +6,7 @@
 	<title>Kévin JAMET — Contact</title>
 	<meta name="description" content="Contactez Kévin JAMET : vCard, réseaux, formulaire direct.">
 	<link rel="stylesheet" href="../../assets/css/theme.css?v=28">
-	<link rel="stylesheet" href="../../assets/css/contact.css?v=8">
+	<link rel="stylesheet" href="../../assets/css/contact.css?v=17">
 	<link rel="stylesheet" href="../../assets/css/footer.css?v=9">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 	<link rel="shortcut icon" type="image/png" href="../../assets/icons/kjicon.png">
@@ -72,7 +72,13 @@
 			<form class="form" action="https://formspree.io/f/xayzjqya" method="POST">
 				<div class="form-row">
 					<label><h1>Your email</h1><input id="mail" placeholder="vous@exemple.com" type="email" name="email" required></label>
-					<button class="send-button" type="submit">SEND <i class="fa-solid fa-paper-plane"></i></button>
+					<div class="send-zone">
+						<button class="send-button" type="button" id="sendInit">SEND <i class="fa-solid fa-paper-plane"></i></button>
+						<div class="confirm-duo" id="sendDuo">
+							<button class="cancel-button" type="button" id="sendCancel">CANCEL</button>
+							<button class="confirm-button" type="submit" id="sendConfirm">CONFIRM (<span id="sendCount">3</span>s)<span class="timer-bar" id="sendBar"></span></button>
+						</div>
+					</div>
 				</div>
 				<label><h1>Subject</h1><input id="object" placeholder="Subject of your message" type="text" name="Object" required></label>
 				<label><h1>Your message</h1><textarea id="message" placeholder="Bonjour Kévin, …" name="message" required></textarea></label>
@@ -118,6 +124,26 @@ const burger=document.getElementById('burger'),menu=document.getElementById('men
 burger.addEventListener('click',()=>{menu.classList.toggle('show');document.querySelector('.q').classList.toggle('a');document.querySelector('.w').classList.toggle('b');document.querySelector('.e').classList.toggle('c');});
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);}}),{threshold:.08});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+(function(){
+  var init=document.getElementById('sendInit'); if(!init) return;
+  var duo=document.getElementById('sendDuo'), cancel=document.getElementById('sendCancel'),
+      count=document.getElementById('sendCount'), bar=document.getElementById('sendBar'),
+      form=init.closest('form'), timer=null;
+  function resetBar(){ bar.style.transition='none'; bar.style.width='100%'; }
+  function resetAll(){ clearInterval(timer); duo.classList.remove('show'); init.classList.remove('hide'); resetBar(); }
+  init.addEventListener('click', function(){
+    if(!form.reportValidity()) return;
+    var left=3; count.textContent=left;
+    init.classList.add('hide'); duo.classList.add('show');
+    void bar.offsetWidth; bar.style.transition='width 3s linear'; bar.style.width='0%';
+    timer=setInterval(function(){
+      left--;
+      if(left<=0){ clearInterval(timer); if(form.reportValidity()){ form.requestSubmit(); } else { resetAll(); } }
+      else { count.textContent=left; }
+    },1000);
+  });
+  cancel.addEventListener('click', resetAll);
+})();
 </script>
 	<script src="../../assets/js/parallax.js?v=14"></script>
 </body>

@@ -31,9 +31,9 @@
 .send-button {
   font-family: var(--font); font-weight: 900; cursor: pointer;
   background: linear-gradient(135deg, #0a0f1e, #407fcd); color: #fff;
-  border: none; border-radius: 14px; padding: 15px;
+  border: none; border-radius: 12px; padding: 15px;
   transition: transform .2s ease, box-shadow .25s ease;
-  box-shadow: var(--shadow-md); width: 100%;
+  box-shadow: var(--shadow-md); width: 100%; height: 35px;
 }
 .send-button:hover { transform: translateY(-2px); box-shadow: var(--shadow-lg); width: 100%; }
 .qr-card { display: flex; gap: 20px; align-items: center; flex-wrap: wrap; }
@@ -53,7 +53,69 @@
 .form-row { display: flex; gap: 12px; align-items: flex-end; }
 .form-row label { flex: 1; min-width: 0; }
 .form-row .send-button { flex: 0 0 auto; width: auto; margin: 0; padding: 15px 26px; white-space: nowrap; }
+
+/* send -> cancel + confirm split */
+.send-zone {
+  display: grid; flex: 0 1 auto; min-width: 0;
+  align-self: flex-end; height: 50px;
+  background: linear-gradient(135deg, #20365e, #407fcd);
+  border: 1px solid rgba(255,255,255,.14);
+  border-radius: 15px;
+  padding: 8px;
+  box-shadow: var(--shadow-md), inset 0 1px 0 rgba(255,255,255,.18);
+}
+#sendInit, .confirm-duo { grid-area: 1 / 1; }
+#sendInit {
+  display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+  background: transparent; border: none; box-shadow: none; color: #fff;
+  font-size: .85rem; padding: 6px 18px;
+  transition: opacity .22s ease, transform .22s ease, filter .22s ease, visibility 0s .22s, background .2s ease;
+}
+#sendInit:hover { transform: translateY(-1px); background: rgba(255,255,255,.1); box-shadow: none; }
+#sendInit.hide {
+  opacity: 0; transform: scale(.72); filter: blur(4px);
+  pointer-events: none; visibility: hidden;
+}
+.confirm-duo {
+  display: flex; gap: 8px; align-items: stretch; justify-content: center;
+  opacity: 0; visibility: hidden;
+  transition: opacity .2s ease, visibility 0s .2s;
+}
+.confirm-duo.show { opacity: 1; visibility: visible; transition: none; }
+.confirm-duo.show > * { animation: duo-in .55s cubic-bezier(.32,1.35,.64,1) both; }
+.confirm-duo.show > *:nth-child(2) { animation-delay: .09s; }
+@keyframes duo-in {
+  from { opacity: 0; transform: translateX(30px) scale(.65); filter: blur(6px); }
+  60% { opacity: 1; transform: translateX(-4px) scale(1.05); filter: blur(0); }
+  to { opacity: 1; transform: none; filter: blur(0); }
+}
+.cancel-button, .confirm-button {
+  height: 32px;
+  font-family: var(--font); font-size: .85rem; font-weight: 900; white-space: nowrap;
+  border-radius: 7px; padding: 6px 18px; cursor: pointer; border: none;
+  transition: transform .2s ease, background .2s ease, color .2s ease;
+}
+.cancel-button { background: transparent; color: rgba(255,255,255,.72); }
+.cancel-button:hover { color: #fff; background: rgba(255,255,255,.12); }
+.confirm-button {
+  position: relative; overflow: hidden;
+  display: inline-flex; align-items: center; gap: 8px;
+  background: #fff; color: var(--ink);
+  box-shadow: 0 4px 14px rgba(0,0,0,.3);
+}
+.confirm-button:hover { transform: translateY(-2px); }
+.confirm-button .timer-bar {
+  position: absolute; left: 0; bottom: 0; height: 4px; width: 100%;
+  background: var(--brand);
+}
 @media (max-width: 640px) {
   .form-row { flex-direction: column; align-items: stretch; }
   .form-row .send-button { width: 100%; }
+  .send-zone { width: 100%; }
+  .confirm-duo { width: 100%; }
+  .confirm-duo > button { flex: 1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  #sendInit, .confirm-duo { transition: none; }
+  .confirm-duo.show > * { animation: none; }
 }
