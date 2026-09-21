@@ -68,6 +68,7 @@
   /* ----- Navbar: flush bar at top, detached pill once scrolled ----- */
   var navClass = 'scrolled';
   function updateNav() {
+    if (document.body.classList.contains('leaving')) return;
     document.body.classList.toggle(navClass, (window.scrollY || window.pageYOffset || 0) > 8);
   }
   window.addEventListener('scroll', updateNav, { passive: true });
@@ -119,9 +120,13 @@
         if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
         if (a.target === '_blank') return;
         e.preventDefault();
-        document.body.classList.add('leaving');
+        var wasScrolled = document.body.classList.contains('scrolled');
         move(a, false);
-        window.setTimeout(function () { window.location.href = a.href; }, 380);
+        window.setTimeout(function () {
+          document.body.classList.add('leaving');
+          document.body.classList.remove('scrolled');
+          window.setTimeout(function () { window.location.href = a.href; }, wasScrolled ? 315 : 110);
+        }, 285);
       });
     });
     window.addEventListener('resize', goActive);

@@ -84,9 +84,9 @@ nav {
   border: 1px solid transparent;
   border-bottom-color: transparent;
   box-shadow: none;
-  transition: width .35s ease, max-width .35s ease, top .35s ease,
-    border-radius .35s ease, box-shadow .35s ease,
-    background .35s ease, border-color .35s ease;
+  transition: width .26s ease, max-width .26s ease, top .26s ease,
+    border-radius .26s ease, box-shadow .26s ease,
+    background .26s ease, border-color .26s ease;
 }
 body.scrolled nav {
   top: 15px;
@@ -120,8 +120,8 @@ nav .imgtitle { box-shadow: none; }
   -webkit-backdrop-filter: blur(12px) saturate(1.4);
   border: 1px solid rgba(255,255,255,.9);
   box-shadow: 0 4px 16px rgba(35,71,255,.16), inset 0 1px 0 rgba(255,255,255,.9);
-  transition: left .45s cubic-bezier(.22,1,.36,1), top .45s cubic-bezier(.22,1,.36,1),
-    width .45s cubic-bezier(.22,1,.36,1), height .45s cubic-bezier(.22,1,.36,1), opacity .3s ease;
+  transition: left .34s cubic-bezier(.22,1,.36,1), top .34s cubic-bezier(.22,1,.36,1),
+    width .34s cubic-bezier(.22,1,.36,1), height .34s cubic-bezier(.22,1,.36,1), opacity .22s ease;
   pointer-events: none;
 }
 .menutitles a {
@@ -324,11 +324,11 @@ h1.hero-title, h1.title, h2, h3, .lead, .subtitle,
   from { opacity: 0; transform: translateY(14px); }
   to { opacity: 1; transform: none; }
 }
-.pagebody, .footer { animation: page-in .55s cubic-bezier(.22,1,.36,1); }
+.pagebody, .footer { animation: page-in .41s cubic-bezier(.22,1,.36,1); }
 body.leaving .pagebody, body.leaving .footer {
   opacity: 0;
   transform: translateY(8px);
-  transition: opacity .3s ease, transform .3s ease;
+  transition: opacity .22s ease, transform .22s ease;
 }
 @media (prefers-reduced-motion: reduce) {
   .pagebody, .footer { animation: none; }
