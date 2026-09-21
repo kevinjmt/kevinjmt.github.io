@@ -314,6 +314,9 @@ h1.hero-title, h1.title, h2, h3, .lead, .subtitle,
   /* detached pill: same 15px offset on mobile */
   body.scrolled nav { top: 15px; }
   .iloveburgers { display: flex; align-items: center; justify-content: center; }
+  /* hamburger: black bars, no background disc */
+  .ham { background: none; }
+  .ger { background: var(--ink); }
   .menutitles {
     position: fixed; top: 91px; left: 12px; right: 12px;
     flex-direction: column; align-items: stretch;
