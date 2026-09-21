@@ -42,8 +42,8 @@
 /* ---------- Centering overrides ---------- */
 .page-hero { text-align: center; }
 .contact-grid { text-align: center; }
-.social-grid { justify-items: center; }
-.soc { justify-content: center; text-align: center; }
+.social-grid { justify-items: stretch; }
+.soc { justify-content: center; text-align: center; width: 100%; }
 .qr-card { justify-content: center; text-align: center; }
 .form { text-align: center; align-items: stretch; }
 .form label { text-align: center; }
