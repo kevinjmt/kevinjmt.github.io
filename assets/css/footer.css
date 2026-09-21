@@ -41,12 +41,12 @@
 .footer-brand { display: flex; flex-direction: column; align-items: flex-start; gap: 6px; }
 .footer-logo { display: inline-flex; }
 .footer .imgtitle {
-  width: 52px; height: 52px;
-  border-radius: 16px;
-  background: #fff;
-  padding: 5px;
-  border: 1px solid var(--line, rgba(10,15,30,.09));
-  box-shadow: var(--shadow-sm, 0 1px 2px rgba(10,15,30,.06));
+  width: 40px; height: 40px;
+  border-radius: 12px;
+  background: none;
+  padding: 4px;
+  border: none;
+  box-shadow: none;
 }
 .footer-name {
   margin: 10px 0 0 0;
