@@ -91,4 +91,40 @@
       });
     });
   }
+  /* ----- Sliding glass nav indicator (desktop) ----- */
+  (function navIndicator() {
+    if (reduceMotion) return;
+    var bar = document.querySelector('.menutitles');
+    var active = bar ? bar.querySelector('a.active') : null;
+    if (!bar || !active) return;
+    if (!window.matchMedia('(min-width: 861px)').matches) return;
+    var pill = document.createElement('span');
+    pill.className = 'nav-indicator';
+    pill.setAttribute('aria-hidden', 'true');
+    bar.appendChild(pill);
+    function move(el) {
+      pill.style.left = el.offsetLeft + 'px';
+      pill.style.top = el.offsetTop + 'px';
+      pill.style.width = el.offsetWidth + 'px';
+      pill.style.height = el.offsetHeight + 'px';
+      pill.style.opacity = '1';
+    }
+    function goActive() { move(active); }
+    bar.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', function (e) {
+        var href = a.getAttribute('href') || '';
+        if (href.charAt(0) === '#') return;
+        if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+        if (a.target === '_blank') return;
+        e.preventDefault();
+        document.body.classList.add('leaving');
+        move(a);
+        window.setTimeout(function () { window.location.href = a.href; }, 380);
+      });
+    });
+    window.addEventListener('resize', goActive);
+    window.addEventListener('load', goActive);
+    if (document.fonts && document.fonts.ready) { document.fonts.ready.then(goActive); }
+    goActive();
+  })();
 })();
