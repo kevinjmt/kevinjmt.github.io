@@ -69,7 +69,14 @@
   var navClass = 'scrolled';
   function updateNav() {
     if (document.body.classList.contains('leaving')) return;
-    document.body.classList.toggle(navClass, (window.scrollY || window.pageYOffset || 0) > 8);
+    var y = window.scrollY || window.pageYOffset || 0;
+    var s = document.body.classList.contains(navClass);
+    if (!s && y <= 24) return;
+    if (s && y >= 8) return;
+    s = !s;
+    document.body.classList.toggle(navClass, s);
+    window.dispatchEvent(new Event('nav-reseat'));
+    window.setTimeout(function () { window.dispatchEvent(new Event('nav-reseat')); }, 380);
   }
   window.addEventListener('scroll', updateNav, { passive: true });
   updateNav();
@@ -111,7 +118,8 @@
       pill.style.opacity = '1';
       if (instant) { void pill.offsetWidth; pill.style.transition = ''; }
     }
-    function goActive() { move(active, true); }
+    var trackToken = 0;
+    function goActive() { trackToken++; move(active, true); }
     bar.querySelectorAll('a').forEach(function (a) {
       a.addEventListener('click', function (e) {
         var href = a.getAttribute('href') || '';
@@ -130,6 +138,25 @@
       });
     });
     window.addEventListener('resize', goActive);
+    window.addEventListener('nav-reseat', function () {
+      var tk = ++trackToken;
+      var start = performance.now();
+      pill.style.transition = 'none';
+      function frame(now) {
+        if (tk !== trackToken) return;
+        pill.style.left = active.offsetLeft + 'px';
+        pill.style.top = active.offsetTop + 'px';
+        pill.style.width = active.offsetWidth + 'px';
+        pill.style.height = active.offsetHeight + 'px';
+        pill.style.opacity = '1';
+        if ((now || performance.now()) - start < 420) {
+          requestAnimationFrame(frame);
+        } else if (tk === trackToken) {
+          pill.style.transition = '';
+        }
+      }
+      requestAnimationFrame(frame);
+    });
     window.addEventListener('load', goActive);
     if (document.fonts && document.fonts.ready) { document.fonts.ready.then(goActive); }
     goActive();
