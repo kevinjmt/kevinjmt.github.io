@@ -361,7 +361,7 @@ body.leaving .pagebody, body.leaving .footer {
   nav { flex-wrap: wrap; height: auto; min-height: var(--nav-h); align-content: center; row-gap: 0; }
   nav:has(.menutitles.show) { row-gap: 12px; }
   nav > div:first-child { order: 1; }
-  .kjbrand { order: 2; }
+  .kjbrand { order: 2; transition: padding-top .3s ease; }
   .iloveburgers { order: 3; }
   .menutitles {
     order: 4; flex-basis: 100%;
@@ -388,6 +388,7 @@ body.leaving .pagebody, body.leaving .footer {
     border-radius: 24px;
     transition: width .26s ease, max-width .26s ease, top .26s ease, box-shadow .26s ease, background .26s ease, border-color .26s ease;
   }
+  nav:has(.menutitles.show) .kjbrand { padding-top: 10px; }
   body.leaving .menutitles { opacity: 0; pointer-events: none; }
   body.leaving .nav-indicator.exit {
     transform: translateY(-52px) scale(.5);
